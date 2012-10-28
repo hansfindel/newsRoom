@@ -5,12 +5,13 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      #uri: mongodb://hans_user:hans_pass@alex.mongohq.com:10093/app8798946
+      #elegir entre uri y {database, host con su respectivas identaciones}, uri es la base de datos 
+      #uri: mongodb://hans:hans@alex.mongohq.com:10093/app8798946
       database: news_room_development
-      # Provides the hosts the default session can connect to. Must be an array
-      # of host:port pairs. (required)
       hosts:
         - localhost:27017
+      # Provides the hosts the default session can connect to. Must be an array
+      # of host:port pairs. (required)  
       options:
         # Change whether the session persists in safe mode by default.
         # (default: false)
@@ -82,4 +83,4 @@ test:
 production:
   sessions:
     default:
-      uri: <%= ENV['mongo_acces'] %>
+      uri: mongodb://hans:hans@alex.mongohq.com:10093/app8798946
