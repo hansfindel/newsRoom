@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @news_agency.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @news_agency.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_news_agency_path(@news_agency) %> |
+<%= link_to 'Back', news_agencies_path %>
