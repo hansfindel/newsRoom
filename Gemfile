@@ -2,7 +2,14 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 gem 'mongoid', '~> 3.0.2'
-gem 'sqlite3'
+
+group :development do
+	gem 'sqlite3'
+end
+group :production do
+	gem 'pg'
+end
+
 
 gem 'bson_ext'
 # Bundle edge Rails instead:
