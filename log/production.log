@@ -840,3 +840,46 @@ Started GET "/articles" for 127.0.0.1 at 2012-10-28 23:23:10 -0300
 Processing by ArticlesController#index as HTML
   Rendered articles/index.html.erb within layouts/application (925.3ms)
 Completed 200 OK in 928ms (Views: 927.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-10-28 23:37:43 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (142.8ms)
+Completed 500 Internal Server Error in 253ms
+
+ActionView::Template::Error (
+Problem:
+  No sessions configuration provided.
+Summary:
+  Mongoid's configuration requires that you provide details about each session that can be connected to, and requires in the sessions config at least 1 default session to exist.
+Resolution:
+  Double check your mongoid.yml to make sure that you have a top-level sessions key with at least 1 default session configuration for it. You can regenerate a new mongoid.yml for assistance via `rails g mongoid:config`.
+
+ Example:
+   development:
+     sessions:
+       default:
+         database: mongoid_dev
+         hosts:
+           - localhost:27017
+
+):
+    10:     <th></th>
+    11:   </tr>
+    12: 
+    13: <% @articles.each do |article| %>
+    14:   <tr>
+    15:     <td><%= article.headline %></td>
+    16:     <td><%= article.deck %></td>
+  app/views/articles/index.html.erb:13:in `_app_views_articles_index_html_erb__3584942179228306089_70334401950880'
+  app/controllers/articles_controller.rb:7:in `index'
+
+
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-10-28 23:38:14 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (1281.2ms)
+Completed 200 OK in 1303ms (Views: 1302.2ms | ActiveRecord: 0.0ms)
