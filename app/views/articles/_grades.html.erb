@@ -1,0 +1,16 @@
+  <% if current_user.role.eql?"editor" %>
+  <div class="field">
+      <%= f.label :editors_grade %><br />
+      <%= f.text_field :editors_grade %>
+    </div>
+<% elsif current_user.role.eql?"chief_editor" %>
+  <div class="field">
+      <%= f.label :chief_editor_grade %><br />
+      <%= f.text_field :chief_editor_grade %>
+    </div>
+<% elsif current_user.role.eql?"chief_editor_country" %>
+  <div class="field">
+      <%= f.label :chief_editor_country_grade %><br />
+      <%= f.text_field :chief_editor_country_grade %>
+    </div>
+<% end %>

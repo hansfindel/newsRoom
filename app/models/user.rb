@@ -1,10 +1,15 @@
 class User
 
   include Mongoid::Document
+
+  ROLES = %w[admin journalist editor chief_editor chief_editor_country reader]
+
   field :name, type: String
   field :email, type: String
   field :password_hash, type: String
   field :password_salt, type: String
+  field :role, type: String
+  has_many :articles
 
   before_create :encrypt_password
 
@@ -13,6 +18,8 @@ class User
   validates_presence_of :password, :on => :create
   validates_presence_of :email
   validates_uniqueness_of :email
+
+ 
 
 
 def self.authenticate(email, password)
