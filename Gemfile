@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 gem 'mongoid', '~> 3.0.2'
+gem 'cancan'
 
 group :development do
 	gem 'sqlite3'
