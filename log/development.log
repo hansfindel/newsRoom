@@ -803,3 +803,6 @@ Connecting to database specified by database.yml
   MOPED: 174.129.78.27:10093 COMMAND      database=admin command={:ismaster=>1} (365.0823ms)
   MOPED: 174.129.78.27:10093 COMMAND      database=app8798946 command={:count=>"articles", :query=>{}} (291.0371ms)
   MOPED: 174.129.78.27:10093 QUERY        database=app8798946 collection=articles selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (180.4140ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
