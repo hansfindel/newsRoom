@@ -43,7 +43,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
-    daemons (1.1.9)
     erubis (2.7.0)
     eventmachine (1.0.0)
     excon (0.16.7)
@@ -149,5 +148,4 @@ DEPENDENCIES
   rails (= 3.2.6)
   sass-rails (~> 3.2.3)
   sqlite3
-  thin
   uglifier (>= 1.0.3)
