@@ -13,6 +13,8 @@ end
 
 gem 'heroku'
 gem 'bson_ext'
+
+gem 'bcrypt-ruby', :require => 'bcrypt'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
