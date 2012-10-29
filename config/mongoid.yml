@@ -84,7 +84,7 @@ production:
   sessions:
     default:
       #uri: mongodb://hans:hans@alex.mongohq.com:10093/app8798946
-      uri: <%= ENV['mongo_access'] %>
+      uri: <%= ENV['mongo_access'] || "mongodb://hans:hans@alex.mongohq.com:10093/app8798946" %>
       options:
         skip_version_check: true
         safe: true
