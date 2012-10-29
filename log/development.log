@@ -806,3 +806,49 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-28 23:53:31 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  MOPED: 174.129.78.27:10093 COMMAND      database=admin command={:ismaster=>1} (362.0291ms)
+  MOPED: 174.129.78.27:10093 QUERY        database=app8798946 collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (191.8042ms)
+  Rendered articles/index.html.erb within layouts/application (1613.7ms)
+Compiled articles.css  (48ms)  (pid 96963)
+Compiled news_agencies.css  (1ms)  (pid 96963)
+Compiled scaffolds.css  (6ms)  (pid 96963)
+Compiled application.css  (101ms)  (pid 96963)
+Compiled jquery.js  (3ms)  (pid 96963)
+Compiled jquery_ujs.js  (0ms)  (pid 96963)
+Compiled articles.js  (439ms)  (pid 96963)
+Compiled news_agencies.js  (51ms)  (pid 96963)
+Compiled application.js  (651ms)  (pid 96963)
+Completed 200 OK in 2544ms (Views: 2542.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-28 23:53:34 -0300
+Served asset /articles.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-28 23:53:34 -0300
+Served asset /news_agencies.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-28 23:53:34 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-28 23:53:34 -0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-28 23:53:34 -0300
+Served asset /jquery.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-28 23:53:34 -0300
+Served asset /articles.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-28 23:53:34 -0300
+Served asset /news_agencies.js - 304 Not Modified (1ms)
