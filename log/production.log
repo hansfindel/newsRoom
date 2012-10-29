@@ -132,3 +132,410 @@ failed with error "auth fails"):
   app/controllers/articles_controller.rb:7:in `index'
 
 
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-28 20:16:59 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (1618.0ms)
+Completed 500 Internal Server Error in 1652ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>NewsRoom</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__390489791300120546_70139851725400'
+  app/controllers/articles_controller.rb:7:in `index'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-28 20:18:12 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (1078.7ms)
+Completed 500 Internal Server Error in 1116ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>NewsRoom</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__607433737462197208_70165651566060'
+  app/controllers/articles_controller.rb:7:in `index'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-28 20:20:32 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (969.0ms)
+Completed 500 Internal Server Error in 1002ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>NewsRoom</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1515568568292397217_70299611439820'
+  app/controllers/articles_controller.rb:7:in `index'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-28 20:22:39 -0300
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (186.7ms)
+Completed 500 Internal Server Error in 189ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>NewsRoom</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1515568568292397217_70299611439820'
+  app/controllers/articles_controller.rb:7:in `index'
+
+
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2012-10-28 20:22:40 -0300
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  railties (3.2.6) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  thin (1.4.1) lib/thin/connection.rb:80:in `block in pre_process'
+  thin (1.4.1) lib/thin/connection.rb:78:in `catch'
+  thin (1.4.1) lib/thin/connection.rb:78:in `pre_process'
+  thin (1.4.1) lib/thin/connection.rb:53:in `process'
+  thin (1.4.1) lib/thin/connection.rb:38:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.4.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.4.1) lib/thin/server.rb:159:in `start'
+  thin (1.4.1) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.4.1) lib/thin/runner.rb:185:in `run_command'
+  thin (1.4.1) lib/thin/runner.rb:151:in `run!'
+  thin (1.4.1) bin/thin:6:in `<top (required)>'
+  /Users/hansfindel/.rvm/gems/ruby-1.9.3-p0/bin/thin:19:in `load'
+  /Users/hansfindel/.rvm/gems/ruby-1.9.3-p0/bin/thin:19:in `<main>'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-28 20:28:12 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (
+Problem:
+  No sessions configuration provided.
+Summary:
+  Mongoid's configuration requires that you provide details about each session that can be connected to, and requires in the sessions config at least 1 default session to exist.
+Resolution:
+  Double check your mongoid.yml to make sure that you have a top-level sessions key with at least 1 default session configuration for it. You can regenerate a new mongoid.yml for assistance via `rails g mongoid:config`.
+
+ Example:
+   development:
+     sessions:
+       default:
+         database: mongoid_dev
+         hosts:
+           - localhost:27017
+
+):
+    10:     <th></th>
+    11:   </tr>
+    12: 
+    13: <% @articles.each do |article| %>
+    14:   <tr>
+    15:     <td><%= article.headline %></td>
+    16:     <td><%= article.deck %></td>
+  app/views/articles/index.html.erb:13:in `_app_views_articles_index_html_erb___4566094539384573363_70251357655480'
+  app/controllers/articles_controller.rb:7:in `index'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-28 22:39:26 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (1886.7ms)
+Completed 500 Internal Server Error in 1957ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>NewsRoom</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2535163827828148058_70237820704580'
+  app/controllers/articles_controller.rb:7:in `index'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-28 22:40:29 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (1203.9ms)
+Completed 500 Internal Server Error in 1214ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>NewsRoom</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__2291437145553793844_70287473346560'
+  app/controllers/articles_controller.rb:7:in `index'
+
+
+Compiled jquery.js  (3ms)  (pid 96731)
+Compiled jquery_ujs.js  (0ms)  (pid 96731)
+Compiled articles.js  (828ms)  (pid 96731)
+Compiled news_agencies.js  (208ms)  (pid 96731)
+Compiled application.js  (1175ms)  (pid 96731)
+Compiled articles.css  (66ms)  (pid 96731)
+Compiled news_agencies.css  (1ms)  (pid 96731)
+Compiled scaffolds.css  (18ms)  (pid 96731)
+Compiled application.css  (104ms)  (pid 96731)
+Compiled jquery.js  (3ms)  (pid 96731)
+Compiled jquery_ujs.js  (0ms)  (pid 96731)
+Compiled articles.js  (129ms)  (pid 96731)
+Compiled news_agencies.js  (62ms)  (pid 96731)
+Compiled application.js  (353ms)  (pid 96731)
+Compiled articles.css  (5ms)  (pid 96731)
+Compiled news_agencies.css  (1ms)  (pid 96731)
+Compiled scaffolds.css  (12ms)  (pid 96731)
+Compiled application.css  (35ms)  (pid 96731)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-28 22:43:27 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (950.7ms)
+Completed 200 OK in 998ms (Views: 997.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-e9394981bdbfae69621c955bd7e7f673.js" for 127.0.0.1 at 2012-10-28 22:43:29 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-e9394981bdbfae69621c955bd7e7f673.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/application-0149f820dbdd285aa65e241569d8c256.css" for 127.0.0.1 at 2012-10-28 22:43:29 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-0149f820dbdd285aa65e241569d8c256.css"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/articles/508dbefa1d44b69679000001/edit" for 127.0.0.1 at 2012-10-28 22:43:45 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"508dbefa1d44b69679000001"}
+  Rendered articles/_form.html.erb (296.4ms)
+  Rendered articles/edit.html.erb within layouts/application (338.9ms)
+Completed 200 OK in 558ms (Views: 376.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-0149f820dbdd285aa65e241569d8c256.css" for 127.0.0.1 at 2012-10-28 22:43:45 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-0149f820dbdd285aa65e241569d8c256.css"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/application-e9394981bdbfae69621c955bd7e7f673.js" for 127.0.0.1 at 2012-10-28 22:43:45 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-e9394981bdbfae69621c955bd7e7f673.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-10-28 22:43:47 -0300
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (187.7ms)
+Completed 200 OK in 190ms (Views: 189.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-e9394981bdbfae69621c955bd7e7f673.js" for 127.0.0.1 at 2012-10-28 22:43:47 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-e9394981bdbfae69621c955bd7e7f673.js"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/application-0149f820dbdd285aa65e241569d8c256.css" for 127.0.0.1 at 2012-10-28 22:43:47 -0300
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-0149f820dbdd285aa65e241569d8c256.css"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+

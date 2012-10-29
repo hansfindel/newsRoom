@@ -615,3 +615,191 @@ Served asset /news_agencies.js - 304 Not Modified (1ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-28 20:05:29 -0300
 Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-28 20:25:31 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  MOPED: 174.129.78.27:10093 COMMAND      database=admin command={:ismaster=>1} (372.6199ms)
+  MOPED: 174.129.78.27:10093 QUERY        database=app8798946 collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (180.4979ms)
+  Rendered articles/index.html.erb within layouts/application (919.8ms)
+Completed 200 OK in 972ms (Views: 971.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:32 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:32 -0300
+Served asset /articles.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:32 -0300
+Served asset /news_agencies.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:32 -0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:32 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:32 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:32 -0300
+Served asset /articles.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:32 -0300
+Served asset /news_agencies.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:32 -0300
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-10-28 20:25:36 -0300
+Processing by ArticlesController#new as HTML
+  MOPED: 174.129.78.27:10093 QUERY        database=app8798946 collection=news_agencies selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (182.6770ms)
+  Rendered articles/_form.html.erb (272.9ms)
+  Rendered articles/new.html.erb within layouts/application (293.5ms)
+Completed 200 OK in 312ms (Views: 311.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:36 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:36 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:36 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:36 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:36 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:36 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:36 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:36 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:36 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-10-28 20:25:46 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kGRs1e5wd6Z13W2EzPJ4oy9Phrz6KUoUfgagglIndbc=", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"10", "published_on(3i)"=>"28", "headline"=>"holo", "deck"=>"hey", "story"=>"ho"}, "commit"=>"Create Article"}
+  MOPED: 174.129.78.27:10093 INSERT       database=app8798946 collection=articles documents=[{"_id"=>"508dbefa1d44b69679000001", "published_on(1i)"=>"2012", "published_on(2i)"=>"10", "published_on(3i)"=>"28", "headline"=>"holo", "deck"=>"hey", "story"=>"ho"}] flags=[] (0.2050ms)
+Redirected to http://0.0.0.0:3000/articles/508dbefa1d44b69679000001
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/508dbefa1d44b69679000001" for 127.0.0.1 at 2012-10-28 20:25:46 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"508dbefa1d44b69679000001"}
+  MOPED: 174.129.78.27:10093 QUERY        database=app8798946 collection=articles selector={"_id"=>"508dbefa1d44b69679000001"} flags=[:slave_ok] limit=0 skip=0 fields=nil (190.2258ms)
+  Rendered articles/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 210ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:46 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:46 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:46 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:46 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:46 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:46 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:46 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:46 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:46 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-10-28 20:25:48 -0300
+Processing by ArticlesController#index as HTML
+  MOPED: 174.129.78.27:10093 QUERY        database=app8798946 collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (177.9389ms)
+  Rendered articles/index.html.erb within layouts/application (179.4ms)
+Completed 200 OK in 209ms (Views: 208.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:48 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:48 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:48 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-28 20:25:48 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:48 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:48 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:48 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:48 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-28 20:25:48 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  MOPED: 174.129.78.27:10093 COMMAND      database=admin command={:ismaster=>1} (365.0823ms)
+  MOPED: 174.129.78.27:10093 COMMAND      database=app8798946 command={:count=>"articles", :query=>{}} (291.0371ms)
+  MOPED: 174.129.78.27:10093 QUERY        database=app8798946 collection=articles selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (180.4140ms)
