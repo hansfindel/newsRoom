@@ -83,8 +83,8 @@ test:
 production:
   sessions:
     default:
-      uri: <%= ENV['mongo_access'] %>
-      #uri: <%= ENV['MONGOHQ_URL']
+      #uri: <%= ENV['mongo_access'] %>
+      uri: <%= ENV['MONGOHQ_URL']
       #uri: mongodb://hans:hans@alex.mongohq.com:10093/app8798946
       options:
         skip_version_check: true
