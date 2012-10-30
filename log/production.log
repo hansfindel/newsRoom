@@ -1052,3 +1052,29 @@ Connecting to database specified by database.yml
 Processing by ArticlesController#index as HTML
   Rendered articles/index.html.erb within layouts/application (1094.9ms)
 Completed 200 OK in 1162ms (Views: 1161.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-30 14:25:38 -0300
+Connecting to database specified by database.yml
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 70ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-10-30 14:26:01 -0300
+Processing by ArticlesController#index as HTML
+  Rendered articles/index.html.erb within layouts/application (35947.0ms)
+Completed 500 Internal Server Error in 36001ms
+
+ActionView::Template::Error (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="174.129.78.27:10093">]>):
+    10:     <th></th>
+    11:   </tr>
+    12: 
+    13: <% @articles.each do |article| %>
+    14:   <tr>
+    15:     <td><%= article.headline %></td>
+    16:     <td><%= article.deck %></td>
+  app/views/articles/index.html.erb:13:in `_app_views_articles_index_html_erb___1454167458370929699_70212101151080'
+  app/controllers/articles_controller.rb:7:in `index'
+
+
