@@ -1928,3 +1928,845 @@ ActionView::Template::Error (undefined method `name' for nil:NilClass):
   Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
   Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
   Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.3ms)
+Connecting to database specified by database.yml
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (61.2457ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=news_room_development command={:count=>"articles", :query=>{}} (8.3256ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=news_room_development command={:count=>"articles", :query=>{}} (0.5713ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (46.5910ms)
+Connecting to database specified by database.yml
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1945ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.7043ms)
+Connecting to database specified by database.yml
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7682ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=news_room_development command={:count=>"articles", :query=>{}} (0.2861ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.7646ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e8f68898d653226000001"} flags=[:remove_first] (0.0863ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e8f68898d653226000002"} flags=[:remove_first] (0.1330ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e8f68898d653226000003"} flags=[:remove_first] (0.1266ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9990898d65592a000001"} flags=[:remove_first] (0.1247ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9990898d65592a000002"} flags=[:remove_first] (0.0548ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9990898d65592a000003"} flags=[:remove_first] (0.1140ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9aec898d65ac2a000001"} flags=[:remove_first] (0.1311ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9aec898d65ac2a000003"} flags=[:remove_first] (0.1295ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9aec898d65ac2a000004"} flags=[:remove_first] (0.1221ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9b41898d65e62a000001"} flags=[:remove_first] (0.1307ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9b41898d65e62a000003"} flags=[:remove_first] (0.1316ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9b41898d65e62a000004"} flags=[:remove_first] (0.1292ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9b9b898d65342b000001"} flags=[:remove_first] (0.1247ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9b9b898d65342b000003"} flags=[:remove_first] (0.2222ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508e9b9b898d65342b000004"} flags=[:remove_first] (0.1256ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508ea246898d65fd2d000001"} flags=[:remove_first] (0.1254ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508ea246898d65fd2d000003"} flags=[:remove_first] (0.1247ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508ea246898d65fd2d000004"} flags=[:remove_first] (0.1240ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508ea4a2898d65f92e000001"} flags=[:remove_first] (0.1254ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508ea4a2898d65f92e000003"} flags=[:remove_first] (0.1237ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508ea4a2898d65f92e000004"} flags=[:remove_first] (0.1245ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508ea6f0898d650230000001"} flags=[:remove_first] (0.1228ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508ea6f0898d650230000003"} flags=[:remove_first] (0.1242ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"508ea6f0898d650230000004"} flags=[:remove_first] (0.1245ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (155.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (168.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0972ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"email"=>"jfacundo"} flags=[:slave_ok] limit=1 skip=0 fields={:_id=>1} (0.6046ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=news_room_development collection=articles documents=[{"_id"=>"50904da2898d65be17000001", "headline"=>" Último cómputo: Oposición obtiene 43,10% y el oficialismo un 37,47% en alcaldes", "deck"=>"Subsecretario Rodrigo Ubilla entregó reporte que considera el 95,94 por ciento de las mesas escrutadas.", "story"=>"SANTIAGO.- Casi seis puntos porcentuales de diferencia en alcaldes arrojó el último cómputo oficial entregado este lunes por el subsecretario del Interior, Rodrigo Ubilla.\nDe acuerdo al reporte, que considera el 95,94 por ciento de las mesas escrutadas, la Coalición por el Cambio obtuvo un total de 1.1971.651 votos, equivalentes al 37,47%.\nMientras que los pactos opositores \"Por un Chile justo\" y \"Concertación democrática\" alcanzaron un 13,70% y 29,40%, respectivamente, que sumados llegan al 43,10 por ciento de las preferencias (2.267.638 sufragios).", "user_id"=>"50904da2898d65be17000002"}] flags=[] (0.2806ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=news_room_development collection=articles documents=[{"_id"=>"50904da2898d65be17000003", "headline"=>" Candidaturas de famosos: Cecilia Serrano y Carla Ochoa entre los ganadores", "deck"=>"Magaly Acevedo, Carla Ochoa y Lissette Sierra fueron algunas de las postulantes que ganaron con el respaldo de la UDI y RN, mientras que la oposición se destacó con Cecilia Serrano, Claudio Arredondo y Patricio Achurra.", "story"=>"SANTIAGO.-La derecha se impuso con ocho concejales pertenecientes al mundo del espectáculo en las elecciones de este domingo, en tanto que la Concertación alcanzó cinco triunfos.\nNo obstante, la periodista Cecilia Serrano  fue la única candidata independiente, apoyada por la Concertación Democrática, que logró un puesto en el consejo de la comuna de Las Condes.\nAsimismo, se consolidó como mayoría nacional tras ser escogida con 10.146 votos, es decir, el 14,58 por ciento."}] flags=[] (0.1011ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=news_room_development collection=articles documents=[{"_id"=>"50904da2898d65be17000004", "headline"=>"Líderes de España e Italia presiden cumbre bilateral centrada en crisis económica", "deck"=>"Mariano Rajoy y Mario Monti tendrán ocasión de analizar la posibilidad de solicitar ayuda financiera a la UE y ratificarán su alianza en defensa de una unión bancaria europea. ", "story"=>"MADRID.- El Jefe del Ejecutivo español, Mariano Rajoy, recibió hoy con honores militares en el Palacio de la Moncloa al Primer Ministro italiano, Mario Monti, antes del comienzo de la XVII cumbre bilateral, centrada en la crisis económica que atraviesan ambos países.\nEn el cuarto encuentro bilateral que celebrarán este año, los dos mandatarios analizarán la situación económica y financiera y la necesidad de recuperar la confianza de los mercados para rebajar los altos intereses que se ven obligados a pagar ambos países."}] flags=[] (0.0679ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-30 18:59:51 -0300
+Processing by ArticlesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0822ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.6249ms)
+  Rendered articles/index.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 844ms (Views: 843.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 18:59:52 -0300
+Served asset /articles.css - 200 OK (20ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 18:59:52 -0300
+Served asset /sessions.css - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-10-30 18:59:52 -0300
+Served asset /bootstrap_and_overrides.css - 200 OK (13ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 18:59:52 -0300
+Served asset /news_agencies.css - 200 OK (9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 18:59:52 -0300
+Served asset /scaffolds.css - 200 OK (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 18:59:52 -0300
+Served asset /users.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:52 -0300
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:52 -0300
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:52 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (46ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:52 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (16ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (15ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (12ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /twitter/bootstrap.js - 200 OK (54ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /articles.js - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /bootstrap.js - 200 OK (26ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /news_agencies.js - 200 OK (5ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /sessions.js - 200 OK (4ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 18:59:53 -0300
+Served asset /users.js - 200 OK (7ms)
+
+
+Started GET "/articles/50904da2898d65be17000001" for 127.0.0.1 at 2012-10-30 18:59:57 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50904da2898d65be17000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9909ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={"_id"=>"50904da2898d65be17000001"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.4892ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"$query"=>{"_id"=>"50904da2898d65be17000002"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.4892ms)
+  Rendered articles/show.html.erb within layouts/application (82.7ms)
+Completed 500 Internal Server Error in 103ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    27: 
+    28: <p>
+    29:   <b>Author:</b>
+    30:   <%= @article.user.name %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/articles/show.html.erb:30:in `_app_views_articles_show_html_erb__565305138060236936_70161143607320'
+  app/controllers/articles_controller.rb:18:in `show'
+
+
+  Rendered /home/andrea/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /home/andrea/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/andrea/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+Connecting to database specified by database.yml
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6678ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=news_room_development command={:count=>"articles", :query=>{}} (0.2415ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3440ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"50904da2898d65be17000001"} flags=[:remove_first] (0.1862ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"50904da2898d65be17000003"} flags=[:remove_first] (0.1314ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"50904da2898d65be17000004"} flags=[:remove_first] (0.1252ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0307ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"email"=>"jfacundo"} flags=[:slave_ok] limit=1 skip=0 fields={:_id=>1} (0.6106ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Processing by ArticlesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7079ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3519ms)
+  Rendered articles/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 194ms (Views: 193.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /scaffolds.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /articles.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /news_agencies.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /sessions.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:22 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:23 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:23 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:23 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:23 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (50ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:23 -0300
+Served asset /articles.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:23 -0300
+Served asset /bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:23 -0300
+Served asset /news_agencies.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:23 -0300
+Served asset /sessions.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:23 -0300
+Served asset /users.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Processing by ArticlesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8960ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.2947ms)
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /articles.css - 304 Not Modified (35ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /articles.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /news_agencies.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 19:02:26 -0300
+Served asset /users.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6437ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"email"=>"jfacundo"} flags=[:slave_ok] limit=1 skip=0 fields={:_id=>1} (0.2816ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5491ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"email"=>"jfacundo"} flags=[:slave_ok] limit=1 skip=0 fields={:_id=>1} (0.3197ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5817ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"email"=>"jfacundo"} flags=[:slave_ok] limit=1 skip=0 fields={:_id=>1} (0.2868ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"$query"=>{"_id"=>"50904fe6898d656918000002"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.2263ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6523ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"email"=>"jfacundo"} flags=[:slave_ok] limit=1 skip=0 fields={:_id=>1} (0.3226ms)
+Connecting to database specified by database.yml
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7308ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.3710ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.9022ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=users selector={"_id"=>"508e9893898d65102a000001"} flags=[:remove_first] (0.1817ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9506ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"email"=>"jfacundo"} flags=[:slave_ok] limit=1 skip=0 fields={:_id=>1} (0.6111ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=news_room_development collection=users documents=[{"_id"=>"5090507d898d658218000001", "name"=>"José Facundo", "email"=>"jfacundo", "role"=>"journalist", "password_salt"=>"$2a$10$Fat488W.Q/7I0VcNLwNP7O", "password_hash"=>"$2a$10$Fat488W.Q/7I0VcNLwNP7O9iNjbb1J53rfYD2ctSVQlhACA3yQDza"}] flags=[] (0.1044ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"$query"=>{"_id"=>"5090507d898d658218000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.5286ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=news_room_development collection=articles documents=[{"_id"=>"5090507d898d658218000002", "name"=>"Último cómputo: Oposición obtiene 43,10% y el oficialismo un 37,47% en alcaldes", "deck"=>"Subsecretario Rodrigo Ubilla entregó reporte que considera el 95,94 por ciento de las mesas escrutadas.", "story"=>"SANTIAGO.- Casi seis puntos porcentuales de diferencia en alcaldes arrojó el último cómputo oficial entregado este lunes por el subsecretario del Interior, Rodrigo Ubilla.\nDe acuerdo al reporte, que considera el 95,94 por ciento de las mesas escrutadas, la Coalición por el Cambio obtuvo un total de 1.1971.651 votos, equivalentes al 37,47%.\nMientras que los pactos opositores \"Por un Chile justo\" y \"Concertación democrática\" alcanzaron un 13,70% y 29,40%, respectivamente, que sumados llegan al 43,10 por ciento de las preferencias (2.267.638 sufragios).", "user_id"=>"5090507d898d658218000001"}] flags=[] (0.2198ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=news_room_development collection=articles documents=[{"_id"=>"5090507d898d658218000003", "headline"=>" Candidaturas de famosos: Cecilia Serrano y Carla Ochoa entre los ganadores", "deck"=>"Magaly Acevedo, Carla Ochoa y Lissette Sierra fueron algunas de las postulantes que ganaron con el respaldo de la UDI y RN, mientras que la oposición se destacó con Cecilia Serrano, Claudio Arredondo y Patricio Achurra.", "story"=>"SANTIAGO.-La derecha se impuso con ocho concejales pertenecientes al mundo del espectáculo en las elecciones de este domingo, en tanto que la Concertación alcanzó cinco triunfos.\nNo obstante, la periodista Cecilia Serrano  fue la única candidata independiente, apoyada por la Concertación Democrática, que logró un puesto en el consejo de la comuna de Las Condes.\nAsimismo, se consolidó como mayoría nacional tras ser escogida con 10.146 votos, es decir, el 14,58 por ciento."}] flags=[] (0.1910ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=news_room_development collection=articles documents=[{"_id"=>"5090507d898d658218000004", "headline"=>"Líderes de España e Italia presiden cumbre bilateral centrada en crisis económica", "deck"=>"Mariano Rajoy y Mario Monti tendrán ocasión de analizar la posibilidad de solicitar ayuda financiera a la UE y ratificarán su alianza en defensa de una unión bancaria europea. ", "story"=>"MADRID.- El Jefe del Ejecutivo español, Mariano Rajoy, recibió hoy con honores militares en el Palacio de la Moncloa al Primer Ministro italiano, Mario Monti, antes del comienzo de la XVII cumbre bilateral, centrada en la crisis económica que atraviesan ambos países.\nEn el cuarto encuentro bilateral que celebrarán este año, los dos mandatarios analizarán la situación económica y financiera y la necesidad de recuperar la confianza de los mercados para rebajar los altos intereses que se ven obligados a pagar ambos países."}] flags=[] (0.1800ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Processing by ArticlesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7274ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3357ms)
+  Rendered articles/index.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 242ms (Views: 241.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /articles.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /news_agencies.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /sessions.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /users.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:17 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (51ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /articles.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /news_agencies.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /sessions.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 19:11:18 -0300
+Served asset /users.js - 304 Not Modified (5ms)
+
+
+Started GET "/articles/5090507d898d658218000002" for 127.0.0.1 at 2012-10-30 19:11:24 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5090507d898d658218000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5646ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={"_id"=>"5090507d898d658218000002"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.2508ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"$query"=>{"_id"=>"5090507d898d658218000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.4504ms)
+  Rendered articles/show.html.erb within layouts/application (43.1ms)
+Completed 500 Internal Server Error in 56ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    32: 
+    33: <p>
+    34:   <b>News Agency:</b>
+    35:   <%= @article.news_agency.name %>
+    36: </p>
+    37: 
+    38: <% if can? :update, @article %>
+  app/views/articles/show.html.erb:35:in `_app_views_articles_show_html_erb___2618871831676988540_70291502377460'
+  app/controllers/articles_controller.rb:18:in `show'
+
+
+  Rendered /home/andrea/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /home/andrea/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/andrea/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Processing by ArticlesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6533ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.4523ms)
+  Rendered articles/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /articles.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /news_agencies.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /articles.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /news_agencies.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:04 -0300
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/articles/5090507d898d658218000002" for 127.0.0.1 at 2012-10-30 19:16:06 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5090507d898d658218000002"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6552ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={"_id"=>"5090507d898d658218000002"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3419ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"$query"=>{"_id"=>"5090507d898d658218000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.6354ms)
+  Rendered articles/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 88ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /news_agencies.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /articles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /articles.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /news_agencies.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 19:16:07 -0300
+Served asset /users.js - 304 Not Modified (1ms)

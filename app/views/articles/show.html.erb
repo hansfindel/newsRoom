@@ -32,7 +32,7 @@
 
 <p>
   <b>News Agency:</b>
-  <%= @article.news_agency.name %>
+  <%= @article.news_agency.name if @article.news_agency%>
 </p>
 
 <% if can? :update, @article %>
