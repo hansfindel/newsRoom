@@ -852,3 +852,1079 @@ Served asset /articles.js - 304 Not Modified (1ms)
 
 Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-28 23:53:34 -0300
 Served asset /news_agencies.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-30 15:49:34 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (33.4ms)
+Compiled articles.css  (53ms)  (pid 4841)
+Compiled news_agencies.css  (1ms)  (pid 4841)
+Compiled scaffolds.css  (13ms)  (pid 4841)
+Compiled sessions.css  (1ms)  (pid 4841)
+Compiled users.css  (1ms)  (pid 4841)
+Compiled application.css  (136ms)  (pid 4841)
+Compiled jquery.js  (40ms)  (pid 4841)
+Compiled jquery_ujs.js  (0ms)  (pid 4841)
+Compiled articles.js  (490ms)  (pid 4841)
+Compiled news_agencies.js  (138ms)  (pid 4841)
+Compiled sessions.js  (134ms)  (pid 4841)
+Compiled users.js  (136ms)  (pid 4841)
+Compiled application.js  (1027ms)  (pid 4841)
+Completed 200 OK in 1354ms (Views: 1353.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:36 -0300
+Served asset /users.js - 200 OK (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:36 -0300
+Served asset /users.css - 200 OK (2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:36 -0300
+Served asset /articles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:36 -0300
+Served asset /sessions.css - 200 OK (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:36 -0300
+Served asset /sessions.js - 200 OK (3ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:36 -0300
+Served asset /news_agencies.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:36 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:36 -0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:36 -0300
+Served asset /articles.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:36 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:36 -0300
+Served asset /news_agencies.js - 304 Not Modified (2ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2012-10-30 15:49:47 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:47 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:47 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:47 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:47 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:47 -0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:47 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:47 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vENmwnEnWlSgaPn2mYcvnh+K3xQZ4BLCsGyZfSt2CQk=", "user"=>{"name"=>"A", "email"=>"A", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8969ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"email"=>"A"} flags=[:slave_ok] limit=1 skip=0 fields={:_id=>1} (0.6194ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=news_room_development collection=users documents=[{"_id"=>"50902157848403e912000001", "name"=>"A", "email"=>"A", "password_salt"=>"$2a$10$1MLTEctXG.P3RZIT29sJ9u", "password_hash"=>"$2a$10$1MLTEctXG.P3RZIT29sJ9urLpkDyifo4bDG2j6WymokUvg17LHKdm"}] flags=[] (0.2153ms)
+Redirected to http://localhost:3000/users/50902157848403e912000001
+Completed 302 Found in 159ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/50902157848403e912000001" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"50902157848403e912000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"_id"=>"50902157848403e912000001"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.6642ms)
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Served asset /articles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Served asset /news_agencies.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:49:59 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7963ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.4201ms)
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Served asset /articles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:07 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Processing by ArticlesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7708ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.2778ms)
+  Rendered articles/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 64ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Served asset /sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Served asset /articles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:14 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/50901d408484035010000001" for 127.0.0.1 at 2012-10-30 15:50:17 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50901d408484035010000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0068ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={"_id"=>"50901d408484035010000001"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.6132ms)
+  Rendered articles/show.html.erb within layouts/application (26.7ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    27: 
+    28: <p>
+    29:   <b>Author:</b>
+    30:   <%= @article.user.name %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/articles/show.html.erb:30:in `_app_views_articles_show_html_erb___955356908__623433688'
+  app/controllers/articles_controller.rb:18:in `show'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.3ms)
+
+
+Started GET "/articles/50901d408484035010000001/edit" for 127.0.0.1 at 2012-10-30 15:50:32 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"50901d408484035010000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={"_id"=>"50901d408484035010000001"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.5996ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=news_agencies selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.5617ms)
+  Rendered articles/_grades.html.erb (1.4ms)
+  Rendered articles/_form.html.erb (30.8ms)
+  Rendered articles/edit.html.erb within layouts/application (73.7ms)
+Completed 500 Internal Server Error in 79ms
+
+ActionView::Template::Error (undefined method `role' for nil:NilClass):
+    1:   <% if current_user.role.eql?"editor" %>
+    2:   <div class="field">
+    3:       <%= f.label :editors_grade %><br />
+    4:       <%= f.text_field :editors_grade %>
+  app/views/articles/_grades.html.erb:1:in `_app_views_articles__grades_html_erb___161284954_98395910'
+  app/views/articles/_form.html.erb:43:in `block in _app_views_articles__form_html_erb___819369823__624109268'
+  app/views/articles/_form.html.erb:1:in `_app_views_articles__form_html_erb___819369823__624109268'
+  app/views/articles/edit.html.erb:3:in `_app_views_articles_edit_html_erb__125501624__628010668'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.2ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.9ms)
+
+
+Started DELETE "/articles/50901d408484035010000001" for 127.0.0.1 at 2012-10-30 15:50:38 -0300
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vENmwnEnWlSgaPn2mYcvnh+K3xQZ4BLCsGyZfSt2CQk=", "id"=>"50901d408484035010000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={"_id"=>"50901d408484035010000001"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.4992ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=news_room_development collection=articles selector={"_id"=>"50901d408484035010000001"} flags=[:remove_first] (0.1242ms)
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-10-30 15:50:38 -0300
+Processing by ArticlesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3002ms)
+  Rendered articles/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:39 -0300
+Served asset /news_agencies.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:39 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:39 -0300
+Served asset /sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:39 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:39 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:39 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:39 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:39 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:39 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:39 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:39 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-10-30 15:50:40 -0300
+Processing by ArticlesController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6962ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=news_agencies selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.2592ms)
+  Rendered articles/_grades.html.erb (0.8ms)
+  Rendered articles/_form.html.erb (45.2ms)
+  Rendered articles/new.html.erb within layouts/application (47.4ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (undefined method `role' for nil:NilClass):
+    1:   <% if current_user.role.eql?"editor" %>
+    2:   <div class="field">
+    3:       <%= f.label :editors_grade %><br />
+    4:       <%= f.text_field :editors_grade %>
+  app/views/articles/_grades.html.erb:1:in `_app_views_articles__grades_html_erb___161284954_98395910'
+  app/views/articles/_form.html.erb:43:in `block in _app_views_articles__form_html_erb___819369823__624109268'
+  app/views/articles/_form.html.erb:1:in `_app_views_articles__form_html_erb___819369823__624109268'
+  app/views/articles/new.html.erb:3:in `_app_views_articles_new_html_erb___734529760__616890328'
+  app/controllers/articles_controller.rb:29:in `new'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.1ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Served asset /news_agencies.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Served asset /articles.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Served asset /sessions.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:50:52 -0300
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-30 15:50:57 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vENmwnEnWlSgaPn2mYcvnh+K3xQZ4BLCsGyZfSt2CQk=", "email"=>"a", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6413ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"$query"=>{"email"=>"a"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.3505ms)
+Completed 500 Internal Server Error in 4ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document not found for class User with attributes {:email=>"a"}.
+Summary:
+  When calling User.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+Resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  app/models/user.rb:26:in `authenticate'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Served asset /news_agencies.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Served asset /news_agencies.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:51:08 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Processing by ArticlesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2975ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3629ms)
+  Rendered articles/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Served asset /news_agencies.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Served asset /news_agencies.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:53:02 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-10-30 15:53:05 -0300
+Processing by ArticlesController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7946ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=news_agencies selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3586ms)
+  Rendered articles/_grades.html.erb (0.7ms)
+  Rendered articles/_form.html.erb (10.2ms)
+  Rendered articles/new.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `role' for nil:NilClass):
+    1:   <% if current_user.role.eql?"editor" %>
+    2:   <div class="field">
+    3:       <%= f.label :editors_grade %><br />
+    4:       <%= f.text_field :editors_grade %>
+  app/views/articles/_grades.html.erb:1:in `_app_views_articles__grades_html_erb___161284954_98395910'
+  app/views/articles/_form.html.erb:43:in `block in _app_views_articles__form_html_erb___819369823__624109268'
+  app/views/articles/_form.html.erb:1:in `_app_views_articles__form_html_erb___819369823__624109268'
+  app/views/articles/new.html.erb:3:in `_app_views_articles_new_html_erb___734529760__616890328'
+  app/controllers/articles_controller.rb:29:in `new'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+
+
+Started GET "/articles.json" for 127.0.0.1 at 2012-10-30 15:56:20 -0300
+Processing by ArticlesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.2344ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Processing by ArticlesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.2787ms)
+  Rendered articles/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:25 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-10-30 15:56:31 -0300
+Processing by ArticlesController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7510ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=news_agencies selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3643ms)
+  Rendered articles/_grades.html.erb (0.8ms)
+  Rendered articles/_form.html.erb (10.5ms)
+  Rendered articles/new.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `role' for nil:NilClass):
+    1:   <% if current_user.role.eql?"editor" %>
+    2:   <div class="field">
+    3:       <%= f.label :editors_grade %><br />
+    4:       <%= f.text_field :editors_grade %>
+  app/views/articles/_grades.html.erb:1:in `_app_views_articles__grades_html_erb___161284954_98395910'
+  app/views/articles/_form.html.erb:43:in `block in _app_views_articles__form_html_erb___819369823__624109268'
+  app/views/articles/_form.html.erb:1:in `_app_views_articles__form_html_erb___819369823__624109268'
+  app/views/articles/new.html.erb:3:in `_app_views_articles_new_html_erb___734529760__616890328'
+  app/controllers/articles_controller.rb:29:in `new'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.4ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.9ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Served asset /articles.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Served asset /news_agencies.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:45 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Served asset /articles.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Served asset /news_agencies.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:56:48 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-30 15:56:54 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vENmwnEnWlSgaPn2mYcvnh+K3xQZ4BLCsGyZfSt2CQk=", "email"=>"a", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6454ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"$query"=>{"email"=>"a"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.4063ms)
+Completed 500 Internal Server Error in 4ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document not found for class User with attributes {:email=>"a"}.
+Summary:
+  When calling User.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+Resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  app/models/user.rb:26:in `authenticate'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-10-30 15:57:04 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vENmwnEnWlSgaPn2mYcvnh+K3xQZ4BLCsGyZfSt2CQk=", "email"=>"A", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"$query"=>{"email"=>"A"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.7503ms)
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 111ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Processing by ArticlesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3693ms)
+  Rendered articles/index.html.erb within layouts/application (1.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"_id"=>"50902157848403e912000001"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.4330ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Served asset /news_agencies.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Served asset /articles.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Served asset /articles.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:05 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Processing by ArticlesController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6974ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=news_agencies selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.5307ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"_id"=>"50902157848403e912000001"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.4659ms)
+  Rendered articles/_grades.html.erb (1.6ms)
+  Rendered articles/_form.html.erb (14.1ms)
+  Rendered articles/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Served asset /articles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:57:08 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-10-30 15:57:20 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vENmwnEnWlSgaPn2mYcvnh+K3xQZ4BLCsGyZfSt2CQk=", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"10", "published_on(3i)"=>"30", "headline"=>"asd", "deck"=>"asd", "story"=>"asd", "grade"=>"2"}, "commit"=>"Create Article"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6275ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=news_room_development collection=articles documents=[{"_id"=>"50902310848403e912000002", "headline"=>"asd", "deck"=>"asd", "story"=>"asd", "grade"=>2.0, "published_on"=>2012-10-30 00:00:00 UTC}] flags=[] (0.1450ms)
+Redirected to http://localhost:3000/articles/50902310848403e912000002
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50902310848403e912000002" for 127.0.0.1 at 2012-10-30 15:57:20 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50902310848403e912000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={"_id"=>"50902310848403e912000002"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.5710ms)
+  Rendered articles/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    27: 
+    28: <p>
+    29:   <b>Author:</b>
+    30:   <%= @article.user.name %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/articles/show.html.erb:30:in `_app_views_articles_show_html_erb___955356908__623433688'
+  app/controllers/articles_controller.rb:18:in `show'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.4ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-10-30 15:57:45 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vENmwnEnWlSgaPn2mYcvnh+K3xQZ4BLCsGyZfSt2CQk=", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"10", "published_on(3i)"=>"30", "headline"=>"asd", "deck"=>"asd", "story"=>"asd", "grade"=>"2"}, "commit"=>"Create Article"}
+  MOPED: 127.0.0.1:27017 INSERT       database=news_room_development collection=articles documents=[{"_id"=>"50902329848403e912000003", "headline"=>"asd", "deck"=>"asd", "story"=>"asd", "grade"=>2.0, "published_on"=>2012-10-30 00:00:00 UTC}] flags=[] (0.2425ms)
+Redirected to http://localhost:3000/articles/50902329848403e912000003
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50902329848403e912000003" for 127.0.0.1 at 2012-10-30 15:57:45 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50902329848403e912000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={"_id"=>"50902329848403e912000003"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.4539ms)
+  Rendered articles/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    27: 
+    28: <p>
+    29:   <b>Author:</b>
+    30:   <%= @article.user.name %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/articles/show.html.erb:30:in `_app_views_articles_show_html_erb___955356908__623433688'
+  app/controllers/articles_controller.rb:18:in `show'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Processing by ArticlesController#new as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=news_agencies selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (1.0483ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=users selector={"_id"=>"50902157848403e912000001"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.4511ms)
+  Rendered articles/_grades.html.erb (1.2ms)
+  Rendered articles/_form.html.erb (10.9ms)
+  Rendered articles/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Served asset /articles.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Served asset /articles.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Served asset /news_agencies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-10-30 15:58:04 -0300
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-10-30 15:58:16 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vENmwnEnWlSgaPn2mYcvnh+K3xQZ4BLCsGyZfSt2CQk=", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"10", "published_on(3i)"=>"30", "headline"=>"ds", "deck"=>"asd", "story"=>"ds", "grade"=>"2"}, "commit"=>"Create Article"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5441ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=news_room_development collection=articles documents=[{"_id"=>"50902348848403e912000004", "headline"=>"ds", "deck"=>"asd", "story"=>"ds", "grade"=>2.0, "published_on"=>2012-10-30 00:00:00 UTC}] flags=[] (0.1433ms)
+Redirected to http://localhost:3000/articles/50902348848403e912000004
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50902348848403e912000004" for 127.0.0.1 at 2012-10-30 15:58:16 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50902348848403e912000004"}
+  MOPED: 127.0.0.1:27017 QUERY        database=news_room_development collection=articles selector={"_id"=>"50902348848403e912000004"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.4838ms)
+  Rendered articles/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    27: 
+    28: <p>
+    29:   <b>Author:</b>
+    30:   <%= @article.user.name %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/articles/show.html.erb:30:in `_app_views_articles_show_html_erb___955356908__623433688'
+  app/controllers/articles_controller.rb:18:in `show'
+
+
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/francisco/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.3ms)
