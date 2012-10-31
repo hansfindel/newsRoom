@@ -10,12 +10,14 @@
       </ul>
     </div>
   <% end %>
+
   <% if @article.new_record? %>
     <div class="field">
       <%= f.label :published_on %><br />
       <%= f.date_select :published_on %>
     </div>
   <% end %>
+
   <div class="field">
     <%= f.label :headline %><br />
     <%= f.text_field :headline %>
@@ -30,11 +32,18 @@
   </div>
 
 
-<div class="field">
-  <%= f.label :news_agency_id %><br />
-  <%= f.collection_select :news_agency_id, NewsAgency.all, :id, :name %>
-</div>
+  <div class="field">
+    <%= f.label :news_agency_id %><br />
+    <%= f.collection_select :news_agency_id, NewsAgency.all, :id, :name %>
+  </div>
 
+    <div class="field">
+      <%= f.label :grade %><br />
+      <%= f.text_field :grade %>
+    </div>
+
+
+  <%= render :partial => 'grades', :locals =>{:f => f} %>
 
   <div class="actions">
     <%= f.submit %>

@@ -20,6 +20,22 @@
   <%= @article.published_on %>
 </p>
 
+<p>
+  <b>Grade:</b>
+  <%= @article.grade %>
+</p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
+<p>
+  <b>Author:</b>
+  <%= @article.user.name %>
+</p>
+
+<p>
+  <b>News Agency:</b>
+  <%= @article.news_agency.name if @article.news_agency%>
+</p>
+
+<% if can? :update, @article %>
+	<%= link_to 'Edit', edit_article_path(@article) %> |
+<% end %>
 <%= link_to 'Back', articles_path %>

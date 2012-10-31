@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-gem 'mongoid'#, '~> 3.0.2'
 gem 'feedzirra'
+gem 'mongoid', '~> 3.0.2'
+gem 'cancan'
 
 group :development do
 	gem 'sqlite3'
@@ -29,6 +30,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'

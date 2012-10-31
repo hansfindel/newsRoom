@@ -1,0 +1,19 @@
+<h1>Listing News</h1>
+
+<table>
+  <tr>
+    <th>Headline</th>
+    <th>Deck</th>
+    <th>Story</th>
+    <th></th>
+  </tr>
+
+<% @json.each do |j| %>
+  <tr>
+    <td><%= j['headline'] %></td>
+    <td><%= j['deck'] %></td>
+    <td><%= j['story'] %></td>
+    <td><%= link_to 'Show',  :controller => "noticia", :action => "show", :id => j['_id'] %></td>
+  </tr>
+<% end %>
+</table>
