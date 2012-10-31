@@ -79,4 +79,14 @@ class ArticlesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def fetch_and_store
+    @value = Glutton.fetch
+    FeedProcessor.process_feeds(@value)
+    redirect_to articles_path, notice: "New feeds were fetched"
+  end
+  def process_feeds
+    FeedProcessor.process_feeds
+    redirect_to articles_path, notice: "New feeds were processed"
+  end
 end

@@ -83,9 +83,12 @@ test:
 production:
   sessions:
     default:
+      #uri for mongolab
+      #uri: mongodb://hans:hans@ds041357.mongolab.com:41357/heroku_app8798946
+      #uris for mongohq
       #uri: <%= ENV['mongo_access'] %>
-      uri: <%= ENV['MONGOHQ_URL']
-      #uri: mongodb://hans:hans@alex.mongohq.com:10093/app8798946
+      #uri: <%= ENV['MONGOHQ_URL']
+      uri: mongodb://hans:hans@alex.mongohq.com:10093/app8798946
       options:
         skip_version_check: true
         safe: false

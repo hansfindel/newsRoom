@@ -1,4 +1,5 @@
 <h1>Listing articles</h1>
+<%= link_to "Populate by glutton", store_glutton_feeds_path %>
 
 <table>
   <tr>
@@ -13,7 +14,7 @@
 <% @articles.each do |article| %>
   <tr>
     <td><%= article.headline %></td>
-    <td><%= article.deck %></td>
+    <td><%= simple_format article.deck %></td>
     <td><%= article.story %></td>
     <td><%= link_to 'Show', article %></td>
     <td><%= link_to 'Edit', edit_article_path(article) %></td>

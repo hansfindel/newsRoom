@@ -4,13 +4,13 @@ NewsRoom::Application.routes.draw do
   get "log_out" => "sessions#destroy", :as => "log_out"
 
   get "sign_up" => "users#new", :as => "sign_up"
+  get "glutton/store" => "articles#fetch_and_store", :as => "store_glutton_feeds"
+  get "feeds_processor/process" => "articles#process_feeds", :as => "process_feeds"
   root :to => "sessions#new"
   
   resources :users
   resources :sessions
-
   resources :news_agencies
-
   resources :articles
   
   # The priority is based upon order of creation:
