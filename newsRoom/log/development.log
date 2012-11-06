@@ -1,0 +1,154 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-26 13:05:12 -0300
+Served asset /rails.png - 200 OK (16ms)
+
+
+Started GET "/noticia" for 127.0.0.1 at 2012-10-26 13:05:28 -0300
+Processing by NoticiaController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'noticia'):
+  app/controllers/noticia_controller.rb:5:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/noticias" for 127.0.0.1 at 2012-10-26 13:05:32 -0300
+
+ActionController::RoutingError (No route matches [GET] "/noticias"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (143.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (122.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateNoticia (20121026160419)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "noticia" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar(255), "bajada" varchar(255), "cuerpo" varchar(255), "autor" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121026160419')
+  [1m[36m (103.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("noticia")
+
+
+Started GET "/noticia" for 127.0.0.1 at 2012-10-26 13:09:02 -0300
+Processing by NoticiaController#index as HTML
+  [1m[36mNoticium Load (1.0ms)[0m  [1mSELECT "noticia".* FROM "noticia" [0m
+  Rendered noticia/index.html.erb within layouts/application (3.0ms)
+Compiled noticia.css  (42ms)  (pid 3552)
+Compiled scaffolds.css  (12ms)  (pid 3552)
+Compiled application.css  (98ms)  (pid 3552)
+Compiled jquery.js  (5ms)  (pid 3552)
+Compiled jquery_ujs.js  (0ms)  (pid 3552)
+Compiled noticia.js  (386ms)  (pid 3552)
+Compiled application.js  (572ms)  (pid 3552)
+Completed 200 OK in 845ms (Views: 842.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/noticia.css?body=1" for 127.0.0.1 at 2012-10-26 13:09:03 -0300
+Served asset /noticia.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 13:09:03 -0300
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 13:09:03 -0300
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 13:09:03 -0300
+Served asset /jquery.js - 200 OK (20ms)
+
+
+Started GET "/assets/noticia.js?body=1" for 127.0.0.1 at 2012-10-26 13:09:03 -0300
+Served asset /noticia.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 13:09:03 -0300
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 13:09:03 -0300
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/noticia/new" for 127.0.0.1 at 2012-10-26 13:09:21 -0300
+Processing by NoticiaController#new as HTML
+  Rendered noticia/_form.html.erb (22.0ms)
+  Rendered noticia/new.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 108ms (Views: 91.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2012-10-26 13:09:55 -0300
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wiu0Z9kE9B5SkuyVb111F3TBYoI8CZZ2YdVjg5ys93A=", "noticium"=>{"titulo"=>"Massu ganó un partido", "bajada"=>"El tenista...", "cuerpo"=>"El jueves el tenista ganó...", "autor"=>"Diego Carey"}, "commit"=>"Create Noticium"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (23.0ms)[0m  [1mINSERT INTO "noticia" ("autor", "bajada", "created_at", "cuerpo", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["autor", "Diego Carey"], ["bajada", "El tenista..."], ["created_at", Fri, 26 Oct 2012 16:09:55 UTC +00:00], ["cuerpo", "El jueves el tenista ganó..."], ["titulo", "Massu ganó un partido"], ["updated_at", Fri, 26 Oct 2012 16:09:55 UTC +00:00]]
+  [1m[35m (130.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/noticia/1
+Completed 302 Found in 156ms (ActiveRecord: 153.0ms)
+
+
+Started GET "/noticia/1" for 127.0.0.1 at 2012-10-26 13:09:55 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (0.0ms)[0m  [1mSELECT "noticia".* FROM "noticia" WHERE "noticia"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered noticia/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/noticia.css?body=1" for 127.0.0.1 at 2012-10-26 13:09:55 -0300
+Served asset /noticia.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 13:09:55 -0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/noticia.js?body=1" for 127.0.0.1 at 2012-10-26 13:09:56 -0300
+Served asset /noticia.js - 304 Not Modified (0ms)
+
+
+Started GET "/noticia" for 127.0.0.1 at 2012-10-26 13:09:59 -0300
+Processing by NoticiaController#index as HTML
+  [1m[35mNoticium Load (1.0ms)[0m  SELECT "noticia".* FROM "noticia" 
+  Rendered noticia/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/noticia.css?body=1" for 127.0.0.1 at 2012-10-26 13:09:59 -0300
+Served asset /noticia.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 13:09:59 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/noticia.js?body=1" for 127.0.0.1 at 2012-10-26 13:09:59 -0300
+Served asset /noticia.js - 304 Not Modified (0ms)
