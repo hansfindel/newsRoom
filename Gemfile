@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 gem 'feedzirra'
-gem 'mongoid', '~> 3.0.2'
+#gem 'mongoid', '~> 3.0.2'
+gem "mongoid", "2.0.1"
 gem 'cancan'
 
 group :development do

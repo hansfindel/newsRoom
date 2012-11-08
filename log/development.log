@@ -122,3 +122,325 @@ Served asset /users.js - 304 Not Modified (1ms)
 
 Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-10-30 22:23:31 -0300
 Served asset /sessions.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (65ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/article.rb:2)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/article.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/news_agency.rb:18)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/user.rb:3)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /Users/hansfindel/Sites/u/arqui_software/newsRoom/config/environment.rb:5)
+
+
+Started GET "/assets/favicon_32.png" for 127.0.0.1 at 2012-11-08 14:17:12 -0300
+Served asset /favicon_32.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon_32.png"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/hansfindel/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/assets/favicon_32.png" for 127.0.0.1 at 2012-11-08 14:17:12 -0300
+Served asset /favicon_32.png - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon_32.png"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/hansfindel/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-08 14:19:15 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 500ms (Views: 499.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /articles.css - 200 OK (1ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /news_agencies.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /sessions.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /jquery.js - 200 OK (53ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (48ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (20ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (67ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (2ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /articles.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /twitter/bootstrap.js - 200 OK (20ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /news_agencies.js - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /sessions.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-08 14:19:17 -0300
+Served asset /users.css - 200 OK (1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-08 14:19:25 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (31ms) rails3_mongoid_devise_development['articles'].find({})
+  Rendered articles/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 64ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/noticieros" for 127.0.0.1 at 2012-11-08 14:19:32 -0300
+
+ActionController::RoutingError (No route matches [GET] "/noticieros"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/hansfindel/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/notice" for 127.0.0.1 at 2012-11-08 14:19:38 -0300
+
+ActionController::RoutingError (No route matches [GET] "/notice"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/hansfindel/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/notices" for 127.0.0.1 at 2012-11-08 14:19:41 -0300
+
+ActionController::RoutingError (No route matches [GET] "/notices"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/hansfindel/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/news_agency" for 127.0.0.1 at 2012-11-08 14:20:27 -0300
+
+ActionController::RoutingError (No route matches [GET] "/news_agency"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.6) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hansfindel/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/hansfindel/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/news_agencies" for 127.0.0.1 at 2012-11-08 14:20:32 -0300
+Processing by NewsAgenciesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['news_agencies'].find({})
+  Rendered news_agencies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 82ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news_agencies/new" for 127.0.0.1 at 2012-11-08 14:20:35 -0300
+Processing by NewsAgenciesController#new as HTML
+  Rendered news_agencies/_form.html.erb (105.8ms)
+  Rendered news_agencies/new.html.erb within layouts/application (768.8ms)
+Completed 200 OK in 790ms (Views: 789.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/news_agencies" for 127.0.0.1 at 2012-11-08 14:21:40 -0300
+Processing by NewsAgenciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"feIyu7kSnEuFCgKmMyBpfU6CNknI9qhpBANrRFDKXac=", "news_agency"=>{"name"=>"Mashable", "feed_url"=>"http://feeds.mashable.com/mashable"}, "commit"=>"Create News agency"}
+MONGODB (0ms) rails3_mongoid_devise_development['news_agencies'].insert([{"name"=>"Mashable", "feed_url"=>"http://feeds.mashable.com/mashable", "_id"=>BSON::ObjectId('509bea249a8a902c5b000003')}])
+Redirected to http://localhost:3000/news_agencies/509bea249a8a902c5b000003
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/news_agencies/509bea249a8a902c5b000003" for 127.0.0.1 at 2012-11-08 14:21:40 -0300
+Processing by NewsAgenciesController#show as HTML
+  Parameters: {"id"=>"509bea249a8a902c5b000003"}
+MONGODB (2781ms) rails3_mongoid_devise_development['news_agencies'].find({:_id=>BSON::ObjectId('509bea249a8a902c5b000003')}).limit(-1)
+  Rendered news_agencies/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3029ms (Views: 247.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news_agencies" for 127.0.0.1 at 2012-11-08 14:21:49 -0300
+Processing by NewsAgenciesController#index as HTML
+MONGODB (54ms) rails3_mongoid_devise_development['news_agencies'].find({})
+  Rendered news_agencies/index.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 79ms (Views: 78.6ms | ActiveRecord: 0.0ms)
