@@ -1343,3 +1343,5 @@ ActionView::Template::Error (Could not connect to any secondary or primary nodes
   app/controllers/articles_controller.rb:7:in `index'
 
 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
