@@ -23,7 +23,7 @@ class User
 
 
 def self.authenticate(email, password)
-    user = User.find_by(email: email)
+    user = User.where(:email => email).first
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
       user
     else
