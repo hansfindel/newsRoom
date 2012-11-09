@@ -2048,3 +2048,409 @@ MONGODB [DEBUG] Logging level is currently :debug which could negatively impact 
 MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
 DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /media/Storage/Proyectos/news-room/config/environment.rb:5)
   [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/article.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/news_agency.rb:18)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/user.rb:3)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /media/Storage/Proyectos/news-room/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-09 17:08:17 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_development['articles'].find({})
+  Rendered articles/index.html.erb within layouts/application (11.0ms)
+Compiled twitter/bootstrap/bootstrap-transition.js  (0ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-alert.js  (0ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-modal.js  (0ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (0ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (0ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-tab.js  (0ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (1ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-popover.js  (0ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-button.js  (0ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (0ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (1ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (0ms)  (pid 23589)
+Compiled twitter/bootstrap/bootstrap-affix.js  (0ms)  (pid 23589)
+Compiled twitter/bootstrap.js  (514ms)  (pid 23589)
+Compiled application.js  (583ms)  (pid 23589)
+Completed 200 OK in 934ms (Views: 932.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /articles.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /sessions.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /news_agencies.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /users.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /scaffolds.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (14ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (14ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (19ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (15ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (19ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (56ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:18 -0300
+Served asset /articles.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:19 -0300
+Served asset /sessions.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:19 -0300
+Served asset /news_agencies.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-09 17:08:19 -0300
+Served asset /users.js - 304 Not Modified (5ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /media/Storage/Proyectos/news-room/config/environment.rb:5)
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /media/Storage/Proyectos/news-room/config/environment.rb:5)
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/user.rb:3)
+MONGODB (1ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"users", "query"=>{:email=>"jfacundo"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].insert([{"name"=>"José Facundo", "email"=>"jfacundo", "role"=>"journalist", "_id"=>BSON::ObjectId('509d630e898d655c6e000001'), "password_salt"=>"$2a$10$OoYo8y.YXCcWGahV3/dWkO", "password_hash"=>"$2a$10$OoYo8y.YXCcWGahV3/dWkObyNAZVXltKEN29byzWkk0y0.6kuTYDK"}])
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/news_agency.rb:18)
+MONGODB (0ms) rails3_mongoid_devise_development['news_agencies'].insert([{"name"=>"IPS News", "url"=>"www.ipsnews.net", "_id"=>BSON::ObjectId('509d630e898d655c6e000002')}])
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/article.rb:2)
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].insert([{"_id"=>BSON::ObjectId('509d630e898d655c6e000003'), "headline"=>"Último cómputo: Oposición obtiene 43,10% y el oficialismo un 37,47% en alcaldes", "deck"=>"Subsecretario Rodrigo Ubilla entregó reporte que considera el 95,94 por ciento de las mesas escrutadas.", "story"=>"SANTIAGO.- Casi seis puntos porcentuales de diferencia en alcaldes arrojó el último cómputo oficial entregado este lunes por el subsecretario del Interior, Rodrigo Ubilla.\nDe acuerdo al reporte, que considera el 95,94 por ciento de las mesas escrutadas, la Coalición por el Cambio obtuvo un total de 1.1971.651 votos, equivalentes al 37,47%.\nMientras que los pactos opositores \"Por un Chile justo\" y \"Concertación democrática\" alcanzaron un 13,70% y 29,40%, respectivamente, que sumados llegan al 43,10 por ciento de las preferencias (2.267.638 sufragios).", "user_id"=>BSON::ObjectId('509d630e898d655c6e000001')}])
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].insert([{"headline"=>" Candidaturas de famosos: Cecilia Serrano y Carla Ochoa entre los ganadores", "deck"=>"Magaly Acevedo, Carla Ochoa y Lissette Sierra fueron algunas de las postulantes que ganaron con el respaldo de la UDI y RN, mientras que la oposición se destacó con Cecilia Serrano, Claudio Arredondo y Patricio Achurra.", "story"=>"SANTIAGO.-La derecha se impuso con ocho concejales pertenecientes al mundo del espectáculo en las elecciones de este domingo, en tanto que la Concertación alcanzó cinco triunfos.\nNo obstante, la periodista Cecilia Serrano  fue la única candidata independiente, apoyada por la Concertación Democrática, que logró un puesto en el consejo de la comuna de Las Condes.\nAsimismo, se consolidó como mayoría nacional tras ser escogida con 10.146 votos, es decir, el 14,58 por ciento.", "_id"=>BSON::ObjectId('509d630e898d655c6e000004')}])
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].insert([{"headline"=>"Líderes de España e Italia presiden cumbre bilateral centrada en crisis económica", "deck"=>"Mariano Rajoy y Mario Monti tendrán ocasión de analizar la posibilidad de solicitar ayuda financiera a la UE y ratificarán su alianza en defensa de una unión bancaria europea. ", "story"=>"MADRID.- El Jefe del Ejecutivo español, Mariano Rajoy, recibió hoy con honores militares en el Palacio de la Moncloa al Primer Ministro italiano, Mario Monti, antes del comienzo de la XVII cumbre bilateral, centrada en la crisis económica que atraviesan ambos países.\nEn el cuarto encuentro bilateral que celebrarán este año, los dos mandatarios analizarán la situación económica y financiera y la necesidad de recuperar la confianza de los mercados para rebajar los altos intereses que se ven obligados a pagar ambos países.", "_id"=>BSON::ObjectId('509d630e898d655c6e000005')}])
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/article.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/news_agency.rb:18)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/user.rb:3)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /media/Storage/Proyectos/news-room/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-09 17:10:21 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_development['articles'].find({})
+  Rendered articles/index.html.erb within layouts/application (103.6ms)
+Completed 200 OK in 407ms (Views: 405.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-09 17:10:21 -0300
+Served asset /scaffolds.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-09 17:10:21 -0300
+Served asset /news_agencies.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-09 17:10:21 -0300
+Served asset /users.css - 304 Not Modified (56ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /articles.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /sessions.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (53ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /articles.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /news_agencies.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /sessions.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-09 17:10:22 -0300
+Served asset /users.js - 304 Not Modified (56ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/article.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/news_agency.rb:18)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/user.rb:3)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /media/Storage/Proyectos/news-room/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-09 17:14:19 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].find({})
+  Rendered articles/index.html.erb within layouts/application (5.5ms)
+Compiled bootstrap_and_overrides.css  (1993ms)  (pid 23683)
+Compiled application.css  (2098ms)  (pid 23683)
+Compiled bootstrap.js  (150ms)  (pid 23683)
+Compiled application.js  (194ms)  (pid 23683)
+Completed 200 OK in 2716ms (Views: 2714.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /articles.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /bootstrap_and_overrides.css - 200 OK (11ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /news_agencies.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:22 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:23 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:23 -0300
+Served asset /twitter/bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:23 -0300
+Served asset /articles.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:23 -0300
+Served asset /bootstrap.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:23 -0300
+Served asset /news_agencies.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:23 -0300
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-09 17:14:23 -0300
+Served asset /users.js - 304 Not Modified (1ms)
