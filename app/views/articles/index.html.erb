@@ -1,5 +1,5 @@
 <h1>NewsRoom</h1>
-<%= link_to "Populate by glutton", store_glutton_feeds_path %>
+
 <h2> Noticias principales </h2>
 <div class="row">
   <div class="span8 offset2">
@@ -16,4 +16,5 @@
 
 <%if can? :create, Article %>
 <%= link_to 'New Article', new_article_path %>
+<%= link_to "Populate by glutton", store_glutton_feeds_path %>
 <% end %>
