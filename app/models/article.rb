@@ -8,7 +8,7 @@ class Article
   field :published_on,  type: Date
   field :guid,          type: String
   field :url,           type: String
-  field :categories,    type: Array
+  #field :categories,    type: Array
   
   field :grade, type: Float
   field :editors_grade, type: Integer
@@ -17,6 +17,12 @@ class Article
 
   belongs_to :news_agency
   belongs_to :user
+  has_many :article_categories
+  has_many :categories, :through => :article_categories
+
+  before_save :categorize
+
+  #scope :with_category, ->(name){ where(name: name) }
 
   def add_grade
   	self.grade = (self.grade + 
@@ -27,4 +33,23 @@ class Article
   	self.save
   end
 
+  def user_name
+    if user
+      return user.name
+    else
+      return ""
+    end
+  end
+
+  def categorize
+    category_names.each do |c|
+      ArticleCategory.construct(self, c)
+    end
+  end
+  def category_names=(array)
+    @category_names = array
+  end
+  def category_names
+    @category_names
+  end
 end

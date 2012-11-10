@@ -18,7 +18,7 @@ class FeedProcessor
           :url             => entry.url,
           :published_on    => entry.published,
           :guid            => entry.id,
-          :categories      => entry.categories
+          :category_names  => entry.categories
         )
       end
     end
