@@ -6,7 +6,7 @@ NewsRoom::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   get "glutton/store" => "articles#fetch_and_store", :as => "store_glutton_feeds"
   get "feeds_processor/process" => "articles#process_feeds", :as => "process_feeds"
-  root :to => "sessions#new"
+  root :to => "articles#index"
 
   
   resources :users

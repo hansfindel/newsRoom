@@ -20,9 +20,16 @@ class Article
   has_many :article_categories
   has_many :categories, :through => :article_categories
 
+
+  before_save :categorize
+  after_save :create_guid
   #before_save :categorize
 
   #scope :with_category, ->(name){ where(name: name) }
+
+  validates_presence_of :headline, message: "Headline must be present"
+  
+
 
   def add_grade
   	self.grade = (self.grade + 
@@ -42,8 +49,10 @@ class Article
   end
 
   def categorize
-    category_names.each do |c|
-      ArticleCategory.construct(self, c)
+    if available_category_names
+      category_names.each do |c|
+        ArticleCategory.construct(self, c)
+      end
     end
   end
   def category_names=(array)
@@ -52,4 +61,19 @@ class Article
   def category_names
     @category_names
   end
+
+  def available_category_names
+    return false if @category_names.nil?
+    return false if !(@category_names.class.eql?(Array))
+    return false if @category_names.empty?
+    return true
+  end
+
+  def create_guid
+    if self.guid.blank?
+      guid = self._id.to_s
+    end
+  end
+
+
 end
