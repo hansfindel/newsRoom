@@ -11,10 +11,10 @@ class Ability
         elsif roles.include?'journalist'
             can :read, :all
             can :update, Article, :user => user
-        elsif uroles.include?'editor'
+        elsif roles.include?'editor'
             can :read, :all
             can :manage, Article
-        elsif uroles.include?'chief_editor'
+        elsif roles.include?'chief_editor'
             can :read, :all
             can :manage, Article
         elsif roles.include?'chief_editor_country'
