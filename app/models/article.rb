@@ -20,8 +20,11 @@ class Article
   has_many :article_categories
   has_many :categories, :through => :article_categories
 
+
   before_save :categorize
   after_save :create_guid
+  #before_save :categorize
+
   #scope :with_category, ->(name){ where(name: name) }
 
   validates_presence_of :headline, message: "Headline must be present"

@@ -5,18 +5,19 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
     user ||= User.new # guest user (not logged in)
-        if user.role.eql?'admin'
+    roles = Ability.get_permissions(user.role)
+        if roles.include?'admin'
             can :manage, :all
-        elsif user.role.eql?'journalist'
+        elsif roles.include?'journalist'
             can :read, :all
-            can :update, Article, :author => user
-        elsif user.role.eql?'editor'
-            can :read, :all
-            can :manage, Article
-        elsif user.role.eql?'chief_editor'
+            can :update, Article, :user => user
+        elsif roles.include?'editor'
             can :read, :all
             can :manage, Article
-        elsif user.role.eql?'chief_editor_country'
+        elsif roles.include?'chief_editor'
+            can :read, :all
+            can :manage, Article
+        elsif roles.include?'chief_editor_country'
             can :read, :all
             can :manage, Article
         else
@@ -37,4 +38,21 @@ class Ability
     #
     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
   end
+
+  def self.get_permissions(number)
+    binary = []
+    permissions = []
+    while number != 0
+        binary.append(number%2)
+        number = number/2
+    end
+    
+    (0..binary.size-1).each do |i|
+        if binary[i] == 1
+            permissions.append(User::ROLES[i])
+        end
+    end
+    return permissions
+  end
+
 end

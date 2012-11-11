@@ -8,8 +8,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-soledad = User.create!(name:"José Facundo", email:"jfacundo2", password:"1234", password_confirmation:"1234", 
-	role:"journalist")
+
+roles = User::ROLES #arreglo con los posibles roles de los usuarios
+User.create!(name:"Admin", email:"admin", password:"1234", password_confirmation:"1234", 
+	role:roles[1])
+
+soledad = User.create!(name:"José Facundo", email:"jfacundo", password:"1234", password_confirmation:"1234", 
+	role:roles[2])
+
 
 reuter = NewsAgency.create!(name:"IPS News", url:"www.ipsnews.net")
 
