@@ -6,6 +6,10 @@ gem 'feedzirra'
 gem "mongoid", "2.0.1"
 gem 'cancan'
 
+gem 'therubyracer'
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+
 group :development do
 	gem 'sqlite3'
 end
@@ -36,6 +40,14 @@ end
 
 gem 'jquery-rails'
 
+gem 'rspec-rails', :group => [:development, :test]
+group :test do 
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'mongoid-rspec'
+  gem 'capybara'
+  gem 'launchy'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

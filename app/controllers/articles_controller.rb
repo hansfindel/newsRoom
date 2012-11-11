@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
     @article.editors_grade = 0;
     @article.chief_editor_grade = 0;
     @article.chief_editor_country_grade = 0;
-    if current_user.role.eql?'journalist'
+    if current_role.eql?'journalist'
       @article.user = current_user
     end
     respond_to do |format|
@@ -67,7 +67,7 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       if @article.update_attributes(params[:article])
 
-        if(!(current_user.role.eql?'reader') && !(current_user.role.eql?'journalist'))
+        if(!(current_role.eql?'reader') && !(current_role.eql?'journalist'))
           @article.add_grade
         end
 
