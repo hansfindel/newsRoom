@@ -55,7 +55,4 @@ class Ability
     return permissions
   end
 
-  def self.permissions_num(str)
-    return 2 ** User.ROLES.index(str)
-  end
 end
