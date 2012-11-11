@@ -14,7 +14,7 @@
 </div>
 
 
-<%if can? :create, Article %>
+<% if can? :create, Article %>
 <%= link_to 'New Article', new_article_path %>
 <%= link_to "Populate by glutton", store_glutton_feeds_path %>
 <% end %>
