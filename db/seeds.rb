@@ -8,10 +8,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-soledad = User.create!(name:"José Facundo", email:"jfacundo", password:"1234", password_confirmation:"1234", 
-	role:"journalist")
+User.create!(name:"Admin", email:"admin", password:"1234", password_confirmation:"1234", 
+	role:1)
 
-reuter = NewsAgency.create!(:name"IPS News", url:"www.ipsnews.net")
+soledad = User.create!(name:"José Facundo", email:"jfacundo", password:"1234", password_confirmation:"1234", 
+	role:2)
+
+reuter = NewsAgency.create!(name:"IPS News", url:"www.ipsnews.net")
 
 soledad.articles.create!(headline: 'Último cómputo: Oposición obtiene 43,10% y el oficialismo un 37,47% en alcaldes', 
 	deck:'Subsecretario Rodrigo Ubilla entregó reporte que considera el 95,94 por ciento de las mesas escrutadas.', 

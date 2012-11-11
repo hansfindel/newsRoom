@@ -20,9 +20,17 @@
     <%= f.text_field :email %>
   </div>
   
+  <% roles = Ability.get_permissions(current_user.role) %>
+  <% if roles.include?"admin" %>
+
     <div class="field">
-      <%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+      
+      <!--<%= f.collection_select :role, User::ROLES, :to_s , :humanize %>-->
+      <% map = User::ROLES.map{|a| [a, 2 ** User::ROLES.index(a)]} %>
+      <%= f.select :role, options_for_select(map, @user.role) %>
     </div>
+
+  <% end %>
 
   <div class="actions">
     <%= f.submit %>
