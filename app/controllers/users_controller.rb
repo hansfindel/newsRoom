@@ -56,10 +56,16 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = User.find(params[:id])
-
+    aux = 0
+    User::ROLES.each do |r|
+      if params[:role][r] != nil
+        aux = aux + params[:role][r].to_i
+      end
+    end
+    params[:user][:role] = aux  
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to @user, notice: 'User was successfully updated.'}
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
