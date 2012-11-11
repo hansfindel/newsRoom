@@ -11,10 +11,10 @@
 
 roles = User::ROLES #arreglo con los posibles roles de los usuarios
 User.create!(name:"Admin", email:"admin", password:"1234", password_confirmation:"1234", 
-	role:roles[1])
+	role:1)
 
 soledad = User.create!(name:"José Facundo", email:"jfacundo", password:"1234", password_confirmation:"1234", 
-	role:roles[2])
+	role:2)
 
 
 reuter = NewsAgency.create!(name:"IPS News", url:"www.ipsnews.net")
