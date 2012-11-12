@@ -40,6 +40,9 @@ class Ability
   end
 
   def self.get_permissions(number=0)
+    if not number
+        number = 0
+    end
     binary = []
     permissions = []
     while number != 0

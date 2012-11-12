@@ -216,7 +216,11 @@ DEPENDENCIES
   launchy
   less-rails
   mongoid (= 2.0.1)
+<<<<<<< HEAD
+=======
   mongoid-rspec
+  pg
+>>>>>>> f7db9b9f3d3ec015e4a42ccb743ee54cc769dc68
   rails (= 3.2.6)
   rspec-rails
   sass-rails (~> 3.2.3)
