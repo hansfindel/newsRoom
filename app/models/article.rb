@@ -18,7 +18,7 @@ class Article
   belongs_to :news_agency
   belongs_to :user
   has_many :article_categories
-  has_many :categories, :through => :article_categories
+  has_many :categories, through: :article_categories
 
 
   before_save :categorize

@@ -39,7 +39,7 @@ class Ability
     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
   end
 
-  def self.get_permissions(number)
+  def self.get_permissions(number=0)
     binary = []
     permissions = []
     while number != 0
