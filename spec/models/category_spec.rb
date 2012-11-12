@@ -17,7 +17,7 @@ describe Category do
   	it "should create new category if does not exists" do
   		Category.where(name: "ThisNewCategory").count == 0
   		category = create(:category, :name => "ThisNewCategory")
-		Category.where(name: "ThisNewCategory").count != 0
+		  Category.where(name: "ThisNewCategory").count != 0
 	end
 
 	it "should not create a new category if already exists" do
