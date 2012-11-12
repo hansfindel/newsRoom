@@ -290,3 +290,177 @@ Served asset /sessions.js - 200 OK (3ms)
 
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-11 19:54:35 -0300
 Served asset /users.js - 200 OK (5ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/pablo/news-room-testing/app/models/article.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/pablo/news-room-testing/app/models/article_category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/pablo/news-room-testing/app/models/category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/pablo/news-room-testing/app/models/news_agency.rb:18)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/pablo/news-room-testing/app/models/user.rb:3)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /home/pablo/news-room-testing/config/environment.rb:5)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/pablo/news-room-testing/app/models/article.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/pablo/news-room-testing/app/models/article_category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/pablo/news-room-testing/app/models/category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/pablo/news-room-testing/app/models/news_agency.rb:18)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/pablo/news-room-testing/app/models/user.rb:3)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /home/pablo/news-room-testing/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-12 11:32:24 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_development['articles'].find({})
+  Rendered articles/index.html.erb within layouts/application (7.0ms)
+Compiled articles.css  (69ms)  (pid 6605)
+Compiled bootstrap_and_overrides.css  (1056ms)  (pid 6605)
+Compiled news_agencies.css  (2ms)  (pid 6605)
+Compiled scaffolds.css  (18ms)  (pid 6605)
+Compiled sessions.css  (1ms)  (pid 6605)
+Compiled users.css  (1ms)  (pid 6605)
+Compiled application.css  (1308ms)  (pid 6605)
+Compiled jquery.js  (13ms)  (pid 6605)
+Compiled jquery_ujs.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-transition.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-alert.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-modal.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-tab.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-popover.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-button.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap/bootstrap-affix.js  (0ms)  (pid 6605)
+Compiled twitter/bootstrap.js  (244ms)  (pid 6605)
+Compiled articles.js  (50ms)  (pid 6605)
+Compiled bootstrap.js  (3ms)  (pid 6605)
+Compiled news_agencies.js  (0ms)  (pid 6605)
+Compiled sessions.js  (0ms)  (pid 6605)
+Compiled users.js  (0ms)  (pid 6605)
+Compiled application.js  (518ms)  (pid 6605)
+Completed 200 OK in 2205ms (Views: 2204.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /news_agencies.css - 200 OK (15ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /sessions.css - 200 OK (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /scaffolds.css - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /bootstrap_and_overrides.css - 200 OK (5ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /articles.css - 200 OK (4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /users.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /jquery.js - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (76ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (10ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /twitter/bootstrap.js - 200 OK (27ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /articles.js - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /bootstrap.js - 200 OK (3ms)
+
+
+Started GET "/assets/news_agencies.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /news_agencies.js - 200 OK (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /sessions.js - 200 OK (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-11-12 11:32:26 -0300
+Served asset /users.js - 200 OK (4ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2012-11-12 11:32:37 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2012-11-12 11:32:39 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (77.5ms)
+Completed 200 OK in 161ms (Views: 159.3ms | ActiveRecord: 0.0ms)
