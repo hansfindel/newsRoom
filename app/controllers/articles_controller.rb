@@ -104,7 +104,7 @@ class ArticlesController < ApplicationController
   end
   
   def show_non_published
-     @articles = Article.where(:is_published => false)
+    @articles = Article.where(:is_published => false)
 
     respond_to do |format|
       format.html # index.html.erb

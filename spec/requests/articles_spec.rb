@@ -13,20 +13,53 @@ describe Article do
       get articles_path
       response.status.should be(200)
     end
-    it "displays articles" do
+    it "displays not published articles in the not published area" do
       @article = build(:article)
+      @article.is_published = false
+	  @article.save.should eq(true)
+	  headline = @article.headline
+      get non_published_articles_path
+      response.body.should include(headline)
+    end
+
+    it "does not display not published articles in the published area" do
+      @article = build(:article)
+      @article.headline = "my headline is not displayed in published areas"
+      @article.is_published = false
+	  @article.save.should eq(true)
+	  headline = @article.headline
+      get articles_path
+      response.body.should_not include(headline)
+    end
+
+   	it "displays published articles in published area" do
+      @article = build(:article)
+      @article.is_published = true
 	  @article.save.should eq(true)
 	  headline = @article.headline
       get articles_path
       response.body.should include(headline)
+    end
+    it "does not display published articles in not published area" do
+      @article = build(:article)
+      @article.headline = "basdf"
+      @article.is_published = true
+	  @article.save.should eq(true)
+	  headline = @article.headline
+      get non_published_articles_path
+      response.body.should_not include(headline)
     end
   end
 
   describe "post /articles" do # should be by every role: as journalist" do
     it "displays articles" do
       headline = "holo"
+      prev_count = Article.all.count
       post_via_redirect articles_path, article: {headline: headline, story: "story"}
       response.body.should include(headline)
+      post_count = Article.all.count
+      (post_count > prev_count).should be_true
+      (Article.where(headline: headline).size > 0).should be_true
     end
 
     it "create through the form" do 

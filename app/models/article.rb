@@ -23,15 +23,19 @@ class Article
 
 
   before_save :categorize
+  before_save :not_published
   after_save :create_guid
-  #before_save :categorize
 
   #scope :with_category, ->(name){ where(name: name) }
 
   validates_presence_of :headline, message: "Headline must be present"
   
-
-
+  def not_published
+    unless is_published
+      is_published = false      
+    end
+    true   #it does not prevent the object being saved
+  end
   def add_grade
   	self.grade = (self.grade + 
   		self.editors_grade + 

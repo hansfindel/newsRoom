@@ -18,7 +18,7 @@ describe Article do
 
 		it "it should be saved" do 
 			@article.headline = "uniq"
-			@article.save.should eq(true)
+			@article.save.should be_true
 		end
 		#it "should test uniqueness of url"
 	end
@@ -27,10 +27,10 @@ describe Article do
 	describe "#article can be updated" do
 		it "update article" do
 			@article.headline = "unique"
-			@article.save.should eq(true)
-			@article.new_record?.should eq(false)
+			@article.save.should be_true
+			@article.new_record?.should be_false
 			@article.deck = "it is an article"
-			@article.save.should eq(true)
+			@article.save.should be_true
 		end 
     end
 

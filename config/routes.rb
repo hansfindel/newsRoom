@@ -7,6 +7,7 @@ NewsRoom::Application.routes.draw do
   get "glutton/store" => "articles#fetch_and_store", :as => "store_glutton_feeds"
   get "feeds_processor/process" => "articles#process_feeds", :as => "process_feeds"
   get "non_published" => "articles#show_non_published", :as => "non_published"
+  get "articles/non_published" => "articles#show_non_published", :as => "non_published_articles"
   root :to => "articles#index"
   
   
