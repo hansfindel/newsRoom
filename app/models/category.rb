@@ -5,6 +5,7 @@ class Category
 
   has_many :article_categories
   has_many :article, :through => :article_categories
+  validates_presence_of :name
 
   def self.construct(name)
   	category = Category.where(name: name)

@@ -19,4 +19,9 @@ FactoryGirl.define do
 	  u.name "categoria nueva"
 	end
 
+	factory :news_agency do
+		name "Agencia Nueva"
+		feed_url "http://urltest.com"
+	end
+
 end
