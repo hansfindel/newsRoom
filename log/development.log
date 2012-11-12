@@ -464,3 +464,24 @@ Started GET "/sign_up" for 127.0.0.1 at 2012-11-12 11:32:39 -0300
 Processing by UsersController#new as HTML
   Rendered users/new.html.erb within layouts/application (77.5ms)
 Completed 200 OK in 161ms (Views: 159.3ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/article.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/article_category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/news_agency.rb:18)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/user.rb:3)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /media/Storage/Proyectos/news-room/config/environment.rb:5)
+MONGODB (8ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"categories", "query"=>{}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['categories'].remove({})
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/article.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/article_category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/news_agency.rb:18)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /media/Storage/Proyectos/news-room/app/models/user.rb:3)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /media/Storage/Proyectos/news-room/config/environment.rb:5)
+MONGODB (1ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"categories", "query"=>{}, "fields"=>nil}).limit(-1)

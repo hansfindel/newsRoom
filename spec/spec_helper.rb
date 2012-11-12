@@ -49,9 +49,4 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
-  config.after(:each) do  #RSpec dejaba guardada la informacion entre pruebas, tuve que agregar esto.  
-    Category.delete_all
-    User.delete_all
-  end
-
 end

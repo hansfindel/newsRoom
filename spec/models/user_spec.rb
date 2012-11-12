@@ -33,10 +33,11 @@ describe User do
 		end
 
 		it "it should be saved" do 
-			@user.password = "hola"
-			@user.password_confirmation = "hola"
-			@user.email =  "hola2@hola.com"
-			@user.save.should == true
+			#@user.password = "hola"
+			#@user.password_confirmation = "hola"
+			#@user.email =  "hola2@hola.com"
+			#@user.save.should == true
+			build(:user, password: "hola", password_confirmation: "hola", email: "hola@hola.com").save  == true
 		end
 		
 	end

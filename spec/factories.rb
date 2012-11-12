@@ -15,6 +15,8 @@ FactoryGirl.define do
 	  u.role User::ROLES[-1]  #READER
 	end
 	
-	#definir otros constructores para los modelos
+	factory :category do |u|
+	  u.name "categoria nueva"
+	end
 
 end

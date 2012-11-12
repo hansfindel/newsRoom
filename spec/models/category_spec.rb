@@ -1,16 +1,18 @@
 require 'spec_helper'
 
 describe Category do
+	before :each do
+		@category = Category.new
+	end
 
   	it "should be valid" do
-      	category = Category.new(:name => "category")
+      	@category.name = "category"
+      	@category.save == true
   	end
 
   	it "should create new category if does not exists" do
-  		Category.where(name: "ThisNewCategory").empty?.should eq(true)
-  		category = Category.new(:name => "ThisNewCategory")
-  		category.save
-  		Category.where(name: "ThisNewCategory").empty?.should eq(false)
-  	end
-
+  		Category.where(name: "ThisNewCategory").count == 0
+  		category = create(:category, :name => "ThisNewCategory")
+		Category.where(name: "ThisNewCategory").count != 0
+	end
 end
