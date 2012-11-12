@@ -8,6 +8,7 @@ class Article
   field :published_on,  type: Date
   field :guid,          type: String
   field :url,           type: String
+  field :is_published,  type: Boolean
   #field :categories,    type: Array
   
   field :grade, type: Float

@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.where(:is_published => true)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -101,5 +101,14 @@ class ArticlesController < ApplicationController
   def process_feeds
     FeedProcessor.process_feeds
     redirect_to articles_path, notice: "New feeds were processed"
+  end
+  
+  def show_non_published
+     @articles = Article.where(:is_published => false)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @articles }
+    end
   end
 end
