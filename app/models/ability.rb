@@ -8,9 +8,6 @@ class Ability
     roles = Ability.get_permissions(user.role)
         if roles.include?'admin'
             can :manage, :all
-        elsif roles.include?'journalist'
-            can :read, :all
-            can :update, Article, :user => user
         elsif roles.include?'editor'
             can :read, :all
             can :manage, Article
@@ -20,6 +17,9 @@ class Ability
         elsif roles.include?'chief_editor_country'
             can :read, :all
             can :manage, Article
+        elsif roles.include?'journalist'
+            can :read, :all
+            can :update, Article, :user => user
         else
             can :read, Article
        end

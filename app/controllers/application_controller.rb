@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
   def current_role
   	unless current_user.blank?
-  		current_user.role 
+  		Ability.get_permissions(current_user.role)
   	else
   		User::ROLES[-1]
   	end

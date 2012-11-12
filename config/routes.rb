@@ -8,6 +8,8 @@ NewsRoom::Application.routes.draw do
   get "feeds_processor/process" => "articles#process_feeds", :as => "process_feeds"
   get "non_published" => "articles#show_non_published", :as => "non_published"
   get "articles/non_published" => "articles#show_non_published", :as => "non_published_articles"
+  get "articles/chief_editors" => "articles#chief_editors_non_published", :as => "chief_editors"
+  get "articles/chief_editors_country" => "articles#chief_editors_country_non_published", :as => "chief_editors_country"
   root :to => "articles#index"
   
   

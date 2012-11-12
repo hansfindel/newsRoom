@@ -2,6 +2,8 @@ class Article
   include Mongoid::Document
   include Mongoid::MultiParameterAttributes
 
+  PUBLISH_GRADE = 15
+
   field :headline,      type: String
   field :deck,          type: String
   field :story,         type: String
@@ -42,6 +44,9 @@ class Article
   		self.chief_editor_grade + 
   		self.chief_editor_country_grade)
 
+    if self.grade >= Article::PUBLISH_GRADE
+      self.is_published = true
+    end
   	self.save
   end
 

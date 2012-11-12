@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
     @article.editors_grade = 0;
     @article.chief_editor_grade = 0;
     @article.chief_editor_country_grade = 0;
-    if current_role.eql?'journalist'
+    if current_role.include?('journalist')
       @article.user = current_user
     end
     respond_to do |format|
@@ -67,7 +67,7 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       if @article.update_attributes(params[:article])
 
-        if(!(current_role.eql?'reader') && !(current_role.eql?'journalist'))
+        if(current_role.include?('editor') || current_role.include?('chief_editor') || current_role.include?('chief_editor_country'))
           @article.add_grade
         end
 
@@ -104,10 +104,28 @@ class ArticlesController < ApplicationController
   end
   
   def show_non_published
-    @articles = Article.where(:is_published => false)
+    @articles = Article.where(:is_published => false, :editors_grade =>0, :user_id =>! current_user._id)
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
+      format.json { render json: @articles }
+    end
+  end
+
+  def chief_editors_non_published
+    @articles = Article.where(:is_published => false, :chief_editor_grade =>0, :user_id =>! current_user._id)
+
+    respond_to do |format|
+      format.html { render :template => "articles/show_non_published" }
+      format.json { render json: @articles }
+    end
+  end
+
+  def chief_editors_country_non_published
+    @articles = Article.where(:is_published => false, :chief_editor_country_grade =>0, :user_id =>! current_user._id)
+
+    respond_to do |format|
+      format.html { render :template => "articles/show_non_published" } 
       format.json { render json: @articles }
     end
   end

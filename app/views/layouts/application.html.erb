@@ -16,8 +16,14 @@
       <%= link_to "News Agencies", news_agencies_path %>
       <%= link_to "User Manager", users_path %>
     <% end %>
-    <% if roles.include?"admin" or roles.include?"editor" or roles.include?"chief_editor" or roles.include?"chief_editor_country" %>
-    	<%= link_to "Non Published Articles", non_published_path %>
+    <% if roles.include?"admin" or roles.include?"editor" %>
+    	<%= link_to "Editor Evaluation", non_published_path %>
+    <% end %>
+    <% if roles.include?"admin" or roles.include?"chief_editor" %>
+      <%= link_to "Chief Editor Evaluation", chief_editors_path %>
+    <% end %>
+    <% if roles.include?"admin" or roles.include?"chief_editor_country" %>
+      <%= link_to "Chief Country Editor Evaluation", chief_editors_country_path %>
     <% end %>
     Logged in as <%= current_user.email %>
     <%= link_to "Log out", log_out_path %>
