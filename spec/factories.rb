@@ -14,7 +14,7 @@ FactoryGirl.define do
 	  u.password "1234"
 	  u.role User::ROLES[-1]  #READER
 	end
+	
 	#definir otros constructores para los modelos
-
 
 end
