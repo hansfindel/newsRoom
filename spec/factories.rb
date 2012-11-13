@@ -8,11 +8,11 @@ FactoryGirl.define do
 	  story 'it is an article'
 	end
 
-	factory :user do |u|
-	  u.name "user"
-	  u.email "user@example.com"
-	  u.password "1234"
-	  u.role User::ROLES[-1]  #READER
+	factory :user do 
+	  name "user"
+	  email "user@example.com"
+	  password "1234"
+	  role User::ROLES[-1]  #READER
 	end
 	#definir otros constructores para los modelos
 

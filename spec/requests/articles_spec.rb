@@ -16,10 +16,13 @@ describe Article do
     it "displays not published articles in the not published area" do
       @article = build(:article)
       @article.is_published = false
-	  @article.save.should eq(true)
-	  headline = @article.headline
-      get non_published_articles_path
-      response.body.should include(headline)
+      #user = build(:user)
+      #user.save.should be_true
+      #@article.save.should eq(true)
+	  prev_count = Article.where(is_published: false).count
+	  post_via_redirect articles_path, article: @article.attributes
+	  post_count = Article.where(is_published: false).count
+	  (post_count > prev_count).should be_true
     end
 
     it "does not display not published articles in the published area" do

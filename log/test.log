@@ -2596,3 +2596,924 @@ MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
   Rendered articles/_grades.html.erb (0.0ms)
   Rendered articles/_form.html.erb (5.7ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2339266a860aeb6000003'), "headline"=>"uniq"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2339266a860aeb6000004'), "headline"=>"unique"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].update({"_id"=>BSON::ObjectId('50a2339266a860aeb6000004')}, {"$set"=>{"deck"=>"it is an article"}})
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2339266a860aeb6000005'), "headline"=>"my headline is not displayed in published areas", "story"=>"it is an article", "is_published"=>false}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:48:34 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+  Rendered articles/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2339366a860aeb6000007'), "headline"=>"Article 2", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:48:35 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:48:35 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2339366a860aeb600000a'), "headline"=>"Article 3", "story"=>"it is an article", "is_published"=>false}])
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 08:48:35 -0300
+Processing by ArticlesController#show_non_published as HTML
+Completed 500 Internal Server Error in 0ms
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2339366a860aeb600000b'), "headline"=>"basdf", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 08:48:35 -0300
+Processing by ArticlesController#show_non_published as HTML
+Completed 500 Internal Server Error in 0ms
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:48:35 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"headline"=>"holo", "story"=>"story"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"holo", "story"=>"story", "_id"=>BSON::ObjectId('50a2339366a860aeb600000c'), "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2339366a860aeb600000c
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2339366a860aeb600000c" for 127.0.0.1 at 2012-11-13 08:48:35 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2339366a860aeb600000c"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2339366a860aeb600000c')}).limit(-1)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:headline=>"holo"})
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:48:35 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (45.0ms)
+Completed 200 OK in 92ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:48:35 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>0.0, "published_on"=>2012-11-13 00:00:00 UTC, "_id"=>BSON::ObjectId('50a2339366a860aeb600000f'), "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2339366a860aeb600000f
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2339366a860aeb600000f" for 127.0.0.1 at 2012-11-13 08:48:35 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2339366a860aeb600000f"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2339366a860aeb600000f')}).limit(-1)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:48:35 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (37.3ms)
+Completed 200 OK in 39ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:48:35 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"", "deck"=>"", "story"=>"ice", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.0ms)
+  Rendered articles/_form.html.erb (6.2ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2347b66a860aeb9000002'), "headline"=>"unique"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].update({"_id"=>BSON::ObjectId('50a2347b66a860aeb9000002')}, {"$set"=>{"deck"=>"it is an article"}})
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2347b66a860aeb9000004'), "headline"=>"uniq"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2347b66a860aeb9000005'), "headline"=>"Article 1", "story"=>"it is an article", "is_published"=>false}])
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 08:52:27 -0300
+Processing by ArticlesController#show_non_published as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>false, :editors_grade=>0, :user_id=>true})
+  Rendered articles/show_non_published.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2347c66a860aeb9000006'), "headline"=>"Article 2", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:52:28 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2347c66a860aeb9000008'), "headline"=>"basdf", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 08:52:28 -0300
+Processing by ArticlesController#show_non_published as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>false, :editors_grade=>0, :user_id=>true})
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2347c66a860aeb9000009'), "headline"=>"my headline is not displayed in published areas", "story"=>"it is an article", "is_published"=>false}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:52:28 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 6ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:52:28 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 6ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:52:28 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"headline"=>"holo", "story"=>"story"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"holo", "story"=>"story", "_id"=>BSON::ObjectId('50a2347c66a860aeb900000c'), "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2347c66a860aeb900000c
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2347c66a860aeb900000c" for 127.0.0.1 at 2012-11-13 08:52:28 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2347c66a860aeb900000c"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2347c66a860aeb900000c')}).limit(-1)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:headline=>"holo"})
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:52:28 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.6ms)
+  Rendered articles/_form.html.erb (9.5ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:52:28 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"", "deck"=>"", "story"=>"ice", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (6.3ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:52:28 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (5.8ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:52:28 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>0.0, "published_on"=>2012-11-13 00:00:00 UTC, "_id"=>BSON::ObjectId('50a2347c66a860aeb9000011'), "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2347c66a860aeb9000011
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2347c66a860aeb9000011" for 127.0.0.1 at 2012-11-13 08:52:28 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2347c66a860aeb9000011"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2347c66a860aeb9000011')}).limit(-1)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (44.9ms)
+  Rendered articles/new.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 60ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"", "deck"=>"", "story"=>"ice", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (6.6ms)
+  Rendered articles/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"headline"=>"holo", "story"=>"story"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"holo", "story"=>"story", "_id"=>BSON::ObjectId('50a2352566a860aec1000003'), "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2352566a860aec1000003
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2352566a860aec1000003" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2352566a860aec1000003"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2352566a860aec1000003')}).limit(-1)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:headline=>"holo"})
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (5.4ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>0.0, "published_on"=>2012-11-13 00:00:00 UTC, "_id"=>BSON::ObjectId('50a2352566a860aec1000006'), "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2352566a860aec1000006
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2352566a860aec1000006" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2352566a860aec1000006"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2352566a860aec1000006')}).limit(-1)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"_id"=>"50a2352566a860aec1000008", "headline"=>"Article 1", "story"=>"it is an article", "is_published"=>"false"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2352566a860aec1000008'), "headline"=>"Article 1", "story"=>"it is an article", "is_published"=>false, "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2352566a860aec1000008
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2352566a860aec1000008" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2352566a860aec1000008"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2352566a860aec1000008')}).limit(-1)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#show_non_published as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>false, :editors_grade=>0, :user_id=>true})
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2352566a860aec100000a'), "headline"=>"Article 2", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2352566a860aec100000d'), "headline"=>"my headline is not displayed in published areas", "story"=>"it is an article", "is_published"=>false}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (10ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 16ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2352566a860aec100000f'), "headline"=>"basdf", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 08:55:17 -0300
+Processing by ArticlesController#show_non_published as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>false, :editors_grade=>0, :user_id=>true})
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2352566a860aec1000010'), "headline"=>"unique"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].update({"_id"=>BSON::ObjectId('50a2352566a860aec1000010')}, {"$set"=>{"deck"=>"it is an article"}})
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2352566a860aec1000012'), "headline"=>"uniq"}])
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2359666a860aec3000002'), "headline"=>"unique"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].update({"_id"=>BSON::ObjectId('50a2359666a860aec3000002')}, {"$set"=>{"deck"=>"it is an article"}})
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2359666a860aec3000004'), "headline"=>"uniq"}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:57:10 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+  Rendered articles/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 23ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+MONGODB (12ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>"user@example.com"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2359666a860aec3000008'), "headline"=>"my headline is not displayed in published areas", "story"=>"it is an article", "is_published"=>false}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:57:10 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2359666a860aec300000a'), "headline"=>"Article 3", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:57:10 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2359666a860aec300000c'), "headline"=>"basdf", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 08:57:10 -0300
+Processing by ArticlesController#show_non_published as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>false, :editors_grade=>0, :user_id=>true})
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:57:10 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"headline"=>"holo", "story"=>"story"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"holo", "story"=>"story", "_id"=>BSON::ObjectId('50a2359666a860aec300000d'), "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2359666a860aec300000d
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2359666a860aec300000d" for 127.0.0.1 at 2012-11-13 08:57:10 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2359666a860aec300000d"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2359666a860aec300000d')}).limit(-1)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:headline=>"holo"})
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:57:10 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (8.8ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:57:10 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"", "deck"=>"", "story"=>"ice", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (5.9ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:57:10 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (5.6ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:57:10 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>0.0, "published_on"=>2012-11-13 00:00:00 UTC, "_id"=>BSON::ObjectId('50a2359666a860aec3000012'), "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2359666a860aec3000012
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2359666a860aec3000012" for 127.0.0.1 at 2012-11-13 08:57:10 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2359666a860aec3000012"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2359666a860aec3000012')}).limit(-1)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a235c366a860aec5000003'), "headline"=>"uniq"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a235c366a860aec5000004'), "headline"=>"unique"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].update({"_id"=>BSON::ObjectId('50a235c366a860aec5000004')}, {"$set"=>{"deck"=>"it is an article"}})
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a235c366a860aec5000005'), "headline"=>"basdf", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 08:57:55 -0300
+Processing by ArticlesController#show_non_published as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>false, :editors_grade=>0, :user_id=>true})
+  Rendered articles/show_non_published.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a235c366a860aec5000006'), "headline"=>"Article 2", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:57:55 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a235c366a860aec5000008'), "headline"=>"my headline is not displayed in published areas", "story"=>"it is an article", "is_published"=>false}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:57:55 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>"user@example.com"}, "fields"=>nil}).limit(-1)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:57:55 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:57:55 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"headline"=>"holo", "story"=>"story"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"holo", "story"=>"story", "_id"=>BSON::ObjectId('50a235c366a860aec500000d'), "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a235c366a860aec500000d
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a235c366a860aec500000d" for 127.0.0.1 at 2012-11-13 08:57:55 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a235c366a860aec500000d"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a235c366a860aec500000d')}).limit(-1)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:headline=>"holo"})
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:57:55 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (8.5ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:57:55 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>0.0, "published_on"=>2012-11-13 00:00:00 UTC, "_id"=>BSON::ObjectId('50a235c366a860aec5000010'), "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a235c366a860aec5000010
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a235c366a860aec5000010" for 127.0.0.1 at 2012-11-13 08:57:55 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a235c366a860aec5000010"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a235c366a860aec5000010')}).limit(-1)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:57:55 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (36.1ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:57:55 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"", "deck"=>"", "story"=>"ice", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (5.7ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2360866a860aec7000002'), "headline"=>"uniq"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2360866a860aec7000004'), "headline"=>"unique"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].update({"_id"=>BSON::ObjectId('50a2360866a860aec7000004')}, {"$set"=>{"deck"=>"it is an article"}})
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2360866a860aec7000005'), "headline"=>"Article 1", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:59:04 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+  Rendered articles/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 24ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>"user@example.com"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2360966a860aec7000009'), "headline"=>"basdf", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 08:59:05 -0300
+Processing by ArticlesController#show_non_published as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>false, :editors_grade=>0, :user_id=>true})
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:59:05 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 8ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2360966a860aec700000b'), "headline"=>"my headline is not displayed in published areas", "story"=>"it is an article", "is_published"=>false}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 08:59:05 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:59:05 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (9.5ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:59:05 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>0.0, "published_on"=>2012-11-13 00:00:00 UTC, "_id"=>BSON::ObjectId('50a2360966a860aec700000e'), "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2360966a860aec700000e
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2360966a860aec700000e" for 127.0.0.1 at 2012-11-13 08:59:05 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2360966a860aec700000e"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2360966a860aec700000e')}).limit(-1)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:59:05 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"headline"=>"holo", "story"=>"story"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"holo", "story"=>"story", "_id"=>BSON::ObjectId('50a2360966a860aec7000010'), "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2360966a860aec7000010
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2360966a860aec7000010" for 127.0.0.1 at 2012-11-13 08:59:05 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2360966a860aec7000010"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2360966a860aec7000010')}).limit(-1)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:headline=>"holo"})
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 08:59:05 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (36.3ms)
+Completed 200 OK in 38ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 08:59:05 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"", "deck"=>"", "story"=>"ice", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.0ms)
+  Rendered articles/_form.html.erb (5.6ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2365e66a860aec9000002'), "headline"=>"uniq"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2365e66a860aec9000003'), "headline"=>"unique"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].update({"_id"=>BSON::ObjectId('50a2365e66a860aec9000003')}, {"$set"=>{"deck"=>"it is an article"}})
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2365e66a860aec9000005'), "headline"=>"basdf", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 09:00:30 -0300
+Processing by ArticlesController#show_non_published as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>false, :editors_grade=>0, :user_id=>true})
+  Rendered articles/show_non_published.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 09:00:30 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 42ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2365e66a860aec9000007'), "headline"=>"my headline is not displayed in published areas", "story"=>"it is an article", "is_published"=>false}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 09:00:30 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2365e66a860aec9000009'), "headline"=>"Article 3", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 09:00:30 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-11-13 09:00:30 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"_id"=>"50a2365e66a860aec900000c", "name"=>"user", "email"=>"user@example.com", "role"=>"reader"}}
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>"user@example.com"}, "fields"=>nil}).limit(-1)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>"user@example.com"}, "fields"=>nil}).limit(-1)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 09:00:30 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.4ms)
+  Rendered articles/_form.html.erb (7.9ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 09:00:30 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>0.0, "published_on"=>2012-11-13 00:00:00 UTC, "_id"=>BSON::ObjectId('50a2365e66a860aec900000e'), "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2365e66a860aec900000e
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2365e66a860aec900000e" for 127.0.0.1 at 2012-11-13 09:00:30 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2365e66a860aec900000e"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2365e66a860aec900000e')}).limit(-1)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 09:00:30 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (5.9ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 09:00:31 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"", "deck"=>"", "story"=>"ice", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.0ms)
+  Rendered articles/_form.html.erb (5.5ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 09:00:31 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"headline"=>"holo", "story"=>"story"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"holo", "story"=>"story", "_id"=>BSON::ObjectId('50a2365f66a860aec9000012'), "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2365f66a860aec9000012
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2365f66a860aec9000012" for 127.0.0.1 at 2012-11-13 09:00:31 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2365f66a860aec9000012"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2365f66a860aec9000012')}).limit(-1)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:headline=>"holo"})
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (43.6ms)
+  Rendered articles/new.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>0.0, "published_on"=>2012-11-13 00:00:00 UTC, "_id"=>BSON::ObjectId('50a2368066a860aecd000002'), "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2368066a860aecd000002
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2368066a860aecd000002" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2368066a860aecd000002"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2368066a860aecd000002')}).limit(-1)
+  Rendered articles/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"headline"=>"holo", "story"=>"story"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"holo", "story"=>"story", "_id"=>BSON::ObjectId('50a2368066a860aecd000004'), "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2368066a860aecd000004
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2368066a860aecd000004" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2368066a860aecd000004"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2368066a860aecd000004')}).limit(-1)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:headline=>"holo"})
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (5.7ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"", "deck"=>"", "story"=>"ice", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.0ms)
+  Rendered articles/_form.html.erb (5.5ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2368066a860aecd000008'), "headline"=>"Article 1", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"_id"=>"50a2368066a860aecd00000b", "name"=>"user", "email"=>"user@example.com", "role"=>"reader"}}
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>"user@example.com"}, "fields"=>nil}).limit(-1)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['users'].find({}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"_id"=>"50a2368066a860aecd00000a", "headline"=>"Article 2", "story"=>"it is an article", "is_published"=>"false", "user_id"=>"50a00cec1d44b6a8b7000001"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2368066a860aecd00000a'), "headline"=>"Article 2", "story"=>"it is an article", "is_published"=>false, "user_id"=>BSON::ObjectId('50a00cec1d44b6a8b7000001'), "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a2368066a860aecd00000a
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a2368066a860aecd00000a" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a2368066a860aecd00000a"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a2368066a860aecd00000a')}).limit(-1)
+MONGODB (12ms) rails3_mongoid_devise_test['users'].find({:_id=>BSON::ObjectId('50a00cec1d44b6a8b7000001')}).limit(-1)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#show_non_published as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>false, :editors_grade=>0, :user_id=>true})
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2368066a860aecd00000e'), "headline"=>"my headline is not displayed in published areas", "story"=>"it is an article", "is_published"=>false}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2368066a860aecd000010'), "headline"=>"basdf", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 09:01:04 -0300
+Processing by ArticlesController#show_non_published as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>false, :editors_grade=>0, :user_id=>true})
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2368066a860aecd000011'), "headline"=>"uniq"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a2368066a860aecd000014'), "headline"=>"unique"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].update({"_id"=>BSON::ObjectId('50a2368066a860aecd000014')}, {"$set"=>{"deck"=>"it is an article"}})
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a236fa66a860aecf000002'), "headline"=>"unique"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].update({"_id"=>BSON::ObjectId('50a236fa66a860aecf000002')}, {"$set"=>{"deck"=>"it is an article"}})
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a236fa66a860aecf000004'), "headline"=>"uniq"}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+  Rendered articles/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a236fa66a860aecf000006'), "headline"=>"basdf", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles/non_published" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#show_non_published as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:is_published=>false, :editors_grade=>0, :user_id=>true})
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a236fa66a860aecf000007'), "headline"=>"my headline is not displayed in published areas", "story"=>"it is an article", "is_published"=>false}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a236fa66a860aecf000009'), "headline"=>"Article 3", "story"=>"it is an article", "is_published"=>true}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:is_published=>true})
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{:is_published=>false}, "fields"=>nil}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"_id"=>"50a236fa66a860aecf00000b", "headline"=>"Article 4", "story"=>"it is an article", "is_published"=>"false"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a236fa66a860aecf00000b'), "headline"=>"Article 4", "story"=>"it is an article", "is_published"=>false, "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a236fa66a860aecf00000b
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a236fa66a860aecf00000b" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a236fa66a860aecf00000b"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a236fa66a860aecf00000b')}).limit(-1)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{:is_published=>false}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"headline"=>"holo", "story"=>"story"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"holo", "story"=>"story", "_id"=>BSON::ObjectId('50a236fa66a860aecf00000d'), "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a236fa66a860aecf00000d
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a236fa66a860aecf00000d" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a236fa66a860aecf00000d"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a236fa66a860aecf00000d')}).limit(-1)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"articles", "query"=>{}, "fields"=>nil}).limit(-1)
+MONGODB (1ms) rails3_mongoid_devise_test['articles'].find({:headline=>"holo"})
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (9.0ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"", "deck"=>"", "story"=>"ice", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (35.3ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (5.5ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"fire", "deck"=>"", "story"=>"here", "grade"=>0.0, "published_on"=>2012-11-13 00:00:00 UTC, "_id"=>BSON::ObjectId('50a236fa66a860aecf000012'), "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a236fa66a860aecf000012
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a236fa66a860aecf000012" for 127.0.0.1 at 2012-11-13 09:03:06 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a236fa66a860aecf000012"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a236fa66a860aecf000012')}).limit(-1)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
