@@ -19,6 +19,7 @@ describe Glutton do
 	    end
 
 	    it "fetches news for every news agency available" do
+	    	(NewsAgency.all.count > 0).should be_true
 	    	Glutton.fetch.should be_true
 	    end
 

@@ -8,9 +8,11 @@ class RawData
   	#not implemented
   	
   	#save it on the data base
-    if data.nil?
-      value = "No new feeds"
+    if data.nil? 
+      #value = "No new feeds"
+      value = []
     else
+      value = []
     	data.entries.each do |feed|
     		#value = self.new(:value => feed)#, :data => data.entries)
     		#value.save
