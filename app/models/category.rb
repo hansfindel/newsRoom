@@ -5,6 +5,8 @@ class Category
 
   has_many :article_categories
   has_many :article, :through => :article_categories
+  has_many :user_categories
+  has_many :user, :through => :user_categories
   validates_presence_of :name
 
   def self.construct(name)
