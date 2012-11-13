@@ -11,8 +11,12 @@ class User
   field :password_salt, type: String
   field :role, type: Integer
   has_many :articles
+<<<<<<< HEAD
+  has_many :categories
+=======
   has_many :user_categories
-  has_many :categories, :through => :user_categories
+  has_many :categories, through :user_categories
+>>>>>>> 7b600adc8570855c98d69680c1166be640502707
 
   before_create :encrypt_password
 
