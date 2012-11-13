@@ -40,6 +40,9 @@ describe User do
 			build(:user, password: "hola", password_confirmation: "hola", email: "hola@hola.com").save  == true
 		end
 		
+		it "should be reader by default" do
+			@user.role == "reader"
+		end
 	end
 
 end

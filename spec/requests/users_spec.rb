@@ -23,7 +23,7 @@ describe User do
       fill_in "user_password_confirmation", :with => @user.password_confirmation
       fill_in "user_name", :with => @user.name
       click_button "Create User"
-      page.should_not have_content("User was successfully created.")
+      page.should have_content("Form is invalid")
   end  
 
 end
