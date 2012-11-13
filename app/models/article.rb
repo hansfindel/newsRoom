@@ -41,8 +41,8 @@ class Article
   def add_grade
   	self.grade = (self.grade + 
   		self.editors_grade + 
-  		self.chief_editor_grade + 
-  		self.chief_editor_country_grade)
+  		3 * self.chief_editor_grade + 
+  		3 * self.chief_editor_country_grade)
 
     if self.grade >= Article::PUBLISH_GRADE
       self.is_published = true

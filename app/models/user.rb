@@ -11,6 +11,7 @@ class User
   field :password_salt, type: String
   field :role, type: Integer
   has_many :articles
+  has_many :categories
 
   before_create :encrypt_password
 
