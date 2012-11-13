@@ -43,11 +43,12 @@ gem 'jquery-rails'
 gem 'rspec-rails', :group => [:development, :test]
 group :test do 
   gem 'database_cleaner'
+  gem 'capybara'
   gem 'factory_girl_rails'
   gem 'mongoid-rspec'
-  gem 'capybara'
   gem 'launchy'
 end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

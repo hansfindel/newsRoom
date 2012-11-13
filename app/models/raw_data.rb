@@ -8,12 +8,16 @@ class RawData
   	#not implemented
   	
   	#save it on the data base
-  	data.entries.each do |feed|
-  		#value = self.new(:value => feed)#, :data => data.entries)
-  		#value.save
-  		value << feed
-  	end
-  	value
+    if data.nil?
+      value = "No new feeds"
+    else
+    	data.entries.each do |feed|
+    		#value = self.new(:value => feed)#, :data => data.entries)
+    		#value.save
+    		value << feed
+    	end
+    end
+    value
   end
 
 

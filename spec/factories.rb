@@ -14,7 +14,14 @@ FactoryGirl.define do
 	  password "1234"
 	  role User::ROLES[-1]  #READER
 	end
-	#definir otros constructores para los modelos
+	
+	factory :category do |u|
+	  u.name "categoria nueva"
+	end
 
+	factory :news_agency do
+		name "Agencia Nueva"
+		feed_url "http://urltest.com"
+	end
 
 end
