@@ -47,7 +47,7 @@ class Ability
     permissions = []
     while number != 0
         binary.append(number%2)
-        number = number/2
+        number = ((number).to_i/2).to_i
     end
     
     (0..binary.size-1).each do |i|

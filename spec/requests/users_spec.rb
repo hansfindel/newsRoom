@@ -16,14 +16,16 @@ describe User do
     end
   end
 
-  it "Should not create user with no email" do  
-      @user = build(:user) 
-      visit new_user_path  
-      fill_in "user_password", :with => @user.password
-      fill_in "user_password_confirmation", :with => @user.password_confirmation
-      fill_in "user_name", :with => @user.name
-      click_button "Create User"
-      page.should have_content("Form is invalid")
-  end  
-
+  describe "creating users" do 
+    it "Should not create user with no email" do  
+        @user = build(:user) 
+        visit new_user_path  
+        fill_in "user_password", :with => @user.password
+        fill_in "user_password_confirmation", :with => @user.password_confirmation
+        fill_in "user_name", :with => @user.name
+        click_button "Create User"
+        page.should have_content("Form is invalid")
+    end  
+  end 
+  
 end
