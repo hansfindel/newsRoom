@@ -6,6 +6,10 @@ FactoryGirl.define do
 	factory :article do 
 	  sequence(:headline) { |n| "Article #{n}" }
 	  story 'it is an article'
+	  factory :article_pub do 
+	  	sequence(:headline) { |n| "i get published at once, #{n}" }
+	  	is_published true
+	  end
 	end
 
 	factory :user do 
