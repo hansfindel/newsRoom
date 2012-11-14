@@ -12,7 +12,6 @@ class RawData
       #value = "No new feeds"
       value = []
     else
-      value = []
     	data.entries.each do |feed|
     		#value = self.new(:value => feed)#, :data => data.entries)
     		#value.save

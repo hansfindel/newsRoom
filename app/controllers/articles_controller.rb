@@ -2,8 +2,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.where(:is_published => true)
-
+    #@articles = #Article.where(:is_published => true)
+    @articles = Article.published.paginated(params[:page])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }
@@ -94,9 +94,8 @@ class ArticlesController < ApplicationController
   end
 
   def fetch_and_store
-    @value = Glutton.fetch
-    FeedProcessor.process_feeds(@value)
-    redirect_to articles_path, notice: "New feeds were fetched"
+    Glutton.fetch_and_store
+    redirect_to articles_path, notice: "New feeds were fetched and processed"
   end
   def process_feeds
     FeedProcessor.process_feeds
@@ -104,7 +103,7 @@ class ArticlesController < ApplicationController
   end
   
   def show_non_published
-    @articles = Article.where(:is_published => false, :editors_grade =>0, :user_id =>! current_user_id)
+    @articles = Article.nonpublished.where(:editors_grade =>0, :user_id =>! current_user_id)
 
     respond_to do |format|
       format.html
@@ -113,7 +112,7 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_non_published
-    @articles = Article.where(:is_published => false, :chief_editor_grade =>0, :user_id =>! current_user_id)
+    @articles = Article.nonpublished.where(:chief_editor_grade =>0, :user_id =>! current_user_id)
 
     respond_to do |format|
       format.html { render :template => "articles/show_non_published" }
@@ -122,7 +121,7 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_country_non_published
-    @articles = Article.where(:is_published => false, :chief_editor_country_grade =>0, :user_id =>! current_user_id)
+    @articles = Article.nonpublished.where(:chief_editor_country_grade =>0, :user_id =>! current_user_id)
 
     respond_to do |format|
       format.html { render :template => "articles/show_non_published" } 

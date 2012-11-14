@@ -28,9 +28,15 @@ class Article
   before_save :not_published
   after_save :create_guid
 
-  #scope :with_category, ->(name){ where(name: name) }
+  scope :published, -> { where(is_published: true) }
+  scope :nonpublished, -> { where(is_published: false) }
 
   validates_presence_of :headline, message: "Headline must be present"
+
+  #paginate(:page => params[:page], :per_page => 30)
+  def self.paginated(page_num, per_page=5)
+    page(page_num).per(per_page)
+  end
   
   def not_published
     unless is_published

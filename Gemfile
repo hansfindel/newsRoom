@@ -49,6 +49,9 @@ group :test do
   gem 'launchy'
 end
 
+gem 'client_side_validations'
+gem 'kaminari'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
