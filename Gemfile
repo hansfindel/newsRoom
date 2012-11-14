@@ -43,7 +43,7 @@ gem 'jquery-rails'
 gem 'rspec-rails', :group => [:development, :test]
 group :test do 
   gem 'database_cleaner'
-  gem 'capybara'
+  gem 'capybara', '~> 1.1.2'
   gem 'factory_girl_rails'
   gem 'mongoid-rspec'
   gem 'launchy'

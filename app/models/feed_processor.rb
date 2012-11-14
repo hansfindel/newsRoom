@@ -11,7 +11,7 @@ class FeedProcessor
   def self.add_entries(entries)
     entries.each do |entry|
       unless Article.where(:guid => entry.id)
-          Article.create!(
+          Article.create(
             :headline                     => entry.title,
             :deck                         => entry.summary,
             :story                        => entry.content,
