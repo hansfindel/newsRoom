@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe NewsAgency do
 	before :each do
+		NewsAgency.destroy_all
 		@news_agency = NewsAgency.new
 	end
 
@@ -28,12 +29,15 @@ describe NewsAgency do
 		end
 
 		it "cannot be saved, it uses an existing url" do 
-			build(:news_agency, name: "Agency", feed_url: "http://urltest.com").save == true
-			build(:news_agency, name: "OtherAgency", feed_url: "http://urltest.com").save == false
+			new1 = build(:news_agency, name: "2Agency", feed_url: "http://urltestx2.com")
+			new1.save.should be_true
+			new2 = build(:news_agency, name: "2OtherAgency", feed_url: "http://urltestx2.com")
+			new2.save.should be_false
 		end
 
 		it "should be saved" do
-			build(:news_agency, name: "Agency", feed_url: "http://urltest.com").save  == true		
+			news = NewsAgency.new(name: "Agency_unique", feed_url: "http://urltest_unique.com")
+			news.save.should  be_true		
 	  	end
 
   	end

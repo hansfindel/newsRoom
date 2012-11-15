@@ -2,6 +2,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe User do
 	before :each do
+		User.destroy_all
 		@user = User.new
 	end
 
@@ -33,12 +34,11 @@ describe User do
 		end
 
 		it "it should be saved" do 
-			#@user.password = "hola"
-			#@user.password_confirmation = "hola"
-			#@user.email =  "hola2@hola.com"
-			#@user.save.should == true
-			user = User.new(name: "me", email: "mi@ma.il", password: "1234")
-			user.save.should be_true
+			#user = User.new(name: "me#{User.count}", email: "mi@ma.il", password: "1234")
+			user2 = build(:user)
+			user2.password = "hola"
+			user2.password_confirmation = "hola"
+			user2.save.should be_true
 			admin = build(:user_admin)
 			admin.email = "asf.as@fac.cs"
 			admin.save.should be_true			
