@@ -65,6 +65,18 @@ describe Article do
 			(@article.grade > 15).should be_true
 			@article.is_published.should be_true
 		end
+		it "gets it's own guid" do
+			@article.headline = "asdf"
+			@article.save
+			@article.guid.should_not be_nil
+		end
+		it "categorize the category array" do
+			Category.destroy_all
+			@article.headline = "asdfqwer"
+			@article.category_names = ["1", "2", "3"]
+			@article.save
+			(Category.count > 0).should be_true
+		end
     end
 
 end

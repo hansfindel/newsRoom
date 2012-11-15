@@ -26,7 +26,7 @@ class Article
 
   before_save :categorize
   before_save :not_published
-  after_save :create_guid
+  after_create :create_guid
 
   scope :published, -> { where(is_published: true) }
   scope :nonpublished, -> { where(is_published: false) }
@@ -87,7 +87,8 @@ class Article
 
   def create_guid
     if self.guid.blank?
-      guid = self._id.to_s
+      self.guid = self._id.to_s
+      self.save
     end
   end
 
