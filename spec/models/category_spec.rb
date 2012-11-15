@@ -1,4 +1,5 @@
-require 'spec_helper'
+require File.dirname(__FILE__) + '/../spec_helper'
+#require 'spec_helper'
 
 describe Category do
 	before :each do
@@ -26,7 +27,6 @@ describe Category do
 		Category.where(name: "ThisNewCategory").count == 1
   		category = create(:category, :name => "ThisNewCategory")
   		Category.where(name: "ThisNewCategory").count == 1
-
 	end
 
 end

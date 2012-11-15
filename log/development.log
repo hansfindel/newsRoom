@@ -451,3 +451,168 @@ MONGODB (0ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"articles
 MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a417081d44b6b804000003')}).limit(-1)
   Rendered articles/index.html.erb within layouts/application (40.4ms)
 Completed 200 OK in 76ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (12ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Starting the New Relic Agent.
+NewRelic Agent Developer Mode enabled.
+To view performance information, go to http://localhost:3000/newrelic
+Installed New Relic Browser Monitoring middleware
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/article.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/article_category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/news_agency.rb:18)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/user.rb:3)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/user_category.rb:2)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /Users/hansfindel/Sites/u/arqui_software/newsRoom/config/environment.rb:5)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-14 19:52:35 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (29ms) rails3_mongoid_devise_development['news_agencies'].find({})
+MONGODB (56ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('509bf41a9a8a902cc4000002')}).limit(-1)
+  Rendered articles/_grades.html.erb (58.0ms)
+MONGODB (78ms) rails3_mongoid_devise_development['article_categories'].find({"article_id"=>BSON::ObjectId('50a420b31d44b6b845000001')})
+MONGODB (27ms) rails3_mongoid_devise_development['categories'].find({"article_id"=>BSON::ObjectId('50a420b31d44b6b845000001')})
+  Rendered articles/_form.html.erb (371.3ms)
+  Rendered articles/new.html.erb within layouts/application (419.2ms)
+Completed 200 OK in 892ms (Views: 891.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-14 19:52:37 -0300
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-14 19:52:37 -0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-14 19:52:37 -0300
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-14 19:52:37 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-14 19:52:37 -0300
+Served asset /articles.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-14 19:52:37 -0300
+Served asset /news_agencies.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-14 19:52:37 -0300
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-14 19:52:37 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-14 19:52:37 -0300
+Served asset /rails.validations.js - 304 Not Modified (1ms)
+
+
+Started GET "/news_agencies" for 127.0.0.1 at 2012-11-14 19:53:02 -0300
+Processing by NewsAgenciesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['news_agencies'].find({})
+  Rendered news_agencies/index.html.erb within layouts/application (7.0ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('509bf41a9a8a902cc4000002')}).limit(-1)
+Completed 200 OK in 117ms (Views: 116.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:03 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:03 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:03 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:03 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-14 19:53:03 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:03 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-14 19:53:03 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:03 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-14 19:53:03 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/news_agencies/new" for 127.0.0.1 at 2012-11-14 19:53:11 -0300
+Processing by NewsAgenciesController#new as HTML
+MONGODB (214ms) rails3_mongoid_devise_development['articles'].find({"news_agency_id"=>BSON::ObjectId('50a420d71d44b6b845000002')})
+  Rendered news_agencies/_form.html.erb (221.0ms)
+  Rendered news_agencies/new.html.erb within layouts/application (251.7ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('509bf41a9a8a902cc4000002')}).limit(-1)
+Completed 200 OK in 283ms (Views: 282.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:12 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:12 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:12 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:12 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:12 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-14 19:53:12 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-14 19:53:12 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-14 19:53:12 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-14 19:53:12 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+New Relic Agent not running.
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/article.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/article_category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/news_agency.rb:18)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/user.rb:3)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/hansfindel/Sites/u/arqui_software/newsRoom/app/models/user_category.rb:2)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /Users/hansfindel/Sites/u/arqui_software/newsRoom/config/environment.rb:5)
+MONGODB (158ms) rails3_mongoid_devise_development['categories'].find({}).limit(-1).sort([[:_id, :desc]])
+MONGODB (29ms) rails3_mongoid_devise_development['articles'].find({}).limit(-1).sort([[:_id, :desc]])
+MONGODB (0ms) rails3_mongoid_devise_development['article_categories'].insert([{"_id"=>BSON::ObjectId('50a458c11d44b6b975000004'), "article_id"=>BSON::ObjectId('50a458ae1d44b6b975000003'), "category_id"=>BSON::ObjectId('50a3d4671d44b6b5aa000136')}])

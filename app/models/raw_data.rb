@@ -12,6 +12,7 @@ class RawData
       #value = "No new feeds"
       value = []
     else
+      data = get_data data
     	data.entries.each do |feed|
     		#value = self.new(:value => feed)#, :data => data.entries)
     		#value.save
@@ -21,5 +22,14 @@ class RawData
     value
   end
 
+  private
+
+  def self.get_data data
+    if data.class.eql?(Array)
+      return data
+    else
+      return []
+    end
+  end
 
 end

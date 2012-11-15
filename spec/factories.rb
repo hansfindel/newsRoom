@@ -13,14 +13,17 @@ FactoryGirl.define do
 	end
 
 	factory :user do 
-	  name "user"
-	  email "user@example.com"
+	  sequence(:name) { |i| "user#{i}" }
+	  sequence(:email) { |j| "user#{j}@example.com" }
 	  password "1234"
 	  role User::ROLES[-1]  #READER
+	  factory :user_admin do 
+	  	role User::ROLES[0]
+	  end
 	end
 	
-	factory :category do |u|
-	  u.name "categoria nueva"
+	factory :category do
+	  name "categoria nueva"
 	end
 
 	factory :news_agency do

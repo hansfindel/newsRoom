@@ -6,9 +6,6 @@ describe "Sessions" do
     @user = build(:user)
     @user.save 
     #user_pass -> "1234"
-    #@current_user = build(:user)
-    #current_user = @current_user
-    #@current_user.save
   end
 
   describe "login" do    

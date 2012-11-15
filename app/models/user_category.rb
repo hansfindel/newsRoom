@@ -7,9 +7,18 @@ class UserCategory
   belongs_to :category 
 
   def self.construct(user, category_name)
-  	cat = Category.construct(category_name)
-  	#ArticleCategory.
-  	create(user: article, category: cat)
+  	if category_name.class.eql?(String)
+      cat = Category.construct(category_name)
+    else #assumming it is an ArticleCategory object
+      cat = category_name
+    end
+    if user.class.eql?(User)
+      #ArticleCategory.
+      create(user: user, category: cat)
+      true
+    else
+      false
+    end
   end
 
 end
