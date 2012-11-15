@@ -45,12 +45,12 @@ class Article
     true   #it does not prevent the object being saved
   end
   def add_grade
-  	self.grade = (self.grade + 
-  		self.editors_grade + 
-  		3 * self.chief_editor_grade + 
-  		3 * self.chief_editor_country_grade)
+  	self.grade = self.grade || 0 
+    self.grade += self.editors_grade || 0 #if editors_grade
+  	self.grade += 3 * (self.chief_editor_grade || 0) #if chief_editor_grade
+  	self.grade += 5 * (self.chief_editor_country_grade || 0) #if self.chief_editor_country_grade
 
-    if self.grade >= Article::PUBLISH_GRADE
+    if self.grade.to_i >= Article::PUBLISH_GRADE
       self.is_published = true
     end
   	self.save

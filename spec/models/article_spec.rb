@@ -20,7 +20,17 @@ describe Article do
 			@article.headline = "uniq"
 			@article.save.should be_true
 		end
-		#it "should test uniqueness of url"
+		it "it should be saved should be not published" do 
+			@article.headline = "un1q"
+			@article.save.should be_true
+			@article.is_published.should be_false
+		end
+		it "it should be saved should be published if it was set so" do 
+			@article.headline = "un1q"
+			@article.is_published = true
+			@article.save.should be_true
+			@article.is_published.should be_true
+		end
 	end
 
 
@@ -32,6 +42,29 @@ describe Article do
 			@article.deck = "it is an article"
 			@article.save.should be_true
 		end 
+		it "should update grade when editors grade it" do 
+			@article.headline = "new_article_1"
+			@article.save.should be_true
+			@article.new_record?.should be_false
+			@article.editors_grade = 5
+			@article.add_grade.should be_true
+			(@article.grade > 4).should be_true
+			@article.chief_editor_grade = 6
+			@article.add_grade.should be_true
+			(@article.grade > 10).should be_true			
+			@article.chief_editor_country_grade = 7
+			@article.add_grade.should be_true
+			@article.is_published.should be_true			
+		end
+		it "gets published when well graded" do 
+			@article.headline = "un1que"
+			@article.save.should be_true
+			@article.new_record?.should be_false
+			@article.editors_grade = 16
+			@article.add_grade.should be_true
+			(@article.grade > 15).should be_true
+			@article.is_published.should be_true
+		end
     end
 
 end
