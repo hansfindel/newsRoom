@@ -77,6 +77,24 @@ describe Article do
 			@article.save
 			(Category.count > 0).should be_true
 		end
+		it "user can create article" do
+			@user = build(:user)
+			@user.save.should be_true
+			article = @user.articles.build(headline: "user_article")
+			article.save.should be_true
+		end
+		it "returns its user's name" do
+			@user = build(:user)
+			@user.save.should be_true
+			article = @user.articles.build(headline: "user_article1")
+			article.save.should be_true
+			article.user_name.should eq(@user.name)
+		end
+		it "returns user_name=nil if it has no user" do
+			article = build(:article, headline: "no_user_article1")
+			article.save.should be_true
+			article.user_name.should eq("")
+		end
     end
 
 end
