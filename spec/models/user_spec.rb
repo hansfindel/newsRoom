@@ -37,11 +37,17 @@ describe User do
 			#@user.password_confirmation = "hola"
 			#@user.email =  "hola2@hola.com"
 			#@user.save.should == true
-			build(:user, password: "hola", password_confirmation: "hola", email: "hola@hola.com").save  == true
+			user = User.new(name: "me", email: "mi@ma.il", password: "1234")
+			user.save.should be_true
+			admin = build(:user_admin)
+			admin.email = "asf.as@fac.cs"
+			admin.save.should be_true			
 		end
 		
 		it "should be reader by default" do
-			@user.role == "reader"
+			@user = build(:user)
+			@user.save
+			@user.role.should == "reader"
 		end
 	end
 
