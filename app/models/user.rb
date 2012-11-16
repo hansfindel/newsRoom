@@ -37,11 +37,16 @@ def self.authenticate(email, password)
 end
 
 def getSlaves()
-  Chief.where(:slave => self._id)
+  array = []
+  Chief.where(:boss => self._id).each do |a|   
+    array.append(a.slave)
+  end
+  User.find(array)
+  #array
 end
 
 def getBoss()
-  Chief.where(:boss => self._id).first
+  User.find(Chief.where(:slave => self._id).first.boss)
 end
 
 def setSlave(userID)
@@ -49,6 +54,10 @@ def setSlave(userID)
   a.save
 end
 
+def setBoss(userID)
+  a = Chief.create(:boss => userID.to_s, :slave => self._id.to_s)
+  a.save
+end
 
 
   protected
