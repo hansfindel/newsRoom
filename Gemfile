@@ -59,6 +59,9 @@ gem 'newrelic_rpm'
 gem "carrierwave"
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
+#cache
+gem 'cache_digests'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

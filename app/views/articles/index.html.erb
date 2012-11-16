@@ -4,8 +4,9 @@
   <div class="span8 offset2">
     <% @articles.each do |article| %>
     <div class="well">
-      <h3><%= link_to article.headline, article %></h3>
-      <p><%= simple_format article.deck %></p>
+      <% cache article do %>
+      	<%= render article %>
+      <% end %>
     </div>
     <% end %>
     <%= paginate @articles, :window => 2 %>
