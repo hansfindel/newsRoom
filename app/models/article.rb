@@ -19,6 +19,8 @@ class Article
 
   belongs_to :news_agency
   belongs_to :user
+  belongs_to :area #seccion
+  
   has_many :article_categories
   has_many :categories, through: :article_categories
 
