@@ -89,6 +89,13 @@ describe User do
         page.should have_content(@user.email)
     end  
 
+    it "should destroy user with the link" do
+        @user = build(:user)
+        @user.save.should be_true
+        get user_path(@user.id, method: :delete)
+        response.status.should be(200)
+    end
+
 
   end 
   
