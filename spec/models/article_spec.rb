@@ -2,6 +2,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Article do
 	before :each do
+		Article.destroy_all
 		@article = Article.new
 	end
 
@@ -13,7 +14,7 @@ describe Article do
 
 	describe "test the validations" do
 		it "cannot be saved, it has no headline" do 
-			@article.save.should == false
+			@article.save.should be_false
 		end
 
 		it "it should be saved" do 

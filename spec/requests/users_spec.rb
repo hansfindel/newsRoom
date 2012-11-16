@@ -5,9 +5,6 @@ describe User do
   before (:each) do
     User.destroy_all
     @user = User.new
-    #@current_user = build(:user)
-    #current_user = @current_user
-    #@current_user.save
   end
 
   describe "GET /users" do    
