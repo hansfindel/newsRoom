@@ -36,4 +36,8 @@ FactoryGirl.define do
 		feed_url "http://urltest.com"
 	end
 
+	factory :area do
+		name "Area Nueva"
+	end
+
 end
