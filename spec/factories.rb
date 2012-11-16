@@ -28,7 +28,7 @@ FactoryGirl.define do
 	end
 	
 	factory :category do
-	  name "categoria nueva"
+	  sequence(:name) { |i| "category#{i}" }
 	end
 
 	factory :news_agency do

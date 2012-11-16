@@ -41,15 +41,13 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
-    @article.grade = 0;
-    @article.editors_grade = 0;
-    @article.chief_editor_grade = 0;
-    @article.chief_editor_country_grade = 0;
+    @article.set_initial_grades
     if current_role.include?('journalist')
       @article.user = current_user
     end
     respond_to do |format|
       if @article.save
+        @article.add_picture(params[:picture])
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render json: @article, status: :created, location: @article }
       else
