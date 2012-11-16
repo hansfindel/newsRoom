@@ -22,6 +22,9 @@
     <% if roles.include?"admin" or roles.include?"chief_editor" %>
       <%= link_to "Chief Editor Evaluation", chief_editors_path %>
     <% end %>
+    <% if roles.include?"admin" %>
+      <%= link_to "Areas", areas_path %>
+    <% end %>
     <% if roles.include?"admin" or roles.include?"chief_editor_country" %>
       <%= link_to "Chief Country Editor Evaluation", chief_editors_country_path %>
     <% end %>
