@@ -24,7 +24,6 @@ class Article
 
   has_many :article_categories
   has_many :categories, through: :article_categories
-  has_one :area
 
   embeds_many :pictures
 
@@ -53,8 +52,8 @@ class Article
   end
 
   def add_grade
-  	self.grade = self.grade || 0 
-    self.grade += self.editors_grade || 0 #if editors_grade
+  	#self.grade = self.grade || 0 
+    self.grade  = self.editors_grade || 0 #if editors_grade
   	self.grade += 3 * (self.chief_editor_grade || 0) #if chief_editor_grade
   	self.grade += 5 * (self.chief_editor_country_grade || 0) #if self.chief_editor_country_grade
 

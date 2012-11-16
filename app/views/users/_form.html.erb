@@ -45,7 +45,7 @@
  
   <div class="field">
     <%= f.label 'Boss' %>
-    <%= collection_select(:boss, :boss, @bosses_array, :_id, :name) %>
+    <%= collection_select(:boss, :boss, @bosses_array, :_id, :name,{:include_blank => "Select boss"}) %>
   </div>
 
   <div class="actions">

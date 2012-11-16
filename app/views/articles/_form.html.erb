@@ -28,7 +28,7 @@
   </div>
   <div class="field">
     <%= f.label :story %><br />
-    <%= f.text_field :story %>
+    <%= f.text_area :story %>
   </div>
 
 
@@ -37,11 +37,16 @@
     <%= f.collection_select :news_agency_id, NewsAgency.all, :id, :name, options: { include_blank: true, prompt: 'Select Person' } %>
   </div>
 
-    <div class="field">
+   <!-- <div class="field">
       <%= f.label :grade %><br />
       <%= f.text_field :grade %>
     </div>
+-->
 
+  <div class="field">
+      <%= f.label :area_id %><br />
+      <%= f.collection_select :area_id, Area.all, :id, :name, {:include_blank => "Select Area"}%>
+    </div>
 
   <%= render :partial => 'grades', :locals =>{:f => f} %>
 
