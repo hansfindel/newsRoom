@@ -23,9 +23,14 @@
   <% if current_role.include?"admin" %>
 
   <div class="field">
+    <% roles = Ability.get_permissions(@user.role)%>
   	<% map = User::ROLES.map{|a| [a, 2 ** User::ROLES.index(a)]} %>
   	<% map.each do |a| %>
-  		<%= check_box_tag('role[' + a[0] + ']', a[1])%>
+      <% if roles.include?(a[0]) %>
+  		  <%= check_box_tag('role[' + a[0] + ']', a[1], checked: true)%>
+      <% else %>
+        <%= check_box_tag('role[' + a[0] + ']', a[1])%>
+      <% end %>
   		<%= label_tag(a[1], a[0]) %>
   		<br />
   	<% end %>
