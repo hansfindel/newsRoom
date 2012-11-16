@@ -10,6 +10,7 @@ class Article
   field :url,           type: String
   field :is_published,  type: Boolean
   #field :categories,    type: Array
+  field :country,       type: String
   
   field :grade, type: Float
   field :editors_grade, type: Integer
@@ -23,6 +24,7 @@ class Article
 
   has_many :article_categories
   has_many :categories, through: :article_categories
+  has_one :area
 
   embeds_many :pictures
 

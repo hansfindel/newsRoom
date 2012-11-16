@@ -28,6 +28,11 @@
   		<br />
   	<% end %>
   </div>
+
+  <p>
+    <%= f.label :country %>
+    <%= select(@object, :country, User::COUNTRY) %>
+  </p>
   
   <% roles = Ability.get_permissions(current_user.role) %>
   <% if roles.include?"admin" %>
@@ -40,6 +45,8 @@
     </div>
 
   <% end %>
+
+  
 
   <div class="actions">
     <%= f.submit %>
