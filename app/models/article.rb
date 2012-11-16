@@ -20,7 +20,7 @@ class Article
   belongs_to :news_agency
   belongs_to :user
   belongs_to :area #seccion
-  
+
   has_many :article_categories
   has_many :categories, through: :article_categories
 
@@ -114,7 +114,7 @@ class Article
   end
 
   def add_picture( image_params )
-    self.pictures.create(image_params)
+    self.pictures.create(image_params) if image_params
   end
 
 
