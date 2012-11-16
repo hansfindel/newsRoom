@@ -1,5 +1,7 @@
 NewsRoom::Application.routes.draw do
  
+  resources :areas
+
   get "log_in" => "sessions#new", :as => "log_in"
   get "log_out" => "sessions#destroy", :as => "log_out"
 
@@ -12,6 +14,7 @@ NewsRoom::Application.routes.draw do
   get "articles/chief_editors_country" => "articles#chief_editors_country_non_published", :as => "chief_editors_country"
   root :to => "articles#index"
   
+  get "errors/overload" => "errors#overload"
   
   resources :users
   resources :sessions

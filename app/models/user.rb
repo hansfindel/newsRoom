@@ -1,16 +1,14 @@
 class User
 
   include Mongoid::Document
-
-  ROLES = %w[admin journalist editor chief_editor chief_editor_country reader]
-
-
   field :name, type: String
   field :email, type: String
   field :password_hash, type: String
   field :password_salt, type: String
   field :role, type: Integer
+  field :country, type: String
   
+  belongs_to :area 
   has_many :articles
   has_many :user_categories
   has_many :categories, :through => :user_categories
@@ -18,12 +16,16 @@ class User
   before_create :encrypt_password
 
   attr_accessor :password
-  validates_confirmation_of :password
-  validates_presence_of :password, :on => :create
-  validates_presence_of :email
-  validates_uniqueness_of :email
 
- 
+
+  validates_presence_of :password, :on => :create, message: "must be present"
+  validates_confirmation_of :password, message: "must be confirmated"
+  validates_presence_of :email, message: "must be present"
+  validates_uniqueness_of :email, message: "is already taken"
+
+  ROLES = %w[admin journalist editor chief_editor chief_editor_country reader]
+  COUNTRY = %w[Chile Argentina Brazil Spain Ecuador Bolivia Peru Colombia Uruguay Paraguay Mexico Venezuela Panama]
+
 
 
 def self.authenticate(email, password)
@@ -35,7 +37,28 @@ def self.authenticate(email, password)
     end
 end
 
+def getSlaves()
+  array = []
+  Chief.where(:boss => self._id).each do |a|   
+    array.append(a.slave)
+  end
+  User.find(array)
+  #array
+end
 
+def getBoss()
+  User.find(Chief.where(:slave => self._id).first.boss)
+end
+
+def setSlave(userID)
+  a = Chief.create(:boss => self._id.to_s, :slave => userID.to_s)
+  a.save
+end
+
+def setBoss(userID)
+  a = Chief.create(:boss => userID.to_s, :slave => self._id.to_s)
+  a.save
+end
 
 
   protected

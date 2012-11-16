@@ -10,13 +10,7 @@
   </tr>
 
 <% @news_agencies.each do |news_agency| %>
-  <tr>
-    <td><%= news_agency.name %></td>
-    <td><%= news_agency.feed_url %></td>
-    <td><%= link_to 'Show', news_agency %></td>
-    <td><%= link_to 'Edit', edit_news_agency_path(news_agency) %></td>
-    <td><%= link_to 'Destroy', news_agency, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <%= render news_agency %>
 <% end %>
 </table>
 

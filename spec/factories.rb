@@ -21,10 +21,14 @@ FactoryGirl.define do
 	  factory :user_admin do 
 	  	role User::ROLES[0]
 	  end
+	  factory :user_email do 
+	  	email "mi_random@mail.co"
+	  	role User::ROLES[0]
+	  end	  
 	end
 	
 	factory :category do
-	  name "categoria nueva"
+	  sequence(:name) { |i| "category#{i}" }
 	end
 
 	factory :news_agency do

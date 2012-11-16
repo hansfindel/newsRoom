@@ -19,10 +19,10 @@ describe Article do
       #user = build(:user)
       #user.save.should be_true
       #@article.save.should eq(true)
-	  prev_count = Article.where(is_published: false).count
-	  post_via_redirect articles_path, article: @article.attributes
-	  post_count = Article.where(is_published: false).count
-	  (post_count > prev_count).should be_true
+	    prev_count = Article.where(is_published: false).count
+	    post_via_redirect articles_path, article: @article.attributes
+	    post_count = Article.where(is_published: false).count
+	    (post_count > prev_count).should be_true
     end
 
     it "does not display not published articles in the published area" do
@@ -71,7 +71,7 @@ describe Article do
     it "create through the form" do 
     	visit new_article_path
     	fill_in "article_headline", :with => "fire"  #article_headline es el id en el form para poner el headline
-		fill_in "article_story", :with => "here"    	
+		  fill_in "article_story", :with => "here"    	
       	click_button "Create Article" #en este caso no tiene clase ni id, pero pesca lo que dice el boton
       	# save_and_open_page  #con esto puedes ver el estado de la pagina en el browser
       	page.should have_content("Article was successfully created.")
@@ -88,4 +88,16 @@ describe Article do
       	page.should_not have_content("ice")
    	end
   end
+
+  #describe "form with js" do
+  #	it "shows a no headline message", js: true do 
+  #  	visit new_article_path
+  #		fill_in "article_story", :with => "ice"    	
+  #    	click_button "Create Article" #en este caso no tiene clase ni id, pero pesca lo que dice el boton
+  #    	page.should_not have_content("Article was successfully created.")
+  #    	page.should have_content("Headline must be present")   #message in the article model		
+  #	end
+  #end
+
+
 end
