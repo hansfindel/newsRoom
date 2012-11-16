@@ -101,7 +101,7 @@ class ArticlesController < ApplicationController
   end
   
   def show_non_published
-    @articles = Article.nonpublished.where(:editors_grade =>0, :user_id =>! current_user_id)
+    @articles = Article.nonpublished.where(:editors_grade =>0, :user_id.ne => current_user_id)
 
     respond_to do |format|
       format.html
@@ -110,7 +110,7 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_non_published
-    @articles = Article.nonpublished.where(:chief_editor_grade =>0, :user_id =>! current_user_id)
+    @articles = Article.nonpublished.where(:chief_editor_grade =>0, :user_id.ne => current_user_id)
 
     respond_to do |format|
       format.html { render :template => "articles/show_non_published" }
@@ -119,7 +119,7 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_country_non_published
-    @articles = Article.nonpublished.where(:chief_editor_country_grade =>0, :user_id =>! current_user_id)
+    @articles = Article.nonpublished.where(:chief_editor_country_grade =>0, :user_id.ne => current_user_id)
 
     respond_to do |format|
       format.html { render :template => "articles/show_non_published" } 

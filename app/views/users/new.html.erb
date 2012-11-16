@@ -29,7 +29,7 @@
   </p>
   <p>
     <%= f.label :country %>
-    <%= select(@object, :country, User::COUNTRY) %>
+    <%= select(:user, :country, User::COUNTRY) %>
   </p>
   <p class="button"><%= f.submit %></p>
 <% end %>

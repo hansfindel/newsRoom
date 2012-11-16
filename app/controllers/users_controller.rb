@@ -35,6 +35,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
+    @bosses_array = User.where(:country => @user.country, :_id.ne => params[:id])
   end
 
   # POST /users
@@ -65,6 +66,11 @@ class UsersController < ApplicationController
     params[:user][:role] = aux  
     respond_to do |format|
       if @user.update_attributes(params[:user])
+
+        if params[:boss][:boss] && not(params[:boss][:boss].empty?)
+          @user.setBoss(params[:boss][:boss])
+        end
+
         format.html { redirect_to @user, notice: 'User was successfully updated.'}
         format.json { head :no_content }
       else
