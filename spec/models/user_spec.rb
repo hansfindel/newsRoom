@@ -14,23 +14,23 @@ describe User do
 
 	describe "test the validations" do
 		it "cannot be saved, it has no password nor email" do 
-			@user.save.should == false
+			@user.save.should be_false
 		end
 
 		it "cannot be saved, it has no email" do 
 			@user.password = "12345"
 			@user.password_confirmation = "12345"
-			@user.save.should == false
+			@user.save.should be_false
 		end
 
 		it "cannot be saved, it has no password" do 
 			@user.email ="test@hmail.com"
-			@user.save.should == false
+			@user.save.should be_false
 		end
 
 		it "cannot be saved, it uses an existing email" do 
 			@user.email = "user@example.com"
-			@user.save.should == false
+			@user.save.should be_false
 		end
 
 		it "it should be saved" do 
