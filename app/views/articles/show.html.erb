@@ -35,6 +35,11 @@
   <%= @article.news_agency.name if @article.news_agency%>
 </p>
 
+<p>
+  <b>Picture name:</b>
+  <%= @article.picture_name %>
+</p>
+
 <% if can? :update, @article %>
 	<%= link_to 'Edit', edit_article_path(@article) %> |
 <% end %>

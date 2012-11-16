@@ -2,8 +2,6 @@ class Article
   include Mongoid::Document
   include Mongoid::MultiParameterAttributes
 
-  PUBLISH_GRADE = 15
-
   field :headline,      type: String
   field :deck,          type: String
   field :story,         type: String
@@ -18,20 +16,27 @@ class Article
   field :chief_editor_grade, type: Integer
   field :chief_editor_country_grade, type: Integer   #xq integer? si son varias notas!
 
+
   belongs_to :news_agency
   belongs_to :user
+  belongs_to :area #seccion
+
   has_many :article_categories
   has_many :categories, through: :article_categories
 
+  embeds_many :pictures
 
   before_save :categorize
   before_save :not_published
+
   after_create :create_guid
 
   scope :published, -> { where(is_published: true) }
   scope :nonpublished, -> { where(is_published: false) }
 
   validates_presence_of :headline, message: "Headline must be present"
+
+  PUBLISH_GRADE = 15
 
   #paginate(:page => params[:page], :per_page => 30)
   def self.paginated(page_num, per_page=5)
@@ -44,6 +49,7 @@ class Article
     end
     true   #it does not prevent the object being saved
   end
+
   def add_grade
   	self.grade = self.grade || 0 
     self.grade += self.editors_grade || 0 #if editors_grade
@@ -90,6 +96,25 @@ class Article
       self.guid = self._id.to_s
       self.save
     end
+  end
+
+  def set_initial_grades
+    grade = 0
+    editors_grade = 0
+    chief_editor_grade = 0
+    chief_editor_country_grade = 0
+  end
+
+  def picture_name
+    if self.pictures.any?
+      self.pictures.first.name 
+    else
+      ""
+    end
+  end
+
+  def add_picture( image_params )
+    self.pictures.create(image_params) if image_params
   end
 
 
