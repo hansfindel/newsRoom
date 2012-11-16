@@ -20,6 +20,8 @@
     <%= f.text_field :email %>
   </div>
   
+  <% if current_role.include?"admin" %>
+
   <div class="field">
   	<% map = User::ROLES.map{|a| [a, 2 ** User::ROLES.index(a)]} %>
   	<% map.each do |a| %>
@@ -31,22 +33,15 @@
 
   <p>
     <%= f.label :country %>
-    <%= select(@object, :country, User::COUNTRY) %>
+    <%= select(:user, :country, User::COUNTRY) %>
   </p>
-  
-  <% roles = Ability.get_permissions(current_user.role) %>
-  <% if roles.include?"admin" %>
-
-    <div class="field">
-      
-      <!--<%= f.collection_select :role, User::ROLES, :to_s , :humanize %>-->
-      <!--<% map = User::ROLES.map{|a| [a, 2 ** User::ROLES.index(a)]} %> -->
-      <!--<%= f.select :role, options_for_select(map, @user.role) %>-->
-    </div>
 
   <% end %>
-
-  
+ 
+  <div class="field">
+    <%= f.label 'Boss' %>
+    <%= collection_select(:boss, :boss, @bosses_array, :_id, :name) %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>
