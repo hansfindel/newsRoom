@@ -3,6 +3,7 @@ require 'capybara/rspec'
 
 describe User do
   before (:each) do
+    User.destroy_all
     @user = User.new
     #@current_user = build(:user)
     #current_user = @current_user
@@ -19,18 +20,18 @@ describe User do
   describe "creating users" do 
 
     it "Should not create user with no email" do  
-        @user = build(:user) 
+        #@user = build(:user) 
         visit new_user_path  
         fill_in "user_password", :with => "1234"
-        fill_in "user_password_confirmation", :with => @user.password_confirmation
-        fill_in "user_name", :with => @user.name
+        fill_in "user_password_confirmation", :with => "1234" # @user.password_confirmation
+        fill_in "user_name", :with => "user_name" #@user.name
         click_button "Create User"
         page.should have_content("Form is invalid")
-        page.should have_content("can't be blank")
+        page.should have_content("must be present")
     end  
 
     it "Email should be unique" do  
-        @user = build(:user)
+        @user = build(:user_email)
         @user.save.should eq(true)
         name = @user.name
         email = @user.email

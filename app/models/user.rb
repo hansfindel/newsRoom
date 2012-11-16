@@ -1,10 +1,6 @@
 class User
 
   include Mongoid::Document
-
-  ROLES = %w[admin journalist editor chief_editor chief_editor_country reader]
-
-
   field :name, type: String
   field :email, type: String
   field :password_hash, type: String
@@ -18,12 +14,15 @@ class User
   before_create :encrypt_password
 
   attr_accessor :password
-  validates_confirmation_of :password
-  validates_presence_of :password, :on => :create
-  validates_presence_of :email
-  validates_uniqueness_of :email
 
- 
+
+  validates_presence_of :password, :on => :create, message: "must be present"
+  validates_confirmation_of :password, message: "must be confirmated"
+  validates_presence_of :email, message: "must be present"
+  validates_uniqueness_of :email, message: "is already taken"
+
+  ROLES = %w[admin journalist editor chief_editor chief_editor_country reader]
+
 
 
 def self.authenticate(email, password)

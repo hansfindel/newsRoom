@@ -88,4 +88,16 @@ describe Article do
       	page.should_not have_content("ice")
    	end
   end
+
+  #describe "form with js" do
+  #	it "shows a no headline message", js: true do 
+  #  	visit new_article_path
+  #		fill_in "article_story", :with => "ice"    	
+  #    	click_button "Create Article" #en este caso no tiene clase ni id, pero pesca lo que dice el boton
+  #    	page.should_not have_content("Article was successfully created.")
+  #    	page.should have_content("Headline must be present")   #message in the article model		
+  #	end
+  #end
+
+
 end

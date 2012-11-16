@@ -21,6 +21,10 @@ FactoryGirl.define do
 	  factory :user_admin do 
 	  	role User::ROLES[0]
 	  end
+	  factory :user_email do 
+	  	email "mi_random@mail.co"
+	  	role User::ROLES[0]
+	  end	  
 	end
 	
 	factory :category do
