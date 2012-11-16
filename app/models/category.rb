@@ -7,7 +7,9 @@ class Category
   has_many :articles, :through => :article_categories
   has_many :user_categories
   has_many :users, :through => :user_categories
+  
   validates_presence_of :name
+  validates_uniqueness_of :name
 
   def self.construct(name)
   	category = Category.where(name: name)
