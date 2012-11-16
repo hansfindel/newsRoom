@@ -27,5 +27,9 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </p>
+  <p>
+    <%= f.label :country %>
+    <%= select(@object, :country, User::COUNTRY) %>
+  </p>
   <p class="button"><%= f.submit %></p>
 <% end %>

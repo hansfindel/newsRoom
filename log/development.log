@@ -3370,3 +3370,2496 @@ MONGODB (0ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"chiefs",
 MONGODB (0ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"chiefs", "query"=>{:slave=>"50a040810d9f915d79000003"}, "fields"=>nil}).limit(-1)
 MONGODB (0ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"chiefs", "query"=>{:slave=>"50a040810d9f915d79000003"}, "fields"=>nil}).limit(-1)
 MONGODB (0ms) rails3_mongoid_devise_development['chiefs'].find({:slave=>"50a040810d9f915d79000003"})
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+Starting the New Relic Agent.
+NewRelic Agent Developer Mode enabled.
+To view performance information, go to http://localhost:3000/newrelic
+Installed New Relic Browser Monitoring middleware
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/diego/IIC2173NewsRoom/app/models/area.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/diego/IIC2173NewsRoom/app/models/article.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/diego/IIC2173NewsRoom/app/models/article_category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/diego/IIC2173NewsRoom/app/models/category.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/diego/IIC2173NewsRoom/app/models/chief.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/diego/IIC2173NewsRoom/app/models/news_agency.rb:18)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/diego/IIC2173NewsRoom/app/models/user.rb:3)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /home/diego/IIC2173NewsRoom/app/models/user_category.rb:2)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from <top (required)> at /home/diego/IIC2173NewsRoom/config/environment.rb:5)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 14:35:32 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (49.4ms)
+Compiled areas.css  (7ms)  (pid 5302)
+Compiled articles.css  (1ms)  (pid 5302)
+Compiled bootstrap_and_overrides.css  (855ms)  (pid 5302)
+Compiled news_agencies.css  (1ms)  (pid 5302)
+Compiled scaffolds.css  (17ms)  (pid 5302)
+Compiled sessions.css  (2ms)  (pid 5302)
+Compiled users.css  (1ms)  (pid 5302)
+Compiled application.css  (1017ms)  (pid 5302)
+Compiled jquery.js  (57ms)  (pid 5302)
+Compiled jquery_ujs.js  (0ms)  (pid 5302)
+Compiled rails.validations.js  (0ms)  (pid 5302)
+Compiled application.js  (79ms)  (pid 5302)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 1322ms (Views: 1320.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:35:33 -0300
+Served asset /areas.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:35:33 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:35:33 -0300
+Served asset /news_agencies.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:35:33 -0300
+Served asset /articles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:35:33 -0300
+Served asset /sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:35:33 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:35:33 -0300
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:35:33 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:35:33 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:35:33 -0300
+Served asset /rails.validations.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 14:49:10 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (65.6ms)
+Completed 500 Internal Server Error in 69ms
+
+ActionView::Template::Error (undefined local variable or method `the_array' for #<#<Class:0x0000000490fde0>:0x007f6db80b11c0>):
+    29:   </p>
+    30:   <p>
+    31:     <%= f.label :country %>
+    32:     <%= f.select(:country, options_for_select(User::COUNTRY[*the_array.collect {|v,i| [v,the_array.index(v)] }], :selected => f.object.test)) %>
+    33:   </p>
+    34: 
+    35:   <p class="button"><%= f.submit %></p>
+  app/views/users/new.html.erb:32:in `block in _app_views_users_new_html_erb___1520262904274354074_70054607945720'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___1520262904274354074_70054607945720'
+  app/controllers/users_controller.rb:29:in `new'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 14:49:42 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (wrong number of arguments (13 for 1..2)):
+    30:   <p>
+    31:     <%= f.label :country %>
+    32:     <%= the_array = User::COUNTRY %>
+    33:     <%= f.select(:country, options_for_select(User::COUNTRY[*the_array.collect {|v,i| [v,the_array.index(v)] }], :selected => f.object.test)) %>
+    34:   </p>
+    35: 
+    36:   <p class="button"><%= f.submit %></p>
+  app/views/users/new.html.erb:33:in `[]'
+  app/views/users/new.html.erb:33:in `block in _app_views_users_new_html_erb___1520262904274354074_70054650882660'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___1520262904274354074_70054650882660'
+  app/controllers/users_controller.rb:29:in `new'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.5ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 14:52:39 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `countries' for #<User:0x007f6dbdf00aa0>):
+    30:   <p>
+    31:     <%= f.label :country %>
+    32:     <%= the_array = User::COUNTRY %>
+    33:     <%= f.select 'countries', the_array %>
+    34: 
+    35:   <p class="button"><%= f.submit %></p>
+    36: <% end %>
+  app/views/users/new.html.erb:33:in `block in _app_views_users_new_html_erb___1520262904274354074_70054657388580'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___1520262904274354074_70054657388580'
+  app/controllers/users_controller.rb:29:in `new'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.6ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 14:52:55 -0300
+Processing by UsersController#new as HTML
+ERROR: compiling _app_views_users_new_html_erb___1520262904274354074_70054608064540 RAISED /home/diego/IIC2173NewsRoom/app/views/users/new.html.erb:33: syntax error, unexpected ')', expecting '='
+...append= ( f.select, the_array );@output_buffer.safe_concat('
+...                               ^
+/home/diego/IIC2173NewsRoom/app/views/users/new.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/home/diego/IIC2173NewsRoom/app/views/users/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+/home/diego/IIC2173NewsRoom/app/views/users/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_users_new_html_erb___1520262904274354074_70054608064540(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "users/new";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Sign up</h1>
+
+');@output_buffer.append=  form_for @user do |f| @output_buffer.safe_concat('
+');   if @user.errors.any? 
+@output_buffer.safe_concat('    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+');         for message in @user.errors.full_messages 
+@output_buffer.safe_concat('          <li>');@output_buffer.append= ( message );@output_buffer.safe_concat('</li>
+');         end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('  <p>
+    ');@output_buffer.append= ( f.label :name );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label :email );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label :password );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.password_field :password );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label :password_confirmation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( f.password_field :password_confirmation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label :country );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( the_array = User::COUNTRY );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( f.select, the_array );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+  <p class="button">');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:297:in `module_eval'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:297:in `compile'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:232:in `compile!'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:144:in `block in render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications.rb:125:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:143:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications.rb:123:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:156:in `block in render_with_newrelic'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/method_tracer.rb:242:in `trace_execution_scoped'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:155:in `render_with_newrelic'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/rendering.rb:88:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/diego/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.6/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/home/diego/IIC2173NewsRoom/app/controllers/users_controller.rb:29:in `new'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/base.rb:167:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:414:in `_run__4088073934372743124__process_action__1621861392889952763__callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications.rb:123:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.6/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:34:in `block in process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:268:in `block in perform_action_with_newrelic_trace'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/method_tracer.rb:242:in `trace_execution_scoped'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:263:in `perform_action_with_newrelic_trace'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/base.rb:121:in `process'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/rendering.rb:45:in `process'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal.rb:203:in `dispatch'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal.rb:246:in `block in action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/routing/route_set.rb:600:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/rack/error_collector.rb:8:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/rack/browser_monitoring.rb:12:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/rack/developer_mode.rb:24:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/client_side_validations-3.2.1/lib/client_side_validations/middleware.rb:21:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.6/lib/active_record/query_cache.rb:64:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:405:in `_run__562417850329098564__call__3986719151642207849__callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.6/lib/rails/rack/logger.rb:26:in `call_app'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.6/lib/rails/rack/logger.rb:16:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/static.rb:62:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.6/lib/rails/engine.rb:479:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.6/lib/rails/application.rb:220:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.6/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/diego/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/diego/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/diego/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (/home/diego/IIC2173NewsRoom/app/views/users/new.html.erb:33: syntax error, unexpected ')', expecting '='
+...append= ( f.select, the_array );@output_buffer.safe_concat('
+...                               ^
+/home/diego/IIC2173NewsRoom/app/views/users/new.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/home/diego/IIC2173NewsRoom/app/views/users/new.html.erb:38: syntax error, unexpected keyword_ensure, expecting ')'
+/home/diego/IIC2173NewsRoom/app/views/users/new.html.erb:40: syntax error, unexpected keyword_end, expecting ')'):
+    30:   <p>
+    31:     <%= f.label :country %>
+    32:     <%= the_array = User::COUNTRY %>
+    33:     <%= f.select, the_array %>
+    34: 
+    35:   <p class="button"><%= f.submit %></p>
+    36: <% end %>
+  app/controllers/users_controller.rb:29:in `new'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 14:54:09 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:09 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:09 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:09 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:09 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:09 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:09 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:09 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:54:09 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:54:09 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:54:09 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 14:54:38 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:38 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:38 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:38 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:38 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:38 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:38 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:54:38 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:54:38 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:54:38 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:54:38 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 14:54:53 -0300
+Processing by UsersController#new as HTML
+ERROR: compiling _app_views_users_new_html_erb___1520262904274354074_70054609178940 RAISED /home/diego/IIC2173NewsRoom/app/views/users/new.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting ']'
+...t([["Select One", ""] the_array]), :class => 'genForm_dropBo...
+...                               ^
+Function body:           def _app_views_users_new_html_erb___1520262904274354074_70054609178940(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "users/new";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Sign up</h1>
+
+');@output_buffer.append=  form_for @user do |f| @output_buffer.safe_concat('
+');   if @user.errors.any? 
+@output_buffer.safe_concat('    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+');         for message in @user.errors.full_messages 
+@output_buffer.safe_concat('          <li>');@output_buffer.append= ( message );@output_buffer.safe_concat('</li>
+');         end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('  <p>
+    ');@output_buffer.append= ( f.label :name );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label :email );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :email );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label :password );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.password_field :password );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label :password_confirmation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( f.password_field :password_confirmation );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <p>
+    ');@output_buffer.append= ( f.label :country );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( the_array = User::COUNTRY );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( f.select :country, options_for_select([["Select One", ""] the_array]), :class => 'genForm_dropBox' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+  <p class="button">');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:297:in `module_eval'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:297:in `compile'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:232:in `compile!'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:144:in `block in render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications.rb:125:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/template.rb:143:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications.rb:123:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:156:in `block in render_with_newrelic'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/method_tracer.rb:242:in `trace_execution_scoped'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:155:in `render_with_newrelic'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/rendering.rb:88:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/diego/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.6/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/home/diego/IIC2173NewsRoom/app/controllers/users_controller.rb:29:in `new'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/base.rb:167:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:414:in `_run__4088073934372743124__process_action__1621861392889952763__callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/notifications.rb:123:in `instrument'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/params_wrapper.rb:206:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.6/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:34:in `block in process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:268:in `block in perform_action_with_newrelic_trace'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/method_tracer.rb:242:in `trace_execution_scoped'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:263:in `perform_action_with_newrelic_trace'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/base.rb:121:in `process'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/abstract_controller/rendering.rb:45:in `process'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal.rb:203:in `dispatch'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_controller/metal.rb:246:in `block in action'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/routing/route_set.rb:600:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/rack/error_collector.rb:8:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/rack/browser_monitoring.rb:12:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/newrelic_rpm-3.5.1.14/lib/new_relic/rack/developer_mode.rb:24:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/client_side_validations-3.2.1/lib/client_side_validations/middleware.rb:21:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.6/lib/active_record/query_cache.rb:64:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activerecord-3.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:405:in `_run__562417850329098564__call__3986719151642207849__callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.6/lib/rails/rack/logger.rb:26:in `call_app'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.6/lib/rails/rack/logger.rb:16:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/activesupport-3.2.6/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/static.rb:62:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.6/lib/rails/engine.rb:479:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.6/lib/rails/application.rb:220:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/railties-3.2.6/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/diego/.rvm/gems/ruby-1.9.3-p286/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/diego/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/diego/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/diego/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (/home/diego/IIC2173NewsRoom/app/views/users/new.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting ']'
+...t([["Select One", ""] the_array]), :class => 'genForm_dropBo...
+...                               ^):
+    30:   <p>
+    31:     <%= f.label :country %>
+    32:     <%= the_array = User::COUNTRY %>
+    33:     <%= f.select :country, options_for_select([["Select One", ""] the_array]), :class => 'genForm_dropBox' %>
+    34: 
+    35:   <p class="button"><%= f.submit %></p>
+    36: <% end %>
+  app/controllers/users_controller.rb:29:in `new'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-16 14:56:29 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].find({:is_published=>true}).limit(5)
+MONGODB (0ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"articles", "query"=>{:is_published=>true}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+  Rendered articles/index.html.erb within layouts/application (75.4ms)
+Completed 200 OK in 90ms (Views: 88.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:29 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:29 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:29 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:29 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:29 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:29 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:29 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:29 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:29 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:29 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-11-16 14:56:32 -0300
+Processing by UsersController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({})
+  Rendered users/index.html.erb within layouts/application (13.1ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:32 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:32 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:32 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:32 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:32 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:32 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:32 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:32 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:32 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:32 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 14:56:33 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (8.4ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:33 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:33 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:33 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:33 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:33 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:33 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:33 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:33 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:33 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:33 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 14:56:44 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (54.6ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 74ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:44 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:44 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:44 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:44 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:44 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:44 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:56:44 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:44 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:44 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:56:44 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 14:57:10 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:57:10 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:57:10 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:57:10 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:57:10 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:57:10 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:57:10 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:57:10 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:57:10 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:57:10 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:57:10 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-11-16 14:58:21 -0300
+Processing by UsersController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({})
+  Rendered users/index.html.erb within layouts/application (11.1ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:21 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:21 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:21 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:21 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:22 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:22 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:58:22 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:58:22 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:22 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:58:22 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/50a655d31d41c80c16000001/edit" for 127.0.0.1 at 2012-11-16 14:58:23 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"50a655d31d41c80c16000001"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+MONGODB (0ms) rails3_mongoid_devise_development['user_categories'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+MONGODB (1ms) rails3_mongoid_devise_development['categories'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+  Rendered users/_form.html.erb (78.3ms)
+  Rendered users/edit.html.erb within layouts/application (81.7ms)
+Completed 200 OK in 98ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:23 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:24 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:24 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:24 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:24 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:24 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:58:24 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:58:24 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:58:24 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:58:24 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/50a655d31d41c80c16000001/edit" for 127.0.0.1 at 2012-11-16 14:59:02 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"50a655d31d41c80c16000001"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+MONGODB (0ms) rails3_mongoid_devise_development['user_categories'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+MONGODB (0ms) rails3_mongoid_devise_development['categories'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+  Rendered users/_form.html.erb (21.1ms)
+  Rendered users/edit.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:02 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:02 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:02 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:02 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:02 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:02 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:02 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:03 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:03 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:03 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/50a655d31d41c80c16000001/edit" for 127.0.0.1 at 2012-11-16 14:59:21 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"50a655d31d41c80c16000001"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+MONGODB (0ms) rails3_mongoid_devise_development['user_categories'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+MONGODB (0ms) rails3_mongoid_devise_development['categories'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+  Rendered users/_form.html.erb (71.1ms)
+  Rendered users/edit.html.erb within layouts/application (73.8ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:21 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:21 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:21 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:21 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:21 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:21 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:21 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:21 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:21 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:21 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2012-11-16 14:59:41 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-16 14:59:41 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].find({:is_published=>true}).limit(5)
+MONGODB (0ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"articles", "query"=>{:is_published=>true}, "fields"=>nil}).limit(-1)
+  Rendered articles/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:41 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:41 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:41 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:41 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:42 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:42 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:42 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:42 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:42 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:42 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2012-11-16 14:59:43 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:43 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:43 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:43 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:43 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:43 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:43 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:43 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:43 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:43 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:43 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-11-16 14:59:47 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvkQy5ywv9yr3LIhJ72QMqbV2yNSMEJSkL6sDjbXVgo=", "email"=>"jfacundo", "password"=>"[FILTERED]", "commit"=>"Log in"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:email=>"jfacundo"}).limit(-1)
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 335ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-16 14:59:48 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].find({:is_published=>true}).limit(5)
+MONGODB (0ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"articles", "query"=>{:is_published=>true}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000002')}).limit(-1)
+  Rendered articles/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:48 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:48 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:48 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:48 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:48 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:48 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 14:59:48 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:48 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:48 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 14:59:48 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_development['articles'].find({:is_published=>true}).limit(5)
+MONGODB (1ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"articles", "query"=>{:is_published=>true}, "fields"=>nil}).limit(-1)
+  Rendered articles/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2012-11-16 15:08:46 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:46 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:47 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:47 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:47 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:47 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:47 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:47 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:47 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:47 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:47 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvkQy5ywv9yr3LIhJ72QMqbV2yNSMEJSkL6sDjbXVgo=", "email"=>"admin", "password"=>"[FILTERED]", "commit"=>"Log in"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:email=>"admin"}).limit(-1)
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 326ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].find({:is_published=>true}).limit(5)
+MONGODB (0ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"articles", "query"=>{:is_published=>true}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+  Rendered articles/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:51 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/areas" for 127.0.0.1 at 2012-11-16 15:08:56 -0300
+Processing by AreasController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['areas'].find({})
+  Rendered areas/index.html.erb within layouts/application (3.7ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:56 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:56 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:56 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:56 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:56 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:56 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:56 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:56 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:56 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:08:56 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-11-16 15:08:59 -0300
+Processing by UsersController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({})
+  Rendered users/index.html.erb within layouts/application (66.5ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 80ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:59 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:59 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:59 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:59 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:59 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:59 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:08:59 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:09:00 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:09:00 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:09:00 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/50a655d31d41c80c16000001/edit" for 127.0.0.1 at 2012-11-16 15:09:04 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"50a655d31d41c80c16000001"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+MONGODB (0ms) rails3_mongoid_devise_development['user_categories'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+MONGODB (0ms) rails3_mongoid_devise_development['categories'].find({"user_id"=>BSON::ObjectId('50a655d31d41c80c16000001')})
+  Rendered users/_form.html.erb (25.7ms)
+  Rendered users/edit.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:09:04 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:09:04 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:09:04 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:09:04 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:09:04 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:09:04 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:09:04 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:09:04 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:09:04 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:09:04 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-11-16 15:12:09 -0300
+Processing by UsersController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({})
+  Rendered users/index.html.erb within layouts/application (9.8ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:09 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:09 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:09 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:09 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:09 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:09 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:09 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:09 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:09 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:09 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 15:12:10 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a655d31d41c80c16000001')}).limit(-1)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:10 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:10 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:10 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:10 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:10 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:11 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:11 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:11 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:11 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:11 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_development['articles'].find({:is_published=>true}).limit(5)
+MONGODB (1ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"articles", "query"=>{:is_published=>true}, "fields"=>nil}).limit(-1)
+  Rendered articles/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:15 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2012-11-16 15:12:17 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:17 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:17 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:17 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:17 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:17 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:17 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:17 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:17 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:17 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:17 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvkQy5ywv9yr3LIhJ72QMqbV2yNSMEJSkL6sDjbXVgo=", "user"=>{"name"=>"Diego Carey", "email"=>"diegocarey@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "country"=>"Chile", "commit"=>"Create User"}
+MONGODB (1ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"users", "query"=>{:email=>"diegocarey@gmail.com"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].insert([{"name"=>"Diego Carey", "email"=>"diegocarey@gmail.com", "_id"=>BSON::ObjectId('50a6820a1d41c814b6000011'), "password_salt"=>"$2a$10$mm.gN0OaN9dxSNsjtdZkje", "password_hash"=>"$2a$10$mm.gN0OaN9dxSNsjtdZkjeD6.xV2Kert1WpXmGWjdzCyJA2knM0Va"}])
+Redirected to http://localhost:3000/users/50a6820a1d41c814b6000011
+Completed 302 Found in 333ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/50a6820a1d41c814b6000011" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"50a6820a1d41c814b6000011"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a6820a1d41c814b6000011')}).limit(-1)
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:26 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-11-16 15:12:29 -0300
+Processing by UsersController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_development['users'].find({})
+  Rendered users/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:29 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:29 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:29 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:29 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:29 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:29 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:29 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:29 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:29 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:29 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/50a6820a1d41c814b6000011" for 127.0.0.1 at 2012-11-16 15:12:31 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"50a6820a1d41c814b6000011"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a6820a1d41c814b6000011')}).limit(-1)
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:31 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:31 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:31 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:31 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:31 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:31 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:31 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:31 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:31 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:31 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-11-16 15:12:33 -0300
+Processing by UsersController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({})
+  Rendered users/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:33 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:33 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:33 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:33 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:33 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:33 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:33 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:12:33 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:33 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:12:33 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/50a6820a1d41c814b6000011/edit" for 127.0.0.1 at 2012-11-16 15:12:35 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"50a6820a1d41c814b6000011"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a6820a1d41c814b6000011')}).limit(-1)
+  Rendered users/_form.html.erb (10.5ms)
+  Rendered users/edit.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `role' for nil:NilClass):
+    34:     <%= select(@object, :country, User::COUNTRY) %>
+    35:   </p>
+    36:   
+    37:   <% roles = Ability.get_permissions(current_user.role) %>
+    38:   <% if roles.include?"admin" %>
+    39: 
+    40:     <div class="field">
+  app/views/users/_form.html.erb:37:in `block in _app_views_users__form_html_erb___1836822044973809640_70054440580020'
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___1836822044973809640_70054440580020'
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___3271328365181559578_70054657011900'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.0ms)
+
+
+Started GET "/users/50a6820a1d41c814b6000011/edit" for 127.0.0.1 at 2012-11-16 15:13:28 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"50a6820a1d41c814b6000011"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a6820a1d41c814b6000011')}).limit(-1)
+  Rendered users/_form.html.erb (5.2ms)
+  Rendered users/edit.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined method `role' for nil:NilClass):
+    34:     <%= select(@object, :country, User::COUNTRY) %>
+    35:   </p>
+    36:   
+    37:   <% roles = Ability.get_permissions(current_user.role) %>
+    38:   <% if roles.include?"admin" %>
+    39: 
+    40:     <div class="field">
+  app/views/users/_form.html.erb:37:in `block in _app_views_users__form_html_erb___1836822044973809640_70054440580020'
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___1836822044973809640_70054440580020'
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___3271328365181559578_70054657011900'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.4ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/diego/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.6ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2012-11-16 15:16:00 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:00 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:00 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:00 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:00 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:00 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:00 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:00 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:00 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:00 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:00 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvkQy5ywv9yr3LIhJ72QMqbV2yNSMEJSkL6sDjbXVgo=", "email"=>"diegocarey@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+MONGODB (1ms) rails3_mongoid_devise_development['users'].find({:email=>"diegocarey@gmail.com"}).limit(-1)
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 334ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['articles'].find({:is_published=>true}).limit(5)
+MONGODB (0ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"articles", "query"=>{:is_published=>true}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a6820a1d41c814b6000011')}).limit(-1)
+  Rendered articles/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:07 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_development['articles'].find({:is_published=>true}).limit(5)
+MONGODB (0ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"articles", "query"=>{:is_published=>true}, "fields"=>nil}).limit(-1)
+  Rendered articles/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:23 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2012-11-16 15:16:26 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:26 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:26 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:26 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:26 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:26 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:26 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:26 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:26 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:26 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:26 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-11-16 15:16:32 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvkQy5ywv9yr3LIhJ72QMqbV2yNSMEJSkL6sDjbXVgo=", "user"=>{"name"=>"Pedro", "email"=>"p", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "country"=>"Chile", "commit"=>"Create User"}
+MONGODB (0ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"users", "query"=>{:email=>"p"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].insert([{"name"=>"Pedro", "email"=>"p", "_id"=>BSON::ObjectId('50a683001d41c814b6000014'), "password_salt"=>"$2a$10$w2Im/P5H/K7pmwNkUhOD6O", "password_hash"=>"$2a$10$w2Im/P5H/K7pmwNkUhOD6OoSageT3PA8JfW4E3wRG6Hq6Bvsku6wS"}])
+Redirected to http://localhost:3000/users/50a683001d41c814b6000014
+Completed 302 Found in 333ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/50a683001d41c814b6000014" for 127.0.0.1 at 2012-11-16 15:16:33 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"50a683001d41c814b6000014"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a683001d41c814b6000014')}).limit(-1)
+  Rendered users/show.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:33 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:33 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:33 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:33 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:33 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:33 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:33 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:33 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:33 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:33 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-11-16 15:16:36 -0300
+Processing by UsersController#index as HTML
+MONGODB (1ms) rails3_mongoid_devise_development['users'].find({})
+  Rendered users/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:36 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:36 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:36 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:36 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:37 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:37 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:37 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:37 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:37 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:37 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/50a683001d41c814b6000014" for 127.0.0.1 at 2012-11-16 15:16:45 -0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DvkQy5ywv9yr3LIhJ72QMqbV2yNSMEJSkL6sDjbXVgo=", "id"=>"50a683001d41c814b6000014"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a683001d41c814b6000014')}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].remove({:_id=>BSON::ObjectId('50a683001d41c814b6000014')})
+Redirected to http://localhost:3000/users
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-11-16 15:16:45 -0300
+Processing by UsersController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({})
+  Rendered users/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:45 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:45 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:45 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:45 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:45 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:46 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:46 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:46 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:46 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:46 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/50a6820a1d41c814b6000011" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DvkQy5ywv9yr3LIhJ72QMqbV2yNSMEJSkL6sDjbXVgo=", "id"=>"50a6820a1d41c814b6000011"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a6820a1d41c814b6000011')}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].remove({:_id=>BSON::ObjectId('50a6820a1d41c814b6000011')})
+Redirected to http://localhost:3000/users
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Processing by UsersController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({})
+  Rendered users/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 79ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:16:50 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-16 15:17:08 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:09 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:09 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:09 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:09 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:09 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:09 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:09 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:17:09 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:17:09 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:17:09 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvkQy5ywv9yr3LIhJ72QMqbV2yNSMEJSkL6sDjbXVgo=", "user"=>{"name"=>"Diego Carey", "email"=>"diegocarey@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "country"=>"Chile", "commit"=>"Create User"}
+MONGODB (1ms) rails3_mongoid_devise_development['$cmd'].find({"count"=>"users", "query"=>{:email=>"diegocarey@gmail.com"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_development['users'].insert([{"name"=>"Diego Carey", "email"=>"diegocarey@gmail.com", "_id"=>BSON::ObjectId('50a6832d1d41c814b6000016'), "password_salt"=>"$2a$10$eDSY3HZioVQpbRQIU2QIPu", "password_hash"=>"$2a$10$eDSY3HZioVQpbRQIU2QIPu6CD0MuMJVY6u9JN3TvJXzcfsOFGPdOW"}])
+Redirected to http://localhost:3000/users/50a6832d1d41c814b6000016
+Completed 302 Found in 348ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/50a6832d1d41c814b6000016" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"50a6832d1d41c814b6000016"}
+MONGODB (0ms) rails3_mongoid_devise_development['users'].find({:_id=>BSON::ObjectId('50a6832d1d41c814b6000016')}).limit(-1)
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/areas.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Served asset /areas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/news_agencies.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Served asset /news_agencies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.validations.js?body=1" for 127.0.0.1 at 2012-11-16 15:17:17 -0300
+Served asset /rails.validations.js - 304 Not Modified (0ms)
