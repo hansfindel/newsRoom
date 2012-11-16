@@ -72,7 +72,7 @@ describe Article do
     	visit new_article_path
     	fill_in "article_headline", :with => "fire"  #article_headline es el id en el form para poner el headline
 		  fill_in "article_story", :with => "here"    	
-      	click_button "create_article" #en este caso no tiene clase ni id, pero pesca lo que dice el boton
+      	click_button "Create Article" #en este caso no tiene clase ni id, pero pesca lo que dice el boton
       	# save_and_open_page  #con esto puedes ver el estado de la pagina en el browser
       	page.should have_content("Article was successfully created.")
       	page.should have_content("fire")
