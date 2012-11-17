@@ -15,17 +15,17 @@ describe NewsAgency do
 	describe "test the validations" do
 
 		it "cannot be saved, it has no name or feed_url" do 
-			@news_agency.save.should == false
+			@news_agency.save.should be_false
 		end
 
 		it "cannot be saved, it has no name" do 
 			@news_agency.feed_url = "url"
-			@news_agency.save.should == false
+			@news_agency.save.should be_false
 		end
 
 		it "cannot be saved, it has no url" do 
 			@news_agency.name = "Agency Name"
-			@news_agency.save.should == false
+			@news_agency.save.should be_false
 		end
 
 		it "cannot be saved, it uses an existing url" do 

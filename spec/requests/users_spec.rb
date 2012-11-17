@@ -5,9 +5,6 @@ describe User do
   before (:each) do
     User.destroy_all
     @user = User.new
-    #@current_user = build(:user)
-    #current_user = @current_user
-    #@current_user.save
   end
 
   describe "GET /users" do    
@@ -104,6 +101,13 @@ describe User do
         page.should_not have_content(@user.email)
     end
 
+    it "Should show user" do
+        @user = build(:user)
+        @user.save.should be_true
+        visit users_path
+        click_link "Show"
+        page.should have_content(@user.email)
+    end  
 
   end 
   
