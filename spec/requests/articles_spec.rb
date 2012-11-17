@@ -85,7 +85,7 @@ describe Article do
       	click_button "Create Article" #en este caso no tiene clase ni id, pero pesca lo que dice el boton
       	# save_and_open_page  #con esto puedes ver el estado de la pagina en el browser
       	page.should_not have_content("Article was successfully created.")
-      	page.should_not have_content("ice")
+      	page.should have_content("Headline must be present")
    	end
   end
 

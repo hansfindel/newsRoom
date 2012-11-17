@@ -3,6 +3,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe Article do
 	before :each do
 		Article.destroy_all
+		User.destroy_all
 		@article = Article.new
 	end
 
