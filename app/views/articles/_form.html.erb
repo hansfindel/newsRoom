@@ -34,7 +34,7 @@
 
   <div class="field">
     <%= f.label :news_agency_id %><br />
-    <%= f.collection_select :news_agency_id, NewsAgency.all, :id, :name, options: { include_blank: true, prompt: 'Select Person' } %>
+    <%= f.collection_select :news_agency_id, NewsAgency.all, :id, :name, { :include_blank => "Select Agency" } %>
   </div>
 
    <!-- <div class="field">
@@ -57,6 +57,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Create Article", :class => "create_article" %>
+    <%= f.submit "Update Article", :class => "create_article" %>
   </div>
 <% end %>

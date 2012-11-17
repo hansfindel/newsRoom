@@ -59,8 +59,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     aux = 0
     User::ROLES.each do |r|
-      if params[:role][r] != nil
-        aux = aux + params[:role][r].to_i
+      if params[:role]
+
+        if params[:role][r] != nil
+          aux = aux + params[:role][r].to_i
+        end
+
       end
     end
     params[:user][:role] = aux  

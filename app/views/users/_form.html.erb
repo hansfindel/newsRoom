@@ -48,6 +48,11 @@
     <%= collection_select(:boss, :boss, @bosses_array, :_id, :name,{:include_blank => "Select boss"}) %>
   </div>
 
+  <div class="field">
+      <%= f.label :area_id %><br />
+      <%= f.collection_select :area_id, Area.all, :id, :name, {:include_blank => "Select Area"}%>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
