@@ -33,3 +33,17 @@ class RawData
   end
 
 end
+
+
+
+# def self.store(data, value=[])
+#    if data.nil? 
+#      value = []
+#    else
+#      data = get_data data
+#      data.entries.each do |feed|
+#        value << feed
+#      end
+#    end
+#    value
+#  end

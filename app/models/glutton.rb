@@ -13,8 +13,9 @@ class Glutton
   def self.fetch_and_store
     NewsAgency.all.each do |agency|
       feed = Feedzirra::Feed.fetch_and_parse(agency.feed_url)
-      @value = RawData.store(feed)
-      FeedProcessor.process_feeds(@value)
+      FeedProcessor.process_feeds(feed)
+      #@value = RawData.store(feed)
+      #FeedProcessor.process_feeds(@value)
     end
   end
 
