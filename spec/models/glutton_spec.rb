@@ -16,7 +16,7 @@ describe Glutton do
 	end
 
 	describe "#new" do
-	    it "takes no parameters and returns an User object" do
+	    it "takes no parameters and returns a Glutton object" do
 	        @glutton.should be_an_instance_of Glutton
 	    end
 
