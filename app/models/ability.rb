@@ -11,17 +11,25 @@ class Ability
         elsif roles.include?'editor'
             can :read, :all
             can :manage, Article
+            can :manage, Area
         elsif roles.include?'chief_editor'
             can :read, :all
             can :manage, Article
+            can :manage, Area
         elsif roles.include?'chief_editor_country'
             can :read, :all
             can :manage, Article
+            can :manage, Area
         elsif roles.include?'journalist'
             can :read, :all
             can :update, Article, :user => user
+            can :create, Article
+            can :manage, Area
         else
             can :read, Article
+            can :create, User
+            can :read, User
+            can :manage, User, :user_id => user.id
        end
     #
     # The first argument to `can` is the action you are giving the user permission to do.

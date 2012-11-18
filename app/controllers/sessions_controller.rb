@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  #skip_authorization_check 
   def new
     if session[:user_id]
       redirect_to :articles

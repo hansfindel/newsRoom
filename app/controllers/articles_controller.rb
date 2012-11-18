@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
+ # load_and_authorize_resource
   def index
     #@articles = #Article.where(:is_published => true)
     @articles = Article.published.paginated(params[:page])
