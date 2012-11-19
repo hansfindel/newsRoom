@@ -22,8 +22,7 @@ class NewsAgency
   field :feed_url, type: String
   has_many :articles
 
-  validates_presence_of :name
-  validates_presence_of :feed_url
-  validates_uniqueness_of :feed_url
+  validates_presence_of :name, :feed_url, message: "must be present"
+  validates_uniqueness_of :feed_url, message: "must be unique"
   
 end

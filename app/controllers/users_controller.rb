@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+  #load_and_authorize_resource
   def index
     @users = User.all
 
@@ -35,6 +36,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
+    @bosses_array = User.where(:country => @user.country, :_id.ne => params[:id])
   end
 
   # POST /users
@@ -56,10 +58,25 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = User.find(params[:id])
+    aux = 0
+    User::ROLES.each do |r|
+      if params[:role]
 
+        if params[:role][r] != nil
+          aux = aux + params[:role][r].to_i
+        end
+
+      end
+    end
+    params[:user][:role] = aux  
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+
+        if params[:boss][:boss] && not(params[:boss][:boss].empty?)
+          @user.setBoss(params[:boss][:boss])
+        end
+
+        format.html { redirect_to @user, notice: 'User was successfully updated.'}
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

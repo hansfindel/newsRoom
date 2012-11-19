@@ -8,20 +8,28 @@ class Ability
     roles = Ability.get_permissions(user.role)
         if roles.include?'admin'
             can :manage, :all
-        elsif roles.include?'journalist'
-            can :read, :all
-            can :update, Article, :user => user
         elsif roles.include?'editor'
             can :read, :all
             can :manage, Article
+            can :manage, Area
         elsif roles.include?'chief_editor'
             can :read, :all
             can :manage, Article
+            can :manage, Area
         elsif roles.include?'chief_editor_country'
             can :read, :all
             can :manage, Article
+            can :manage, Area
+        elsif roles.include?'journalist'
+            can :read, :all
+            can :update, Article, :user => user
+            can :create, Article
+            can :manage, Area
         else
             can :read, Article
+            can :create, User
+            can :read, User
+            can :manage, User, :user_id => user.id
        end
     #
     # The first argument to `can` is the action you are giving the user permission to do.
@@ -39,15 +47,15 @@ class Ability
     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
   end
 
-  def self.get_permissions(number)
-    if number == nil
+  def self.get_permissions(number=0)
+    if not number
         number = 0
     end
     binary = []
     permissions = []
     while number != 0
         binary.append(number%2)
-        number = number/2
+        number = ((number).to_i/2).to_i
     end
     
     (0..binary.size-1).each do |i|

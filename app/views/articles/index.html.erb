@@ -1,16 +1,16 @@
 <h1>NewsRoom</h1>
-
 <h2> Noticias principales </h2>
 <div class="row">
   <div class="span8 offset2">
     <% @articles.each do |article| %>
     <div class="well">
-      <h3><%= link_to article.headline, article %></h3>
-      <p><%= simple_format article.deck %></p>
+      <% cache article do %>
+      	<%= render article %>
+      <% end %>
     </div>
     <% end %>
+    <%= paginate @articles, :window => 2 %>
   </div>
-
 </div>
 
 

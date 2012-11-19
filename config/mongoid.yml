@@ -14,6 +14,19 @@ test:
   <<: *defaults
   database: rails3_mongoid_devise_test
 
+#just like the production site (before moving to u-servers)
+staging:
+  uri: <%= ENV['MONGOHQ_URL'] %>
+  max_retries_on_connection_failure: 20
+  persist_in_safe_mode: true
+  skip_version_check: true
+  #  host: <%= ENV['MONGOID_HOST'] %>
+  #  port: <%= ENV['MONGOID_PORT'] %>
+  #  username: <%= ENV['MONGOID_USERNAME'] %>
+  #  password: <%= ENV['MONGOID_PASSWORD'] %>
+  #  database: <%= ENV['MONGOID_DATABASE'] %>
+  #  uri: mongodb://hans:hans@alex.mongohq.com:10093/app8798946 || <%= ENV['MONGOHQ_URL'] %>
+
 # set these environment variables on your prod server
 production:
   uri: <%= ENV['MONGOHQ_URL'] %>

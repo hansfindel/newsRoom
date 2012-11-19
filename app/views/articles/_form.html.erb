@@ -1,10 +1,10 @@
-<%= form_for(@article) do |f| %>
+<%= form_for @article, :validate => true, :html => {:multipart => true}  do |f| %>
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
       <ul>
-      <% @article.errors.full_messages.each do |msg| %>
+        <% @article.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -28,24 +28,35 @@
   </div>
   <div class="field">
     <%= f.label :story %><br />
-    <%= f.text_field :story %>
+    <%= f.text_area :story %>
   </div>
 
 
   <div class="field">
     <%= f.label :news_agency_id %><br />
-    <%= f.collection_select :news_agency_id, NewsAgency.all, :id, :name %>
+    <%= f.collection_select :news_agency_id, NewsAgency.all, :id, :name, { :include_blank => "Select Agency" } %>
   </div>
 
-    <div class="field">
+   <!-- <div class="field">
       <%= f.label :grade %><br />
       <%= f.text_field :grade %>
     </div>
+-->
 
+  <div class="field">
+      <%= f.label :area_id %><br />
+      <%= f.collection_select :area_id, Area.all, :id, :name, {:include_blank => "Select Area"}%>
+    </div>
 
   <%= render :partial => 'grades', :locals =>{:f => f} %>
 
+  <div class="field">
+    <%= f.fields_for :pictures do |f| %>
+      <%= render "picture_fields", :f => f %>
+    <% end %>
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Update Article", :class => "create_article" %>
   </div>
 <% end %>

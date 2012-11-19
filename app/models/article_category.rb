@@ -7,9 +7,17 @@ class ArticleCategory
   belongs_to :category 
 
   def self.construct(article, category_name)
-  	cat = Category.construct(category_name)
-  	#ArticleCategory.
-  	create(article: article, category: cat)
+    if category_name.class.eql?(String)
+  	  cat = Category.construct(category_name)
+    else #assumming it is a Category object
+      cat = category_name
+    end
+    if article.class.eql?(Article)
+    	#ArticleCategory.
+    	create(article: article, category: cat)
+      return true
+    end
+    false
   end
 
 end

@@ -1,9 +1,10 @@
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
+ # load_and_authorize_resource
   def index
-    @articles = Article.all
-
+    #@articles = #Article.where(:is_published => true)
+    @articles = Article.published.paginated(params[:page])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }
@@ -41,15 +42,13 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
-    @article.grade = 0;
-    @article.editors_grade = 0;
-    @article.chief_editor_grade = 0;
-    @article.chief_editor_country_grade = 0;
-    if current_role.eql?'journalist'
+    @article.set_initial_grades
+    if current_role.include?('journalist')
       @article.user = current_user
     end
     respond_to do |format|
       if @article.save
+        @article.add_picture(params[:picture])
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render json: @article, status: :created, location: @article }
       else
@@ -67,7 +66,7 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       if @article.update_attributes(params[:article])
 
-        if(!(current_role.eql?'reader') && !(current_role.eql?'journalist'))
+        if(current_role.include?('editor') || current_role.include?('chief_editor') || current_role.include?('chief_editor_country'))
           @article.add_grade
         end
 
@@ -94,12 +93,38 @@ class ArticlesController < ApplicationController
   end
 
   def fetch_and_store
-    @value = Glutton.fetch
-    FeedProcessor.process_feeds(@value)
-    redirect_to articles_path, notice: "New feeds were fetched"
+    Glutton.fetch_and_store
+    redirect_to articles_path, notice: "New feeds were fetched and processed"
   end
   def process_feeds
     FeedProcessor.process_feeds
     redirect_to articles_path, notice: "New feeds were processed"
+  end
+  
+  def show_non_published
+    @articles = Article.nonpublished.where(:editors_grade =>0, :user_id.ne => current_user_id)
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @articles }
+    end
+  end
+
+  def chief_editors_non_published
+    @articles = Article.nonpublished.where(:chief_editor_grade =>0, :user_id.ne => current_user_id)
+
+    respond_to do |format|
+      format.html { render :template => "articles/show_non_published" }
+      format.json { render json: @articles }
+    end
+  end
+
+  def chief_editors_country_non_published
+    @articles = Article.nonpublished.where(:chief_editor_country_grade =>0, :user_id.ne => current_user_id)
+
+    respond_to do |format|
+      format.html { render :template => "articles/show_non_published" } 
+      format.json { render json: @articles }
+    end
   end
 end

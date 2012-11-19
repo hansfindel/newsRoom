@@ -1,13 +1,20 @@
 NewsRoom::Application.routes.draw do
  
+  resources :areas
+
   get "log_in" => "sessions#new", :as => "log_in"
   get "log_out" => "sessions#destroy", :as => "log_out"
 
   get "sign_up" => "users#new", :as => "sign_up"
   get "glutton/store" => "articles#fetch_and_store", :as => "store_glutton_feeds"
   get "feeds_processor/process" => "articles#process_feeds", :as => "process_feeds"
+  get "non_published" => "articles#show_non_published", :as => "non_published"
+  get "articles/non_published" => "articles#show_non_published", :as => "non_published_articles"
+  get "articles/chief_editors" => "articles#chief_editors_non_published", :as => "chief_editors"
+  get "articles/chief_editors_country" => "articles#chief_editors_country_non_published", :as => "chief_editors_country"
   root :to => "articles#index"
-
+  
+  get "errors/overload" => "errors#overload"
   
   resources :users
   resources :sessions

@@ -2,6 +2,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Glutton do
 	before :each do
+		NewsAgency.destroy_all
 		@ups = NewsAgency.new(name: "UPS", feed_url: "http://feeds.feedburner.com/railscasts")
 		if !@ups.save
 			@ups = NewsAgency.where(name: "UPS").first
@@ -19,6 +20,7 @@ describe Glutton do
 	    end
 
 	    it "fetches news for every news agency available" do
+	    	(NewsAgency.all.count > 0).should be_true
 	    	Glutton.fetch.should be_true
 	    end
 

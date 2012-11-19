@@ -27,5 +27,14 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </p>
+  <p>
+    <%= f.label :country %>
+    <%= select(:user, :country, User::COUNTRY) %>
+  </p>
+
+  <div class="field">
+      <%= f.label :area_id %><br />
+      <%= f.collection_select :area_id, Area.all, :id, :name, {:include_blank => "Select Area"}%>
+    </div>
   <p class="button"><%= f.submit %></p>
 <% end %>
