@@ -1,11 +1,13 @@
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
- # load_and_authorize_resource
+  load_and_authorize_resource
+  #skip_before_filter :verify_authenticity_token, :only => [:update,:create]
   def index
     #@articles = #Article.where(:is_published => true)
     @articles = Article.published.paginated(params[:page])
     respond_to do |format|
+
       format.html # index.html.erb
       format.json { render json: @articles }
     end
@@ -36,6 +38,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
+    
   end
 
   # POST /articles
