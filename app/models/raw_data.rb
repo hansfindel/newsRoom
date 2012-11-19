@@ -12,12 +12,17 @@ class RawData
       value = "No new feeds"
     else
     	data.entries.each do |feed|
-    		#value = self.new(:value => feed)#, :data => data.entries)
-    		#value.save
-    		value << feed
+    		unless exists? :guis => feed.id
+          Article.create!(
+            :headline => entry.title,
+            :deck => entry.summary,
+            :url => entry.url,
+            :published_on => entry.published_at
+            :guid => entry.guid
+            )
+    		  value << feed
     	end
     end
-    value
   end
 
 

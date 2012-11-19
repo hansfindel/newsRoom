@@ -10769,3 +10769,132 @@ MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"
 MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>nil}, "fields"=>nil}).limit(-1)
 MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>"test@hmail.com"}, "fields"=>nil}).limit(-1)
 MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>"hola@hola.com"}, "fields"=>nil}).limit(-1)
+Connecting to database specified by database.yml
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-12 22:46:32 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"headline"=>"holo", "story"=>"story"}}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"holo", "story"=>"story", "_id"=>BSON::ObjectId('50a1a678898d650bc7000001'), "grade"=>0.0, "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a1a678898d650bc7000001
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a1a678898d650bc7000001" for 127.0.0.1 at 2012-11-12 22:46:32 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a1a678898d650bc7000001"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a1a678898d650bc7000001')}).limit(-1)
+  Rendered articles/show.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 114ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-12 22:46:33 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.7ms)
+  Rendered articles/_form.html.erb (57.7ms)
+Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-12 22:46:33 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"fire", "deck"=>"", "story"=>"here", "news_agency_id"=>"50a1527c898d650f35000008", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"headline"=>"fire", "deck"=>"", "story"=>"here", "news_agency_id"=>BSON::ObjectId('50a1527c898d650f35000008'), "grade"=>0.0, "published_on"=>2012-11-13 00:00:00 UTC, "_id"=>BSON::ObjectId('50a1a679898d650bc7000004'), "editors_grade"=>0, "chief_editor_grade"=>0, "chief_editor_country_grade"=>0}])
+Redirected to http://www.example.com/articles/50a1a679898d650bc7000004
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/50a1a679898d650bc7000004" for 127.0.0.1 at 2012-11-12 22:46:33 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"50a1a679898d650bc7000004"}
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].find({:_id=>BSON::ObjectId('50a1a679898d650bc7000004')}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({:_id=>BSON::ObjectId('50a1527c898d650f35000008')}).limit(-1)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2012-11-12 22:46:33 -0300
+Processing by ArticlesController#new as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (42.6ms)
+Completed 200 OK in 45ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2012-11-12 22:46:33 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "article"=>{"published_on(1i)"=>"2012", "published_on(2i)"=>"11", "published_on(3i)"=>"13", "headline"=>"", "deck"=>"", "story"=>"ice", "news_agency_id"=>"50a1527c898d650f35000008", "grade"=>""}, "commit"=>"Create Article"}
+MONGODB (1ms) rails3_mongoid_devise_test['news_agencies'].find({})
+  Rendered articles/_grades.html.erb (0.1ms)
+  Rendered articles/_form.html.erb (9.9ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a1a679898d650bc7000008'), "headline"=>"Article 1", "story"=>"it is an article"}])
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-12 22:46:33 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (2ms) rails3_mongoid_devise_test['articles'].find({})
+MONGODB [DEBUG] cursor.refresh() for cursor 5799243195727628901
+Completed 200 OK in 122ms (Views: 121.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2012-11-12 22:46:33 -0300
+Processing by ArticlesController#index as HTML
+MONGODB (2ms) rails3_mongoid_devise_test['articles'].find({})
+MONGODB [DEBUG] cursor.refresh() for cursor 2369900346051021573
+Completed 200 OK in 157ms (Views: 121.4ms | ActiveRecord: 0.0ms)
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a1a679898d650bc700000c'), "headline"=>"uniq"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].insert([{"_id"=>BSON::ObjectId('50a1a679898d650bc700000e'), "headline"=>"unique"}])
+MONGODB (0ms) rails3_mongoid_devise_test['articles'].update({"_id"=>BSON::ObjectId('50a1a679898d650bc700000e')}, {"$set"=>{"deck"=>"it is an article"}})
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"categories", "query"=>{:name=>"ThisNewCategory"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['categories'].insert([{"_id"=>BSON::ObjectId('50a1a679898d650bc7000010'), "name"=>"ThisNewCategory"}])
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"categories", "query"=>{:name=>"ThisNewCategory"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['categories'].insert([{"_id"=>BSON::ObjectId('50a1a679898d650bc7000011'), "name"=>"ThisNewCategory"}])
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"categories", "query"=>{:name=>"ThisNewCategory"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['categories'].insert([{"_id"=>BSON::ObjectId('50a1a679898d650bc7000012'), "name"=>"category"}])
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"categories", "query"=>{:name=>"ThisNewCategory"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['categories'].insert([{"_id"=>BSON::ObjectId('50a1a679898d650bc7000015'), "name"=>"ThisNewCategory"}])
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"categories", "query"=>{:name=>"ThisNewCategory"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>"http://feeds.feedburner.com/railscasts"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({:name=>"UPS"}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>"http://feeds.mashable.com/mashable"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({:name=>"Reuters"}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>"http://feeds.feedburner.com/railscasts"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({:name=>"UPS"}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>"http://feeds.mashable.com/mashable"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({:name=>"Reuters"}).limit(-1)
+MONGODB (1ms) rails3_mongoid_devise_test['news_agencies'].find({})
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>"http://feeds.feedburner.com/railscasts"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({:name=>"UPS"}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>"http://feeds.mashable.com/mashable"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['news_agencies'].find({:name=>"Reuters"}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>"http://urltest.com"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>nil}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>"url"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>nil}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>"http://urltest.com"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"news_agencies", "query"=>{:feed_url=>"http://urltest.com"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>"hola@hola.com"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>nil}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>nil}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>"test@hmail.com"}, "fields"=>nil}).limit(-1)
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>"user@example.com"}, "fields"=>nil}).limit(-1)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-11-12 22:47:06 -0300
+Processing by UsersController#new as HTML
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-11-12 22:47:06 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"user", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+MONGODB (0ms) rails3_mongoid_devise_test['$cmd'].find({"count"=>"users", "query"=>{:email=>""}, "fields"=>nil}).limit(-1)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-11-12 22:47:06 -0300
+Processing by UsersController#index as HTML
+MONGODB (0ms) rails3_mongoid_devise_test['users'].find({})
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)

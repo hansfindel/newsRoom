@@ -17,7 +17,8 @@
 class NewsAgency
   include Mongoid::Document
   field :name, type: String
-  #field :url, type: String
+  #if false, is a RSS Feed
+  field :is_api, type: Boolean
   field :feed_url, type: String
   has_many :articles
 
