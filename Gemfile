@@ -13,7 +13,10 @@ gem "twitter-bootstrap-rails"
 group :development do
 	gem 'sqlite3'
 end
-group :production do
+group :production do 
+  gem 'sqlite3'
+end
+group :staging do
 	gem 'pg'
 	#gem 'thin'
 end
