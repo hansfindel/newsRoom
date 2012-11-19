@@ -66,7 +66,10 @@ class ArticlesController < ApplicationController
   # PUT /articles/1.json
   def update
     @article = Article.find(params[:id])
-
+    if params[:tags]
+      @article.category_names=(params[:tags].split(","))
+      ArticleCategory.where(:article_id => @article.id).destroy_all
+    end
     respond_to do |format|
       if @article.update_attributes(params[:article])
 

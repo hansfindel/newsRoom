@@ -118,5 +118,14 @@ class Article
     self.pictures.create(image_params) if image_params
   end
 
+  def get_category_names
+    array = []
+    if self.article_categories
+      self.article_categories.each do |c|
+        array.append(c.category.name)
+      end
+    end
+    array.join(',')
+  end
 
 end
