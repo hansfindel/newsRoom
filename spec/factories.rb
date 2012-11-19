@@ -40,4 +40,9 @@ FactoryGirl.define do
 		name "Area Nueva"
 	end
 
+	factory :chief do
+		slave "Esclavo"
+		boss "Jefe"
+	end
+
 end
