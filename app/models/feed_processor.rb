@@ -11,7 +11,8 @@ class FeedProcessor
   
   def self.add_entries(entries)
     entries.each do |entry|
-      if Article.where(:guid => entry.id).empty?
+      guid = Article.where(:guid => entry.id)
+      if guid && guid.empty?
           Article.create!(
             :headline                     => entry.title,
             :deck                         => entry.summary,
