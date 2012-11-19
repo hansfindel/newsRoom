@@ -48,6 +48,7 @@ class ArticlesController < ApplicationController
     @article.set_initial_grades
     if current_role.include?('journalist')
       @article.user = current_user
+      @article.country = current_user.country
     end
     respond_to do |format|
       if @article.save
@@ -105,8 +106,8 @@ class ArticlesController < ApplicationController
   end
   
   def show_non_published
-    @articles = Article.nonpublished.where(:editors_grade =>0, :user_id.ne => current_user_id, :area => current_user.area, :country => current_user.country)
-    @news = Article.nonpublished.where(:area.exists => false).limit(5)
+    @articles = Article.nonpublished.where(:editors_grade =>0, :user_id.ne => current_user_id, :area_id => current_user.area.id, :country => current_user.country)
+    @news = Article.nonpublished.where(:area_id => nil).limit(5)
     @country = current_user.country
 
     respond_to do |format|
@@ -116,7 +117,7 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_non_published
-    @articles = Article.nonpublished.where(:chief_editor_grade =>0,:editors_grade.ne =>0 ,:user_id.ne => current_user_id, :area => current_user.area, :country => current_user.country)
+    @articles = Article.nonpublished.where(:chief_editor_grade =>0,:editors_grade.ne =>0 ,:user_id.ne => current_user_id, :area_id => current_user.area.id, :country => current_user.country)
 
     respond_to do |format|
       format.html { render :template => "articles/show_non_published" }

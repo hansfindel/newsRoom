@@ -46,7 +46,7 @@ class Article
   
   def not_published
     unless is_published
-      is_published = false      
+      self.is_published = false      
     end
     true   #it does not prevent the object being saved
   end
