@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   #en cada controlador implementar
   #before_filter :degraded?
   
-  #before_filter :redirect_if_degraded
-  #around_filter :degrade 
-  #helper_method :rollout?
+  before_filter :redirect_if_degraded
+  around_filter :degrade 
+  helper_method :rollout?
 
   private
   def current_user
