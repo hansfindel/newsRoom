@@ -50,8 +50,8 @@ describe Article do
       @article = build(:article)
       @article.headline = "basdf"
       @article.is_published = true
-	  @article.save.should eq(true)
-	  headline = @article.headline
+	    @article.save.should eq(true)
+	    headline = @article.headline
       get non_published_articles_path
       response.body.should_not include(headline)
     end

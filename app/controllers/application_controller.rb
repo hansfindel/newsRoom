@@ -1,10 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper_method :current_user, :current_role
+  
+  helper_method :current_user, :current_role, :current_user_country
 
   #en cada controlador implementar
   #before_filter :degraded?
-  
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_path, :alert => "No tienes los permisos necesarios"
+  end
   before_filter :redirect_if_degraded
   around_filter :degrade 
   helper_method :rollout?
@@ -26,6 +29,13 @@ class ApplicationController < ActionController::Base
   	else
   		User::ROLES[-1]
   	end
+  end
+  def current_user_country
+    unless current_user.blank?
+      current_user.country
+    else
+      ""
+    end
   end
 
 

@@ -102,7 +102,7 @@ class ArticlesController < ApplicationController
   end
   
   def show_non_published
-    @articles = Article.nonpublished.where(:editors_grade =>0, :user_id.ne => current_user_id, :area => current_user.area, :country => current_user.country)
+    @articles = Article.by_area_and_country(current_user).nonpublished.where(:editors_grade =>0, :user_id.ne => current_user_id)
     @news = Article.nonpublished.where(:area.exists => false)
 
     respond_to do |format|
@@ -112,7 +112,7 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_non_published
-    @articles = Article.nonpublished.where(:chief_editor_grade =>0,:editors_grade.ne =>0 ,:user_id.ne => current_user_id, :area => current_user.area, :country => current_user.country)
+    @articles = Article.by_area_and_country(current_user).nonpublished.where(:chief_editor_grade =>0,:editors_grade.ne =>0 ,:user_id.ne => current_user_id)
 
     respond_to do |format|
       format.html { render :template => "articles/show_non_published" }
@@ -121,7 +121,7 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_country_non_published
-    @articles = Article.nonpublished.where(:chief_editor_country_grade =>0, :editors_grade.ne =>0, :chief_editor_grade.ne =>0,:user_id.ne => current_user_id, :country => current_user.country)
+    @articles = Article.nonpublished.where(:chief_editor_country_grade =>0, :editors_grade.ne =>0, :chief_editor_grade.ne =>0,:user_id.ne => current_user_id, :country => current_user_country)
 
     respond_to do |format|
       format.html { render :template => "articles/show_non_published" } 

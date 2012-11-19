@@ -51,6 +51,24 @@ class Article
     true   #it does not prevent the object being saved
   end
 
+  def self.by_area(area)
+    unless area.blank?
+      where(area: area)      
+    else
+      scope
+    end
+  end
+  def self.by_country(country)
+    unless country.blank?
+      where(country: country)
+    else
+      scope
+    end
+  end
+  def self.by_area_and_country(user)
+    by_country(user.country).by_area(user.area)
+  end
+
   def add_grade
   	#self.grade = self.grade || 0 
     self.grade  = self.editors_grade || 0 #if editors_grade
