@@ -103,7 +103,8 @@ class ArticlesController < ApplicationController
   
   def show_non_published
     @articles = Article.nonpublished.where(:editors_grade =>0, :user_id.ne => current_user_id, :area => current_user.area, :country => current_user.country)
-    @news = Article.nonpublished.where(:area.exists => false)
+    @news = Article.nonpublished.where(:area.exists => false).limit(5)
+    @country = current_user.country
 
     respond_to do |format|
       format.html
