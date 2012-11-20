@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   helper_method :current_user, :current_role, :current_user_country, :current_user_area
-  skip_before_filter :verify_authenticity_token, :only => [:update,:create]
+  skip_before_filter :verify_authenticity_token, :only => [:update,:create, :overload]
 
   #en cada controlador implementar
   #before_filter :degraded?

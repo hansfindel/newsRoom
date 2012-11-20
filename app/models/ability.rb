@@ -34,6 +34,8 @@ class Ability
             can :create, User
             can :read, User
        end
+       #everyone can
+       can :manage, Error
     #
     # The first argument to `can` is the action you are giving the user permission to do.
     # If you pass :manage it will apply to every action. Other common actions here are
