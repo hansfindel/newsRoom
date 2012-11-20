@@ -81,6 +81,7 @@ class Article
 
     if self.grade.to_i >= Article::PUBLISH_GRADE
       self.is_published = true
+      #kills the page cache
     end
   	self.save
   end
