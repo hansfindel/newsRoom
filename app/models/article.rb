@@ -55,18 +55,22 @@ class Article
     unless area.blank?
       where(area: area)      
     else
-      scope
+      scoped
     end
   end
   def self.by_country(country)
     unless country.blank?
       where(country: country)
     else
-      scope
+      scoped
     end
   end
   def self.by_area_and_country(user)
-    by_country(user.country).by_area(user.area)
+    if user
+      by_country(user.country).by_area(user.area)      
+    else
+      scoped
+    end
   end
 
   def add_grade
