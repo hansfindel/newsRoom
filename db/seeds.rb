@@ -15,6 +15,13 @@ soledad = User.last
 
 #reuter = NewsAgency.create!(name:"IPS News", feed_url:"http://feeds.mashable.com/mashable")
 
+#datos de la API de NYTimes
+#body -> story
+#date -> published on
+#title -> headline
+#byline -> deck
+#url
+
 soledad.articles.create!(headline: 'Último cómputo: Oposición obtiene 43,10% y el oficialismo un 37,47% en alcaldes', 
 	deck:'Subsecretario Rodrigo Ubilla entregó reporte que considera el 95,94 por ciento de las mesas escrutadas.', 
 	story:'SANTIAGO.- Casi seis puntos porcentuales de diferencia en alcaldes arrojó el último cómputo oficial entregado este lunes por el subsecretario del Interior, Rodrigo Ubilla.

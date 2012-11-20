@@ -5,18 +5,41 @@ class RawData
   #field :value, type: Feed
   #field :data, type: Array
 
-  def self.store(data, value=[])
-  	#could write in a "temporal" folder
-  	#not implemented
-  	
-  	#save it on the data base
+
+  def self.store_from_api(data, api_values)
     if data.nil? 
       #value = "No new feeds"
+      value = []
+    else
+      data['results'].each do |entry|
+        a = Article.new(
+          :headline                     => entry['title'],
+          :deck                         => entry['deck'],
+          :url                          => entry['url'],
+          :published_on                 => entry['published_on'],
+          :guid                         => entry['url'],
+          :story                        => entry['body'],
+          :is_published                 => false,
+          :editors_grade                => 0,
+          :chief_editor_grade           => 0, 
+          :chief_editor_country_grade   => 0
+        )
+        my_uri = URI.parse(entry['url'])
+        File.open("public/feeds/"+my_uri.host+entry['url'].split('/').last+".json", "w") do |f|
+          f. << a.to_json
+        end
+      end
+    end
+  end
 
+  def self.store(data, value=[])
+
+    if data.nil? 
+      #value = "No new feeds"
       value = []
     else
      	data.entries.each do |entry|
-      puts entry.title
+            
       a = Article.new(
           :headline                     => entry.title,
           :deck                         => entry.summary,

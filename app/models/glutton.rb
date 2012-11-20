@@ -1,26 +1,44 @@
 require 'feedzirra'
+require 'open-uri'
+require 'json'
 
 class Glutton
   #this crawls through each news_agency
   def self.fetch
   	@value ||= []
   	NewsAgency.all.each do |agency|
-  		feed = Feedzirra::Feed.fetch_and_parse(agency.feed_url)
-  		@value = RawData.store(feed, @value)
+      if !agency.is_api
+  		  feed = Feedzirra::Feed.fetch_and_parse(agency.feed_url)
+        @value = RawData.store(feed, @value)
+      else
+        feed = JSON.parse(open(agency.feed_url).read)
+        @value = RawData.store_from_api(feed, @value, agency.api_values)
+      end
+  		
   	end
   	@value	
   end
   def self.fetch_and_store
     NewsAgency.all.each do |agency|
-      feed = Feedzirra::Feed.fetch_and_parse(agency.feed_url)
-      #@value = RawData.store(feed)
-      FeedProcessor.add_entries(feed.entries)
+      if !agency.is_api
+        feed = Feedzirra::Feed.fetch_and_parse(agency.feed_url)
+        FeedProcessor.add_entries(feed.entries)
+        @value = RawData.store(feed)
+      else
+        feed = JSON.parse(open(agency.feed_url).read)
+        FeedProcessor.add_entries_from_api(feed, agency.api_values)
+        @value = RawData.store_from_api(feed, agency.api_values)
+      end
+      
+      
     end
   end
 
   #if called for each feed_url
   def self.update_from_feed(feed_url)
-    feed = Feedzirra::Feed.fetch_and_parse(feed_url)
+    if !agency.is_api
+        feed = Feedzirra::Feed.fetch_and_parse(agency.feed_url)
+    end
     RawData.store(feed)
     #add_entries(feed.entries)
   end  
