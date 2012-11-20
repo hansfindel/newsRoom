@@ -22,7 +22,6 @@ class RawData
             :published_on => entry.published_at,
             :guid => entry.guid
             )
-    		  value << feed
         end
     	end
     end
