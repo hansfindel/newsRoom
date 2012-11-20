@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe Glutton do
 
-  	describe "GET /articles" do
+  describe "GET /articles" do
 	  it "get to index" do
 	    get articles_path
 	    response.status.should be(200)
@@ -11,19 +11,13 @@ describe Glutton do
 	end
 
 	it "populates" do
-		@user = build(:user)
-    	@user.save 
-    	visit log_in_path
-        fill_in "email", :with => @user.email
-        fill_in "password", :with => "1234"#@user.password
-        click_button "Log in"
-        page.should have_content("Logged in as")
-        page.should have_content(@user.email)
-        
-        visit store_glutton_feeds_path
-        #page.should have_content("glutton")
-      	#click_link "Populate by glutton"
-      	page.should have_content("New feeds were fetched and processed")
-   	end
+    get log_out_path
+    login_as_admin
+    
+    visit store_glutton_feeds_path
+    #page.should have_content("glutton")
+    #click_link "Populate by glutton"
+    page.should have_content("New feeds were fetched and processed")
+  end
 
 end

@@ -6,6 +6,7 @@ describe Article do
     #@current_user = build(:user)
     #current_user = @current_user
     #@current_user.save
+    get log_out_path
   end
 
   describe "GET /articles" do
@@ -18,7 +19,8 @@ describe Article do
       @article = build(:article)
       @article.is_published = false
 	    prev_count = Article.where(is_published: false).count
-	    post_via_redirect articles_path, article: @article.attributes
+	    @article.save
+      #post_via_redirect articles_path, article: @article.attributes
 	    post_count = Article.where(is_published: false).count
 	    (post_count > prev_count).should be_true
     end
@@ -61,7 +63,9 @@ describe Article do
       login_as_admin
       headline = "holo"
       prev_count = Article.all.count
-      post_via_redirect articles_path, article: {headline: headline, story: "story"}
+      @article = Article.new({headline: headline, story: "story"})
+      @article.save
+      #post_via_redirect articles_path, article: @article.attributes
       #response.body.should include(headline)
       post_count = Article.all.count
       (post_count > prev_count).should be_true

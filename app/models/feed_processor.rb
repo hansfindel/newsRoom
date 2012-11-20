@@ -3,8 +3,10 @@ require 'feedzirra'
 class FeedProcessor
   def self.process_feeds(data)
     #data = RawData.get_all
-    entries = data.entries
-    add_entries(entries)
+    if data and data.class != Fixnum
+      entries = data.entries
+      add_entries(entries)
+    end
   end
 
   private
