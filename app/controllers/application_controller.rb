@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   check_authorization
   protect_from_forgery
 
-  helper_method :current_user, :current_role, :current_user_country
+  helper_method :current_user, :current_role, :current_user_country, :current_user_area
   skip_before_filter :verify_authenticity_token, :only => [:update,:create]
 
   #en cada controlador implementar
@@ -39,7 +39,13 @@ class ApplicationController < ActionController::Base
       ""
     end
   end
-
+  def current_user_area
+    unless current_user.blank?
+      current_user.area
+    else
+      ""
+    end
+  end
 
 def degrade 
   degrade_feature(action_id) { yield } 

@@ -77,7 +77,7 @@ class ArticlesController < ApplicationController
           @article.add_grade
         end
 
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Article was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -109,9 +109,13 @@ class ArticlesController < ApplicationController
   end
   
   def show_non_published
-    @articles = Article.by_area_and_country(current_user).nonpublished.where(:editors_grade =>0, :user_id.ne => current_user_id)
+    if current_user
+      @articles = Article.where(:is_published => false, :editors_grade =>0)#, :country => current_user_country, :area => current_user_area) #, :user_id.ne => current_user_id
+    else
+      @articles = Article.where(:is_published => false, :editors_grade =>0) #, :user_id.ne => current_user_id
+    end
     @news = Article.nonpublished.where(:area.exists => false).limit(5)
-    @country = current_user.country
+    @country = current_user_country
 
     respond_to do |format|
       format.html
@@ -120,7 +124,11 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_non_published
-    @articles = Article.by_area_and_country(current_user).nonpublished.where(:chief_editor_grade =>0,:editors_grade.ne =>0 ,:user_id.ne => current_user_id)
+    if current_user
+      @articles = Article.where(:is_published => false, :chief_editor_grade =>0, :editors_grade.gt => 0) #, :country => current_user_country, :area => current_user_area) #, :user_id.ne => current_user_id
+    else
+      @articles = Article.where(:is_published => false, :chief_editor_grade =>0) #, :user_id.ne => current_user_id
+    end
 
     respond_to do |format|
       format.html { render :template => "articles/show_non_published" }
