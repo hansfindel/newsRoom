@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'capybara/rspec'
+#ærequire 'capybara/rspec'
 
 describe "News_Agencies" do
 

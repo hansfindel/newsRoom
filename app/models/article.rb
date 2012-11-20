@@ -46,7 +46,7 @@ class Article
   
   def not_published
     unless is_published
-      is_published = false      
+      self.is_published = false      
     end
     true   #it does not prevent the object being saved
   end
@@ -140,5 +140,14 @@ class Article
     self.pictures.create(image_params) if image_params
   end
 
+  def get_category_names
+    array = []
+    if self.article_categories
+      self.article_categories.each do |c|
+        array.append(c.category.name)
+      end
+    end
+    array.join(',')
+  end
 
 end

@@ -1,11 +1,13 @@
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
- # load_and_authorize_resource
+  load_and_authorize_resource
+  #skip_before_filter :verify_authenticity_token, :only => [:update,:create]
   def index
     #@articles = #Article.where(:is_published => true)
     @articles = Article.published.paginated(params[:page])
     respond_to do |format|
+
       format.html # index.html.erb
       format.json { render json: @articles }
     end
@@ -36,6 +38,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
+    
   end
 
   # POST /articles
@@ -45,6 +48,7 @@ class ArticlesController < ApplicationController
     @article.set_initial_grades
     if current_role.include?('journalist')
       @article.user = current_user
+      @article.country = current_user.country
     end
     respond_to do |format|
       if @article.save
@@ -62,7 +66,10 @@ class ArticlesController < ApplicationController
   # PUT /articles/1.json
   def update
     @article = Article.find(params[:id])
-
+    if params[:tags]
+      @article.category_names=(params[:tags].split(","))
+      ArticleCategory.where(:article_id => @article.id).destroy_all
+    end
     respond_to do |format|
       if @article.update_attributes(params[:article])
 
@@ -103,7 +110,8 @@ class ArticlesController < ApplicationController
   
   def show_non_published
     @articles = Article.by_area_and_country(current_user).nonpublished.where(:editors_grade =>0, :user_id.ne => current_user_id)
-    @news = Article.nonpublished.where(:area.exists => false)
+    @news = Article.nonpublished.where(:area.exists => false).limit(5)
+    @country = current_user.country
 
     respond_to do |format|
       format.html

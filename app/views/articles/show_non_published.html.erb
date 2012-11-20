@@ -1,5 +1,9 @@
 <h1>NewsRoom</h1>
-<h2> Noticias por aceptar </h2>
+<% if @country %>
+	<h2> Noticias por aceptar en <%= @country %></h2>
+<% else %>
+	<h2> Noticias por aceptar</h2>
+<% end %>
 <div class="row">
   <div class="span8 offset2">
     <% @articles.each do |article| %>
@@ -9,5 +13,17 @@
     </div>
     <% end %>
   </div>
-
 </div>
+<% if @news %>
+	<h2> Noticias por clasificar </h2>
+	<div class="row">
+	  <div class="span8 offset2">
+	    <% @news.each do |news| %>
+	    <div class="well">
+	      <h3><%= link_to news.headline, news %></h3>
+	      <p><%= simple_format news.deck %></p>
+	    </div>
+	    <% end %>
+	  </div>
+	</div>
+<% end %>

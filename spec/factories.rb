@@ -19,12 +19,15 @@ FactoryGirl.define do
 	  password_confirmation "1234"
 	  role User::ROLES[-1]  #READER
 	  factory :user_admin do 
-	  	role User::ROLES[0]
+	  	role 1#User::ROLES[0]
 	  end
 	  factory :user_email do 
 	  	email "mi_random@mail.co"
-	  	role User::ROLES[0]
-	  end	  
+	  	role 15#User::ROLES[0]
+	  end	
+	  factory :editor do 
+	  	role 4
+	  end  
 	end
 	
 	factory :category do

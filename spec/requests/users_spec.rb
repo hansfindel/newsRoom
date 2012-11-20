@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'capybara/rspec'
+#require 'capybara/rspec'
 
 describe User do
   before (:each) do

@@ -53,3 +53,13 @@ RSpec.configure do |config|
   end
 
 end
+
+##### methods to login 
+def login_as_admin
+  @user = User.where(role: 4).first || create(:user_admin)
+  visit log_in_path
+  fill_in "email", :with => @user.email
+  fill_in "password", :with => "1234"#@user.password
+  click_button "Log in"
+end
+

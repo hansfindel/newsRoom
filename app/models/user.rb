@@ -42,8 +42,8 @@ def getSlaves()
   Chief.where(:boss => self._id).each do |a|   
     array.append(a.slave)
   end
-  User.find(array)
-  #array
+  #User.find(array)
+  array
 end
 
 def getBoss()
