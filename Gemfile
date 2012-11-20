@@ -15,10 +15,11 @@ group :development do
 end
 group :production do 
   #gem 'sqlite3'
+  gem 'thin'
 end
 group :staging do
 	gem 'pg'
-	#gem 'thin'
+	gem 'thin'
 end
 
 gem 'heroku'
