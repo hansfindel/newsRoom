@@ -15,6 +15,7 @@ soledad = User.last
 
 #reuter = NewsAgency.create!(name:"IPS News", feed_url:"http://feeds.mashable.com/mashable")
 
+reuter = NewsAgency.create!(name:"IPS News", feed_url:"www.ipsnews.net", is_api: false)
 #datos de la API de NYTimes
 #body -> story
 #date -> published on

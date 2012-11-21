@@ -1,14 +1,18 @@
 class ApplicationController < ActionController::Base
-  #check_authorization 
+  check_authorization
   protect_from_forgery
-  helper_method :current_user, :current_role
+
+  helper_method :current_user, :current_role, :current_user_country, :current_user_area
+  skip_before_filter :verify_authenticity_token, :only => [:update,:create, :overload]
 
   #en cada controlador implementar
   #before_filter :degraded?
-  
-  #before_filter :redirect_if_degraded
-  #around_filter :degrade 
-  #helper_method :rollout?
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_path, :alert => "No tienes los permisos necesarios"
+  end
+  before_filter :redirect_if_degraded
+  around_filter :degrade 
+  helper_method :rollout?
 
   private
   def current_user
@@ -28,22 +32,36 @@ class ApplicationController < ActionController::Base
   		User::ROLES[-1]
   	end
   end
-
+  def current_user_country
+    unless current_user.blank?
+      current_user.country
+    else
+      ""
+    end
+  end
+  def current_user_area
+    unless current_user.blank?
+      current_user.area
+    else
+      ""
+    end
+  end
 
 def degrade 
-  degrade_feature(action_id) { yield }
+  degrade_feature(action_id) { yield } 
 end
+
 def redirect_if_degraded
-  render "errors/overload" if rollout?(action_id)
+  render "errors/overload" if rollout?(action_id) and production?
 end
 
 def rollout?(name)
-  Rollout.overloaded? name
+  Rollout.overloaded? name 
 end
 
 def degrade_feature(name)
   yield
-rescue StandardError => e
+  rescue StandardError => e
   Rollout.mark name
   raise e
 end
@@ -59,6 +77,10 @@ end
 
 def current_controller_name
   params["controller"]
+end
+
+def production?
+  Rails.env == "production" || Rails.env == "staging" #|| Rails.env == "development"
 end
 
 end

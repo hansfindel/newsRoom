@@ -2,26 +2,28 @@ class Rollout
   include Mongoid::Document
   field :name, :type => String
   field :time, :type => Time
-  field :count, :tipe => Integer
+#  field :count, :tipe => Integer
   
 
   def self.lapsus
-  	5.minutes.ago
+  	1.minute.ago
   end
 
   def self.mark(name)
   	if Rollout.where(name: name).any?
-  		r = Rollout.where(name: name).first
-  		if r.time < lapsus
-  			r.count = 1
-  			r.time = Time.now
-  		else
-  			r.time = Time.now
-  			r.count = r.count + 1
-  		end
-  		r.save
+  		#r = Rollout.where(name: name).first
+  		#if r.time < lapsus
+  			#r.count = 1
+  		  #r.time = Time.now
+  		#else
+  		#	r.time = Time.now
+  			#r.count = r.count + 1
+  		#end
+      #r.count = Time.now
+  		#r.save
   	else
-  		Rollout.create(name: name, time: Time.now, count: 1)
+  		#Rollout.create(name: name, time: Time.now, count: 1)
+      Rollout.create(name: name, time: Time.now)
   	end
   end
 

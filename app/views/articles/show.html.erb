@@ -36,6 +36,21 @@
 </p>
 
 <p>
+  <b>Country:</b>
+  <%= @article.country %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @article.area.name if @article.area%>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @article.get_category_names %>
+</p>
+
+<p>
   <b>Picture name:</b>
   <%= @article.picture_name %>
 </p>

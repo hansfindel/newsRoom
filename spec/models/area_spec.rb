@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-describe User do
+describe Area do
 	before :each do
 		Area.destroy_all
 		@area = Area.new

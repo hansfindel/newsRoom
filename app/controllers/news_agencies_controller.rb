@@ -1,6 +1,7 @@
 class NewsAgenciesController < ApplicationController
   # GET /news_agencies
   # GET /news_agencies.json
+    load_and_authorize_resource
   def index
     @news_agencies = NewsAgency.all
 

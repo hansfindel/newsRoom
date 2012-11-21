@@ -29,10 +29,19 @@ staging:
 
 # set these environment variables on your prod server
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %>
-  max_retries_on_connection_failure: 20
-  persist_in_safe_mode: true
-  skip_version_check: true
+  <<: *defaults
+  database: rails3_mongoid_devise_production
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019
+  #the nexts 4 lines are to connect with the heroku addon
+  #uri: <%= ENV['MONGOHQ_URL'] %>
+  #max_retries_on_connection_failure: 20
+  #persist_in_safe_mode: true
+  #skip_version_check: true
+  #the next lines dont work correctly
   #  host: <%= ENV['MONGOID_HOST'] %>
   #  port: <%= ENV['MONGOID_PORT'] %>
   #  username: <%= ENV['MONGOID_USERNAME'] %>
