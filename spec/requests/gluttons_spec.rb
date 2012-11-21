@@ -20,7 +20,6 @@ describe Glutton do
         page.should have_content("Logged in as")
         page.should have_content(@user.email)
         
-        page.should have_content("glutton")
       	click_link "Populate by glutton"
       	page.should have_content("New feeds were fetched and processed")
    	end
