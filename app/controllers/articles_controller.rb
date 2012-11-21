@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  caches_page :index
+  #caches_page :index
 
   # GET /articles
   # GET /articles.json
