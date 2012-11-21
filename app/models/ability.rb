@@ -12,25 +12,29 @@ class Ability
             can :read, :all
             can :manage, Article
             can :manage, Area
+            can :manage, User, :id => user.id
         elsif roles.include?'chief_editor'
             can :read, :all
             can :manage, Article
             can :manage, Area
+            can :manage, User, :id => user.id
         elsif roles.include?'chief_editor_country'
             can :read, :all
             can :manage, Article
             can :manage, Area
+            can :manage, User, :id => user.id
         elsif roles.include?'journalist'
             can :read, :all
             can :update, Article, :user => user
             can :create, Article
             can :manage, Area
+            can :manage, User, :id => user.id
         else
             can :read, Article
             can :create, User
             can :read, User
-            can :manage, User, :user_id => user.id
        end
+       #everyone can
     #
     # The first argument to `can` is the action you are giving the user permission to do.
     # If you pass :manage it will apply to every action. Other common actions here are

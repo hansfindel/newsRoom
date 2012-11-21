@@ -1,17 +1,19 @@
 require 'spec_helper'
-require 'capybara/rspec'
+#require 'capybara/rspec'
 
 describe "Areas" do
 
 	before :each do
+		#get log_out_path
 		Area.destroy_all
 		@area = build(:area)
+		login_as_admin
 	end
 
   	describe "GET /areas" do
 	    it "get to index" do
 	      get areas_path
-	      response.status.should be(200)
+    	  (response.status == 200 || response.status == 302).should be_true
 	    end
 	end
 

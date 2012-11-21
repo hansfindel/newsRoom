@@ -10,14 +10,18 @@
 
 
 roles = User::ROLES #arreglo con los posibles roles de los usuarios
-User.create!(name:"Admin", email:"admin", password:"1234", password_confirmation:"1234", 
-	role:1)
 
-soledad = User.create!(name:"José Facundo", email:"jfacundo", password:"1234", password_confirmation:"1234", 
-	role:2)
+soledad = User.last
 
+#reuter = NewsAgency.create!(name:"IPS News", feed_url:"http://feeds.mashable.com/mashable")
 
-reuter = NewsAgency.create!(name:"IPS News", url:"www.ipsnews.net")
+reuter = NewsAgency.create!(name:"IPS News", feed_url:"www.ipsnews.net", is_api: false)
+#datos de la API de NYTimes
+#body -> story
+#date -> published on
+#title -> headline
+#byline -> deck
+#url
 
 soledad.articles.create!(headline: 'Último cómputo: Oposición obtiene 43,10% y el oficialismo un 37,47% en alcaldes', 
 	deck:'Subsecretario Rodrigo Ubilla entregó reporte que considera el 95,94 por ciento de las mesas escrutadas.', 

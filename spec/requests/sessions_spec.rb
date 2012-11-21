@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'capybara/rspec'
+#require 'capybara/rspec'
 
 describe "Sessions" do
   before (:each) do
@@ -7,7 +7,12 @@ describe "Sessions" do
     @user.save 
     #user_pass -> "1234"
   end
-
+  describe "login methods" do 
+    it "should log in as admin" do 
+        login_as_admin
+        page.should have_content("Logged in as")
+    end
+  end
   describe "login" do    
     it "get to login" do
       get log_in_path

@@ -15,7 +15,8 @@ NewsRoom::Application.routes.draw do
   root :to => "articles#index"
   
   get "errors/overload" => "errors#overload"
-  
+  get 'mu-a8f5303e-aa326727-78ec284a-3daa78fb' => "errors#error"
+
   resources :users
   resources :sessions
   resources :news_agencies
