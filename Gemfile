@@ -63,6 +63,9 @@ gem 'newrelic_rpm'
 gem "carrierwave"
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
+#server 
+gem 'unicorn'
+
 #cache
 gem 'cache_digests'
 
