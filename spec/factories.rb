@@ -29,6 +29,9 @@ FactoryGirl.define do
 	  factory :editor do 
 	  	role 4
 	  end  
+	  factory :journalist do 
+	  	role 1
+	  end 
 	end
 	
 	factory :category do

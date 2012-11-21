@@ -70,3 +70,11 @@ def login_as_editor
   fill_in "password", :with => "1234"#@user.password
   click_button "Log in"
 end
+
+def login_as_journalist
+  @admin ||= (User.where(role: 2).first || create(:journalist))
+  visit log_in_path
+  fill_in "email", :with => @admin.email
+  fill_in "password", :with => "1234"#@user.password
+  click_button "Log in"
+end
