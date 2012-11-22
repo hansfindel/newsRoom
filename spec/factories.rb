@@ -31,7 +31,13 @@ FactoryGirl.define do
 	  end  
 	  factory :journalist do 
 	  	role 1
-	  end 
+	  end
+	  factory :chief_editor do 
+	  	role 8
+	  end
+	  factory :chief_editor_country do 
+	  	role 16
+	  end  
 	end
 	
 	factory :category do
