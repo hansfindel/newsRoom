@@ -78,13 +78,15 @@ class Article
     self.grade  = self.editors_grade || 0 #if editors_grade
   	self.grade += 3 * (self.chief_editor_grade || 0) #if chief_editor_grade
   	self.grade += 3 * (self.chief_editor_country_grade || 0) #if self.chief_editor_country_grade
-
+    will_remove_cache = false
     if self.grade.to_i >= Article::PUBLISH_GRADE
       self.is_published = true
       #kills the page cache
-      expire_page "/"
+      #remove_cache
+      will_remove_cache = true
     end
   	self.save
+    will_remove_cache
   end
 
   def user_name
