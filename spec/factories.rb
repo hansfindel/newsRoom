@@ -23,19 +23,23 @@ FactoryGirl.define do
 	  	role 1#User::ROLES[0]
 	  end
 	  factory :user_email do 
-	  	email "mi_random@mail.co"
+	  	sequence(:email) { |x| "mi_random#{x}@example.com" }
 	  	role 15#User::ROLES[0]
 	  end	
 	  factory :editor do 
+	  	sequence(:email) { |x| "editor#{x}@example.com" }
 	  	role 4
 	  end  
 	  factory :journalist do 
+	  	sequence(:email) { |x| "journalist#{x}@example.com" }
 	  	role 2
 	  end
 	  factory :chief_editor do 
+	  	sequence(:email) { |x| "chief_editor#{x}@example.com" }
 	  	role 8
 	  end
 	  factory :chief_editor_country do 
+	  	sequence(:email) { |x| "chief_editor_country#{x}@example.com" }
 	  	role 16
 	  end  
 	end

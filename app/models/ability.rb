@@ -37,7 +37,8 @@ class Ability
             can :read, User
        end
        #everyone can
-       can :up_editor_grade, Article       
+       can :up_editor_grade, Article
+       can :create_random, Article       
     #
     # The first argument to `can` is the action you are giving the user permission to do.
     # If you pass :manage it will apply to every action. Other common actions here are

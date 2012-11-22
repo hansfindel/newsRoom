@@ -110,11 +110,11 @@ class ArticlesController < ApplicationController
     random = BCrypt::Engine.generate_salt
     Article.create(headline: "random#{random}")
     respond_to do |format|
-      format.html { redirect_to articles_path, notice: 'Article was successfully upgraded.' }
+      format.html { redirect_to articles_path, notice: 'Article was successfully created at random.' }
       format.json { head :no_content }
     end
   end
-  
+
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy

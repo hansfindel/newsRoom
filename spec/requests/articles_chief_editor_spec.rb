@@ -35,9 +35,9 @@ describe Article do
     end
 
      it "can qualify articles" do
-      login_as_editor
+      login_as_chief_editor
       click_link "Editor Evaluation"
-      page.should have_content("Noticias por clasificar")
+      page.should have_content("Noticias por aceptar")
     end
 
     it "should edit himself" do
@@ -57,7 +57,7 @@ describe Article do
 
     it "should not edit another user" do
       get log_out_path 
-      login_as_editor
+      login_as_chief_editor
 
       @user = build(:user)
       @user.save.should be_true
@@ -89,7 +89,7 @@ describe Article do
 
     it "should not enter to chief editor country evaluation area" do
       get log_out_path 
-      login_as_editor
+      login_as_chief_editor
 
       visit chief_editors_country_path
       
@@ -98,7 +98,7 @@ describe Article do
 
      it "can create new areas" do
       Area.destroy_all
-      login_as_editor
+      login_as_chief_editor
       visit areas_path
       page.should have_content("New Area")
       click_link "New Area"
