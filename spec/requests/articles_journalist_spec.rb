@@ -15,12 +15,12 @@ describe Article do
 
   describe "journalists permissons" do
 
-    it "can populate by glutton" do    
+    it "can't populate by glutton" do    
       get log_out_path
       login_as_journalist
       
       visit store_glutton_feeds_path
-      page.should have_content("New feeds were fetched and processed")
+      page.should have_content("No tienes los permisos necesarios")
     end
 
     it "can write articles through the form" do
