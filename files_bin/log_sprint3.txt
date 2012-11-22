@@ -5,7 +5,9 @@ Andrea:
 
 
 Diego: 
-
+- Aprendizaje de Ruby: Rails for Zombies, Ruby Bits Part 1 y Part 2, Tutorial de Ruby clásico.
+- Setear Environment en Windows: Instalación de Ruby On Rails y gemas.
+- Pair programming con Andrea: Codificación del modelo de clases
 
 
 Hans:

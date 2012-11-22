@@ -5,7 +5,10 @@ Andrea:
 
 
 Diego: 
-
+- Pair programming con José y Santiago: Se arreglaron más cosas de los permisos, se implementaron nuevas clases para manejar el tema de las categorías (areas), se imlpementó jerarquía de editores (chief_efitor y chief_editor_country), se arreglaron muchos bugs.
+- Se investigó sobre sharding.
+- Aprendizaje sobre testing.
+- Se realizaron algunos tests.
 
 
 Hans:
