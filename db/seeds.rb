@@ -21,19 +21,16 @@ reuter = NewsAgency.create!(name:"IPS News", feed_url:"www.ipsnews.net", is_api:
 #date -> published on
 #title -> headline
 #byline -> deck
+#results -> results
 #url
 
-soledad.articles.create!(headline: 'Último cómputo: Oposición obtiene 43,10% y el oficialismo un 37,47% en alcaldes', 
-	deck:'Subsecretario Rodrigo Ubilla entregó reporte que considera el 95,94 por ciento de las mesas escrutadas.', 
-	story:'SANTIAGO.- Casi seis puntos porcentuales de diferencia en alcaldes arrojó el último cómputo oficial entregado este lunes por el subsecretario del Interior, Rodrigo Ubilla.
-De acuerdo al reporte, que considera el 95,94 por ciento de las mesas escrutadas, la Coalición por el Cambio obtuvo un total de 1.1971.651 votos, equivalentes al 37,47%.
-Mientras que los pactos opositores "Por un Chile justo" y "Concertación democrática" alcanzaron un 13,70% y 29,40%, respectivamente, que sumados llegan al 43,10 por ciento de las preferencias (2.267.638 sufragios).',
-is_published: true)
+feedzilla = NewsAgency.create!(name: "Feedzilla", feed_url:"http://api.feedzilla.com/v1/categories/21/articles.json", is_api: true, api_values:{:story, '',:results => 'articles', :headline => 'title', :deck => 'summary', :published_on => 'publish_date', :url => 'url}' )
 
-900.times do
-	soledad.articles.create(headline: Faker::Lorem.sentence(word_count = 4), 
-		deck: Faker::Lorem.paragraph(sentence_count = 2), 
-		story: Faker::Lorem.paragraph(sentence_count = 4))
-endx
+
+#900.times do
+#	soledad.articles.create(headline: Faker::Lorem.sentence(word_count = 4), 
+#		deck: Faker::Lorem.paragraph(sentence_count = 2), 
+#		story: Faker::Lorem.paragraph(sentence_count = 4), is_published: true)
+#end
 
 

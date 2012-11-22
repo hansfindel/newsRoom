@@ -29,8 +29,8 @@ class Glutton
         #@value = RawData.store(feed)
       else
         feed = JSON.parse(open(agency.feed_url).read)
-        FeedProcessor.add_entries_from_api(feed, agency.api_values)
-        @value = RawData.store_from_api(feed, agency.api_values)
+        FeedProcessor.add_entries_from_api(feed, agency.api_values, agency.api_values['results'])
+        @value = RawData.store_from_api(feed, agency.api_values, agency.api_values['results'])
       end
       true
     end

@@ -32,15 +32,15 @@ class FeedProcessor
     end
   end
 
-  def self.add_entries_from_api(entries, api_values)
-        entries['results'].each do |entry|
+  def self.add_entries_from_api(entries, api_values, results_pos)
+        entries[results_pos].each do |entry|
           a = Article.create!(
-            :headline                     => entry['title'],
-            :deck                         => entry['deck'],
-            :url                          => entry['url'],
-            :published_on                 => entry['published_on'],
-            :guid                         => entry['url'],
-            :story                        => entry['body'],
+            :headline                     => entry[api_values['headline']],
+            :deck                         => entry[api_values['deck']],
+            :url                          => entry[api_values['url']],
+            :published_on                 => entry[api_values['published_on']],
+            :guid                         => entry[api_values['url']],
+            :story                        => entry[api_values['story']],
             :is_published                 => false,
             :editors_grade                => 0,
             :chief_editor_grade           => 0, 
