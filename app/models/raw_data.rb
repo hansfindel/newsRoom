@@ -5,20 +5,20 @@ class RawData
   #field :value, type: Feed
   #field :data, type: Array
 
-
-  def self.store_from_api(data, api_values)
+  #result_pos indica donde se guardan los articulos en el json recibido
+  def self.store_from_api(data, api_values, result_pos)
     if data.nil? 
       #value = "No new feeds"
       value = []
     else
-      data['results'].each do |entry|
+      data[result_pos].each do |entry|
         a = Article.new(
-          :headline                     => entry['title'],
-          :deck                         => entry['deck'],
-          :url                          => entry['url'],
-          :published_on                 => entry['published_on'],
-          :guid                         => entry['url'],
-          :story                        => entry['body'],
+          :headline                     => entry[api_values['headline']],
+          :deck                         => entry[api_values['deck']],
+          :url                          => entry[api_values['url']],
+          :published_on                 => entry[api_values['published_on']],
+          :guid                         => entry[api_values['url']],
+          :story                        => entry[api_values['story']],
           :is_published                 => false,
           :editors_grade                => 0,
           :chief_editor_grade           => 0, 
