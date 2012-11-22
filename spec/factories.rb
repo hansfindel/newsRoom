@@ -30,7 +30,7 @@ FactoryGirl.define do
 	  	role 4
 	  end  
 	  factory :journalist do 
-	  	role 1
+	  	role 2
 	  end
 	  factory :chief_editor do 
 	  	role 8

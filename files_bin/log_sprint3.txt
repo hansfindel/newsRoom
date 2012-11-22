@@ -17,7 +17,8 @@ José:
 
 
 Pablo:
-
+- Corrección de entrega 2, Análisis de Riesgos, Puntos Sensibles y Trade-offs.
+- Aprendizaje de Ruby, tutoriales e instalación de rails, gemas, etc.
 
 
 Santiago:

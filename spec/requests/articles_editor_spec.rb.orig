@@ -13,32 +13,20 @@ describe Article do
     end
   end
 
+<<<<<<< HEAD
+  describe "editors permissons" do
+    it "can populate by glutton" do
+      get log_out_path 
+=======
     it "can populate by glutton" do    
+>>>>>>> 128f2e3038d0de9833fa1e26d5ccff7a98a48568
       login_as_editor
       
       visit store_glutton_feeds_path
       page.should have_content("New feeds were fetched and processed")
     end
 
-    it "can write articles through the form" do
-      login_as_editor
-
-      visit new_article_path
-      fill_in "article_headline", :with => "headline"
-      fill_in "article_story", :with => "story"      
-      click_button "Create Article" 
-
-      page.should have_content("Article was successfully created.")
-      page.should have_content("headline")
-      page.should have_content("story")
-    end
-
-    it "can qualify articles" do
-      login_as_editor
-      click_link "Editor Evaluation"
-      page.should have_content("Noticias por clasificar")
-    end
-
+<<<<<<< HEAD
     it "should edit himself" do
       get log_out_path 
       editor ||= (User.where(role: 4).first || create(:editor))
@@ -66,6 +54,34 @@ describe Article do
       page.should have_content("No tienes los permisos necesarios")
     end
 
+  end
+=======
+    it "can write articles through the form" do
+      login_as_editor
+
+      visit new_article_path
+      fill_in "article_headline", :with => "headline"
+      fill_in "article_story", :with => "story"      
+      click_button "Create Article" 
+
+      page.should have_content("Article was successfully created.")
+      page.should have_content("headline")
+      page.should have_content("story")
+    end
+
+    it "can qualify articles" do
+      login_as_editor
+      click_link "Editor Evaluation"
+      page.should have_content("Noticias por clasificar")
+    end
+
+    it "can't edit users" do
+      login_as_editor
+      visit users_path
+      click_link "Edit"
+      page.should have_content("No tienes los permisos necesarios")
+    end
+
     it "can create new areas" do
       Area.destroy_all
       login_as_editor
@@ -79,5 +95,6 @@ describe Article do
       page.should have_content("nombreArea")
     end
 
+>>>>>>> 128f2e3038d0de9833fa1e26d5ccff7a98a48568
 
 end
