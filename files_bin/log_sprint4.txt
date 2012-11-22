@@ -17,8 +17,8 @@ Hans:
 
 
 José:
-
-
+- Pair programing con Santiago: Implementación flujo general del programa y de las noticias particularmente.
+- Implementacion permisos acumulativos y binarios de los usuarios; adaptación de ability.rb.
 
 Pablo:
 - Testing. Principalmente a los modelos. Entre 40 y 50 tests realizados

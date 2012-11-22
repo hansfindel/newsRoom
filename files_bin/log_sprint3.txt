@@ -15,8 +15,9 @@ Hans:
 - ...
 
 José:
-
-
+- Setear Environment Local en Ubuntu: Instalación de Ruby On Rails y gemas.
+- Implementación servicios externos
+- Corrección entrega 2 y planteamiento de Análisis de Riesgos, Puntos Sensibles y Trade-offs.
 
 Pablo:
 - Corrección de entrega 2, Análisis de Riesgos, Puntos Sensibles y Trade-offs.

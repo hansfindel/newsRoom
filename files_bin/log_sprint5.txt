@@ -18,8 +18,9 @@ Hans:
 
 
 José:
-
-
+- Pair programing con Diego y Santiago: Se arreglaron más cosas de los permisos, se implementaron nuevas clases para manejar el tema de las categorías (areas), se imlpementó jerarquía de editores (chief_efitor y chief_editor_country), se arreglaron muchos bugs. Finalizados los todos los casos de uso.
+- Aprendizaje sobre testing.
+- Se realizaron algunos tests.
 
 Pablo:
 - Testing. Principalmente a requests. Entre 40 y 50 tests funcionales realizados
