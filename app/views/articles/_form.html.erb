@@ -46,7 +46,17 @@
   <div class="field">
       <%= f.label :area_id %><br />
       <%= f.collection_select :area_id, Area.all, :id, :name, {:include_blank => "Select Area"}%>
-    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :tags %><br />
+    <%= text_area_tag  :tags , @article.get_category_names %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= select(:article, :country, User::COUNTRY) %>
+  </div>
 
   <%= render :partial => 'grades', :locals =>{:f => f} %>
 

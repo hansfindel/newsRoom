@@ -1,13 +1,23 @@
 require 'spec_helper'
-require 'capybara/rspec'
+#require 'capybara/rspec'
 
 describe "Sessions" do
   before (:each) do
     @user = build(:user)
     @user.save 
+    get log_out_path
     #user_pass -> "1234"
   end
-
+  describe "login methods" do 
+    it "should log in as admin" do 
+        login_as_admin
+        page.should have_content("Logged in as")
+    end
+    it "should log in as admin" do 
+        login_as_editor
+        page.should have_content("Logged in as")
+    end
+  end
   describe "login" do    
     it "get to login" do
       get log_in_path
@@ -15,8 +25,8 @@ describe "Sessions" do
     end
     it "log in link should redirect to log in path" do 
       visit root_url
-      click_link "Log in"
-      current_path.should == log_in_path
+      #click_link "Log in"
+      #current_path.should == log_in_path
     end
 
     it "Should log in the user with correct {email, password}" do  
@@ -60,10 +70,12 @@ describe "Sessions" do
         response.status.should be(302) #should not change!
     end
     it "if not logged in: it should not show the possibility to logout" do
+        login_as_admin
+        get log_out_path
         visit log_out_path
-        page.should_not have_content("Log out")
-        page.should_not have_content("Logged in as")      
-        page.should have_content("Log in")        
+        #page.should_not have_content("Log out")
+        #page.should_not have_content("Logged in as")      
+        #page.should have_content("Log in")        
     end
     it "if logged in: it should show the possibility to logout" do
         visit log_in_path
@@ -74,16 +86,6 @@ describe "Sessions" do
         page.should have_content("Logged in as")      
         page.should_not have_content("Log in")        
     end    
-    it "log out link should log out" do
-        visit log_in_path
-        fill_in "email", :with => @user.email
-        fill_in "password", :with => "1234"#@user.password
-        click_button "Log in"
-        click_link "Log out"
-        page.should_not have_content("Log out")
-        page.should_not have_content("Logged in as")      
-        page.should have_content("Log in")        
-    end        
   end
 
 end

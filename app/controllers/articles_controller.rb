@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+
+  caches_page :index
+  #expire_page "/"
   # GET /articles
   # GET /articles.json
   load_and_authorize_resource
@@ -66,7 +69,10 @@ class ArticlesController < ApplicationController
   # PUT /articles/1.json
   def update
     @article = Article.find(params[:id])
-
+    if params[:tags]
+      @article.category_names=(params[:tags].split(","))
+      ArticleCategory.where(:article_id => @article.id).destroy_all
+    end
     respond_to do |format|
       if @article.update_attributes(params[:article])
 
@@ -74,7 +80,7 @@ class ArticlesController < ApplicationController
           @article.add_grade
         end
 
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Article was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -106,9 +112,13 @@ class ArticlesController < ApplicationController
   end
   
   def show_non_published
-    @articles = Article.nonpublished.where(:editors_grade =>0, :user_id.ne => current_user_id, :area_id => current_user.area.id, :country => current_user.country)
-    @news = Article.nonpublished.where(:area_id => nil).limit(5)
-    @country = current_user.country
+    if current_user
+      @articles = Article.where(:is_published => false, :editors_grade =>0)#, :country => current_user_country, :area => current_user_area) #, :user_id.ne => current_user_id
+    else
+      @articles = Article.where(:is_published => false, :editors_grade =>0) #, :user_id.ne => current_user_id
+    end
+    @news = Article.nonpublished.where(:area.exists => false).limit(5)
+    @country = current_user_country
 
     respond_to do |format|
       format.html
@@ -117,7 +127,11 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_non_published
-    @articles = Article.nonpublished.where(:chief_editor_grade =>0,:editors_grade.ne =>0 ,:user_id.ne => current_user_id, :area_id => current_user.area.id, :country => current_user.country)
+    if current_user
+      @articles = Article.where(:is_published => false, :chief_editor_grade =>0, :editors_grade.gt => 0) #, :country => current_user_country, :area => current_user_area) #, :user_id.ne => current_user_id
+    else
+      @articles = Article.where(:is_published => false, :chief_editor_grade =>0) #, :user_id.ne => current_user_id
+    end
 
     respond_to do |format|
       format.html { render :template => "articles/show_non_published" }
@@ -126,7 +140,7 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_country_non_published
-    @articles = Article.nonpublished.where(:chief_editor_country_grade =>0, :editors_grade.ne =>0, :chief_editor_grade.ne =>0,:user_id.ne => current_user_id, :country => current_user.country)
+    @articles = Article.nonpublished.where(:chief_editor_country_grade =>0, :editors_grade.ne =>0, :chief_editor_grade.ne =>0,:user_id.ne => current_user_id, :country => current_user_country)
 
     respond_to do |format|
       format.html { render :template => "articles/show_non_published" } 

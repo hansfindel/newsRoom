@@ -10,6 +10,7 @@
     <div class="well">
       <h3><%= link_to article.headline, article %></h3>
       <p><%= simple_format article.deck %></p>
+      <%= render "articles/grade_form", :article => article %>
     </div>
     <% end %>
   </div>

@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def new
     if session[:user_id]
       redirect_to :articles
-      return
+      return 
     end
   end
 
@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
+      expire_page "/"
       redirect_to :articles, :notice => "Logged in!"
     else
       flash.now.alert = "Invalid email or password"
@@ -20,6 +21,7 @@ class SessionsController < ApplicationController
 
 def destroy
   session[:user_id] = nil
+  expire_page "/"
   redirect_to root_url, :notice => "Logged out!"
 end
 

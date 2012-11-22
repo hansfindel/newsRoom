@@ -17,14 +17,21 @@ FactoryGirl.define do
 	  sequence(:email) { |j| "user#{j}@example.com" }
 	  password "1234"
 	  password_confirmation "1234"
-	  role User::ROLES[-1]  #READER
+	  role User::ROLES.count - 1  #READER
 	  factory :user_admin do 
-	  	role User::ROLES[0]
+	  	sequence(:email) { |x| "user_admin#{x}@example.com" }
+	  	role 1#User::ROLES[0]
 	  end
 	  factory :user_email do 
 	  	email "mi_random@mail.co"
-	  	role User::ROLES[0]
-	  end	  
+	  	role 15#User::ROLES[0]
+	  end	
+	  factory :editor do 
+	  	role 4
+	  end  
+	  factory :journalist do 
+	  	role 1
+	  end 
 	end
 	
 	factory :category do

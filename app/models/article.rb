@@ -51,6 +51,28 @@ class Article
     true   #it does not prevent the object being saved
   end
 
+  def self.by_area(area)
+    unless area.blank?
+      where(area: area)      
+    else
+      scoped
+    end
+  end
+  def self.by_country(country)
+    unless country.blank?
+      where(country: country)
+    else
+      scoped
+    end
+  end
+  def self.by_area_and_country(user)
+    if user
+      by_country(user.country).by_area(user.area)      
+    else
+      scoped
+    end
+  end
+
   def add_grade
   	#self.grade = self.grade || 0 
     self.grade  = self.editors_grade || 0 #if editors_grade
@@ -59,6 +81,8 @@ class Article
 
     if self.grade.to_i >= Article::PUBLISH_GRADE
       self.is_published = true
+      #kills the page cache
+      expire_page "/"
     end
   	self.save
   end
@@ -118,5 +142,14 @@ class Article
     self.pictures.create(image_params) if image_params
   end
 
+  def get_category_names
+    array = []
+    if self.article_categories
+      self.article_categories.each do |c|
+        array.append(c.category.name)
+      end
+    end
+    array.join(',')
+  end
 
 end

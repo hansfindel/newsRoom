@@ -49,7 +49,32 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
-    DatabaseCleaner.clean
+    #DatabaseCleaner.clean
   end
 
+end
+
+##### methods to login 
+def login_as_admin
+  @admin ||= (User.where(role: 1).first || create(:user_admin))
+  visit log_in_path
+  fill_in "email", :with => @admin.email
+  fill_in "password", :with => "1234"#@user.password
+  click_button "Log in"
+end
+
+def login_as_editor
+  @admin ||= (User.where(role: 4).first || create(:editor))
+  visit log_in_path
+  fill_in "email", :with => @admin.email
+  fill_in "password", :with => "1234"#@user.password
+  click_button "Log in"
+end
+
+def login_as_journalist
+  @admin ||= (User.where(role: 2).first || create(:journalist))
+  visit log_in_path
+  fill_in "email", :with => @admin.email
+  fill_in "password", :with => "1234"#@user.password
+  click_button "Log in"
 end

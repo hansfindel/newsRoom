@@ -14,7 +14,8 @@ group :development do
 	gem 'sqlite3'
 end
 group :production do 
-  gem 'sqlite3'
+  #gem 'sqlite3'
+  #gem 'thin'
 end
 group :staging do
 	gem 'pg'
@@ -61,6 +62,9 @@ gem 'newrelic_rpm'
 
 gem "carrierwave"
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
+#server 
+gem 'unicorn'
 
 #cache
 gem 'cache_digests'
