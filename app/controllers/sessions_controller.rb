@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
-      expire_page "/"
+      remove_cache
       redirect_to :articles, :notice => "Logged in!"
     else
       flash.now.alert = "Invalid email or password"
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 
 def destroy
   session[:user_id] = nil
-  expire_page "/"
+  remove_cache
   redirect_to root_url, :notice => "Logged out!"
 end
 

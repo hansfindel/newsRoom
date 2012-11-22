@@ -1,12 +1,13 @@
 class ArticlesController < ApplicationController
 
-  caches_page :index
+  #caches_page :index
   #expire_page "/"
   # GET /articles
   # GET /articles.json
   load_and_authorize_resource
   #skip_before_filter :verify_authenticity_token, :only => [:update,:create]
   def index
+    remove_cache
     #@articles = #Article.where(:is_published => true)
     @articles = Article.published.paginated(params[:page])
     respond_to do |format|
@@ -77,7 +78,10 @@ class ArticlesController < ApplicationController
       if @article.update_attributes(params[:article])
 
         if(current_role.include?('editor') || current_role.include?('chief_editor') || current_role.include?('chief_editor_country'))
-          @article.add_grade
+          remove = @article.add_grade
+          if remove
+            remove_cache
+          end
         end
 
         format.html { redirect_to :back, notice: 'Article was successfully updated.' }

@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   helper_method :current_user, :current_role, :current_user_country, :current_user_area
+  helper_method :remove_cache
   skip_before_filter :verify_authenticity_token, :only => [:update,:create, :overload]
 
   #en cada controlador implementar
@@ -13,6 +14,7 @@ class ApplicationController < ActionController::Base
   before_filter :redirect_if_degraded
   around_filter :degrade 
   helper_method :rollout?
+
 
   private
   def current_user
@@ -81,6 +83,10 @@ end
 
 def production?
   Rails.env == "production" || Rails.env == "staging" #|| Rails.env == "development"
+end
+def remove_cache
+  expire_page "/"
+  expire_page "/articles"
 end
 
 end
