@@ -51,6 +51,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'mongoid-rspec'
   gem 'launchy'
+  gem 'faker'
   #gem 'poltergeist' #js testing
 end
 
