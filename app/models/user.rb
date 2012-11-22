@@ -40,7 +40,7 @@ end
 def getSlaves()
   array = []
   Chief.where(:boss => self._id).each do |a|   
-    array.append(a.slave)
+    array.append(BSON::ObjectId(a.slave))
   end
   #User.find(array)
   array
