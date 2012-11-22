@@ -9,7 +9,9 @@ Diego:
 
 
 Hans:
-
+- Añadir fotos adjuntas a los artículos
+- Implementar el rollout (para degradar el sistema)
+- Testing
 
 
 José:

@@ -9,7 +9,8 @@ Diego:
 
 
 Hans:
-
+- Generar módulo aparte con las categorías. Categorizar feeds "automáticamente"
+- Setear ambiente de testing y primeros tests
 
 
 José:

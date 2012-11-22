@@ -9,8 +9,8 @@ Diego:
 
 
 Hans:
-
-
+- Implementación del Glutton, RawData y FeedsProcessor
+- ...
 
 José:
 
