@@ -14,7 +14,7 @@ Diego:
 Hans:
 - Generar módulo aparte con las categorías. Categorizar feeds "automáticamente"
 - Setear ambiente de testing y primeros tests
-
+- Pair programming con Diego: Setup de base de datos Mongo con Heroku.
 
 José:
 - Pair programing con Santiago: Implementación flujo general del programa y de las noticias particularmente.

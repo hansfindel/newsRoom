@@ -30,6 +30,7 @@ describe Article do
     end
 
     it "can't edit users" do
+      create(:user).should be_true #it has al least one user
       visit users_path
       click_link "Edit"
       page.should have_content("No tienes los permisos necesarios")
