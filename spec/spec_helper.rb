@@ -78,3 +78,19 @@ def login_as_journalist
   fill_in "password", :with => "1234"#@user.password
   click_button "Log in"
 end
+
+def login_as_chief_editor
+  @chief ||= (User.where(role: 8).first || create(:chief_editor))
+  visit log_in_path
+  fill_in "email", :with => @chief.email
+  fill_in "password", :with => "1234"
+  click_button "Log in"
+end
+
+def login_as_chief_editor_country
+  @ecountry ||= (User.where(role: 16).first || create(:chief_editor_country))
+  visit log_in_path
+  fill_in "email", :with => @ecountry.email
+  fill_in "password", :with => "1234"
+  click_button "Log in"
+end
