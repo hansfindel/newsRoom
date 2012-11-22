@@ -79,5 +79,33 @@ describe Article do
       page.should have_content("nombreArea")
     end
 
+    it "should not edit another user" do
+      get log_out_path 
+      login_as_editor
 
+      @user = build(:user)
+      @user.save.should be_true
+      
+      visit edit_user_path(@user.id)
+      
+      page.should have_content("No tienes los permisos necesarios")
+    end
+
+    it "should not enter to chief editor evaluation area" do
+      get log_out_path 
+      login_as_editor
+
+      visit chief_editors_path
+      
+      page.should have_content("No tienes los permisos necesarios")
+    end
+
+    it "should not enter to chief editor country evaluation area" do
+      get log_out_path 
+      login_as_editor
+
+      visit chief_editors_country_path
+      
+      page.should have_content("No tienes los permisos necesarios")
+    end
 end

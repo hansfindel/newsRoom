@@ -131,10 +131,12 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_non_published
-    if current_user
+    if current_user && current_role.include?('chief_editor')
       @articles = Article.where(:is_published => false, :chief_editor_grade =>0, :editors_grade.gt => 0) #, :country => current_user_country, :area => current_user_area) #, :user_id.ne => current_user_id
     else
-      @articles = Article.where(:is_published => false, :chief_editor_grade =>0) #, :user_id.ne => current_user_id
+      redirect_to articles_path, notice: "No tienes los permisos necesarios"
+      return
+      #@articles = Article.where(:is_published => false, :chief_editor_grade =>0) #, :user_id.ne => current_user_id
     end
 
     respond_to do |format|
@@ -144,8 +146,13 @@ class ArticlesController < ApplicationController
   end
 
   def chief_editors_country_non_published
-    @articles = Article.nonpublished.where(:chief_editor_country_grade =>0, :editors_grade.ne =>0, :chief_editor_grade.ne =>0,:user_id.ne => current_user_id, :country => current_user_country)
-
+    if current_user && current_role.include?('chief_editor_country')
+      @articles = Article.nonpublished.where(:chief_editor_country_grade =>0, :editors_grade.ne =>0, :chief_editor_grade.ne =>0,:user_id.ne => current_user_id, :country => current_user_country)
+    else
+      redirect_to articles_path, notice: "No tienes los permisos necesarios"
+      return
+    end
+    
     respond_to do |format|
       format.html { render :template => "articles/show_non_published" } 
       format.json { render json: @articles }
