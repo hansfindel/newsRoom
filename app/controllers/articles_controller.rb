@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
-  #caches_page :index
-
+  caches_page :index
+  #expire_page "/"
   # GET /articles
   # GET /articles.json
   load_and_authorize_resource
