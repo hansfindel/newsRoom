@@ -35,15 +35,8 @@ describe Article do
       page.should have_content("No tienes los permisos necesarios")
     end
 
-    it "can't create new areas" do
-      visit users_path
-      click_link "New Area"
-      page.should have_content("No tienes los permisos necesarios")
-    end
-
-    it "can't edit areas" do
-      visit users_path
-      click_link "Edit"
+    it "can't manage areas" do
+      visit areas_path
       page.should have_content("No tienes los permisos necesarios")
     end
 

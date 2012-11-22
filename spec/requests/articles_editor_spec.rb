@@ -35,12 +35,12 @@ describe Article do
 
     it "can qualify articles" do
       login_as_editor
-      visit non_published_path
-      page.should have_content("Noticias por aceptar en")
-      page.should have_content("Noticias por calificar")
+      click_link "Editor Evaluation"
+      page.should have_content("Noticias por clasificar")
     end
 
     it "can't edit users" do
+      login_as_editor
       visit users_path
       click_link "Edit"
       page.should have_content("No tienes los permisos necesarios")
@@ -48,7 +48,9 @@ describe Article do
 
     it "can create new areas" do
       Area.destroy_all
-      visit users_path
+      login_as_editor
+      visit areas_path
+      page.should have_content("New Area")
       click_link "New Area"
       page.should have_content("New area")
       fill_in "area_name", :with => "nombreArea" 
