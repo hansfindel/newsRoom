@@ -93,6 +93,19 @@ class ArticlesController < ApplicationController
 
     end
   end
+  def up_editor_grade
+    @article = Article.find(params[:id])
+    @article.editors_grade += 1
+    respond_to do |format|
+      if @article.save
+        format.html { redirect_to articles_path, notice: 'Article was successfully upgraded.' }
+        format.json { head :no_content }
+      else 
+        format.html { redirect_to articles_path, notice: 'Article was not successfully upgraded.' }
+        format.json { head :no_content }  
+      end
+    end
+  end
 
   # DELETE /articles/1
   # DELETE /articles/1.json
