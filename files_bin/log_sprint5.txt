@@ -14,8 +14,12 @@ Diego:
 Hans:
 - Añadir fotos adjuntas a los artículos
 - Implementar el rollout (para degradar el sistema)
-- Testing
+- Testing unitario y funcional (y probar distintos "agentes" de test de carga)
+- Setear un nuevo ambiente de desarrollo. Agregar new_relic para ver desempeño. 
+- Agregar caché y expiradores
+- Comparar desempeño webbrick, thin y unicorn (este último se queda)
 - Configurar servidores de amazon para el sharding
+- BugFixes varios
 
 José:
 - Pair programing con Diego y Santiago: Se arreglaron más cosas de los permisos, se implementaron nuevas clases para manejar el tema de las categorías (areas), se imlpementó jerarquía de editores (chief_efitor y chief_editor_country), se arreglaron muchos bugs. Finalizados los todos los casos de uso.

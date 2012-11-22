@@ -11,7 +11,9 @@ Diego:
 
 
 Hans:
+- Iniciar la aplicación(con mongo en vez de ActiveRecord con sql) y arreglar estructura del repositorio git
 - Implementación del Glutton, RawData y FeedsProcessor
+- Creación de artículos con sus respectivas categorías (asociadas en el mismo modelo)
 - ...
 
 José:

@@ -13,8 +13,10 @@ Diego:
 
 Hans:
 - Generar módulo aparte con las categorías. Categorizar feeds "automáticamente"
-- Setear ambiente de testing y primeros tests
-- Pair programming con Diego: Setup de base de datos Mongo con Heroku.
+- Setear ambiente de testing y primeros tests y factories. 
+- Fix en "abilities" de los usuarios (tarea iniciada por José)
+- Incorporación de helper_methods para robustecer las consultas (current_user_role en vez de current_user.role que puede tirar 'nil-pointer')
+- Pair programming con Diego: Setup de base de datos Mongo con Heroku. (muchos intentos!)
 
 José:
 - Pair programing con Santiago: Implementación flujo general del programa y de las noticias particularmente.
