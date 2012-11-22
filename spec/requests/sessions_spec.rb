@@ -34,8 +34,7 @@ describe "Sessions" do
         fill_in "email", :with => @user.email
         fill_in "password", :with => "1234"#@user.password
         click_button "Log in"
-        page.should have_content("Logged in as")
-        page.should have_content(@user.email)
+        page.should have_content("Logged in!")
     end  
     it "Should not log in the user with correct email and wrong password" do  
         visit log_in_path
