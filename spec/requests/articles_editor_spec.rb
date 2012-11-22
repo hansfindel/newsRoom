@@ -31,7 +31,30 @@ describe Article do
       page.should have_content("Article was successfully created.")
       page.should have_content("headline")
       page.should have_content("story")
+    end
 
+    it "can qualify articles" do
+      login_as_editor
+      visit non_published_path
+      page.should have_content("Noticias por aceptar en")
+      page.should have_content("Noticias por calificar")
+    end
+
+    it "can't edit users" do
+      visit users_path
+      click_link "Edit"
+      page.should have_content("No tienes los permisos necesarios")
+    end
+
+    it "can create new areas" do
+      Area.destroy_all
+      visit users_path
+      click_link "New Area"
+      page.should have_content("New area")
+      fill_in "area_name", :with => "nombreArea" 
+      click_button "Create Area"
+      page.should have_content("Area was successfully created.")
+      page.should have_content("nombreArea")
     end
 
 
