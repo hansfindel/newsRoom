@@ -54,19 +54,20 @@ def degrade
 end
 
 def redirect_if_degraded
+  remove_cache
   render "errors/overload" if rollout?(action_id) and production?
 end
 
 def rollout?(name)
   #Rollout.overloaded? name 
-  RedisRollout.overloaded? name 
+  production? ? RedisRollout.overloaded?(name) : false
 end
 
 def degrade_feature(name)
   yield
   rescue StandardError => e
   #Rollout.mark name
-  RedisRollout.mark name
+  RedisRollout.mark name if production?
   raise e
 end
 
@@ -84,7 +85,10 @@ def current_controller_name
 end
 
 def production?
-  Rails.env == "production" || Rails.env == "staging" #|| Rails.env == "development"
+  Rails.env == "production" || Rails.env == "staging" || heroku_prod? #|| Rails.env == "development"
+end
+def heroku_prod?
+  Rails.env == "heroku_production"
 end
 def remove_cache
   expire_page "/"

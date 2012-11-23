@@ -1,15 +1,16 @@
 class ArticlesController < ApplicationController
 
-  #caches_page :index
-  #expire_page "/"
+  #caches_page :index , :expires_in => 7.seconds 
+  #expire_page "/?page=2"
+  
   # GET /articles
   # GET /articles.json
   load_and_authorize_resource
   #skip_before_filter :verify_authenticity_token, :only => [:update,:create]
   def index
-    remove_cache
+    #remove_cache #if params[:page]
     #@articles = #Article.where(:is_published => true)
-    @articles = Article.published.paginated(params[:page])
+    @articles = Article.published.paginated(params[:page], 10)
     respond_to do |format|
 
       format.html # index.html.erb
@@ -179,4 +180,6 @@ class ArticlesController < ApplicationController
       format.json { render json: @articles }
     end
   end
+
+
 end
