@@ -58,13 +58,15 @@ def redirect_if_degraded
 end
 
 def rollout?(name)
-  Rollout.overloaded? name 
+  #Rollout.overloaded? name 
+  RedisRollout.overloaded? name 
 end
 
 def degrade_feature(name)
   yield
   rescue StandardError => e
-  Rollout.mark name
+  #Rollout.mark name
+  RedisRollout.mark name
   raise e
 end
 

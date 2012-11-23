@@ -54,6 +54,9 @@ group :test do
   gem 'faker'
   #gem 'poltergeist' #js testing
 end
+group :test, :staging, :heroku_production, :production do 
+  gem 'redis'
+end
 
 gem 'client_side_validations'
 gem 'kaminari'
