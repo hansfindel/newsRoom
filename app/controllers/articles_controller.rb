@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   #skip_authorization_check
   #caches_page :index , :expires_in => 7.seconds 
+  caches_page :index 
   #expire_page "/?page=2"
   #caches_action :index
   # GET /articles
