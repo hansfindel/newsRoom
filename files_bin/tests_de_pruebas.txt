@@ -3,13 +3,12 @@ En este documento se detallarán los tests de carga a los que se someterá el si
 
 Los principales usuarios de la aplicación es el público en general, por lo que hay que considerar una gran carga de conexiones simultáneas. Según nuestros cálculos podrían haber del orden de 3000 usuarios conectados concurrentemente. Por otra parte un usuario promedio debiese tardar al menos 12.5 segundos para "pasar" la página, tiempo en el que alcanza a leer los títulos de las noticias en cada carga de la aplicación. Lo anterior refleja que en régimen las aplicación debería soportar una carga de 250 request's por segundo. 
 
-Gráficos articles#index
+#Gráficos articles#index
 
+Otro de los posibles puntos de falla es la escritura de datos. Para ello probaremos la creación simultánea de hasta 100 entradas y la edición de hasta 200 entradas concurrentemente. 
 
-Otro de los posibles puntos de falla es la escritura de datos. Para ello probaremos la creación simultánea de varias entradas y la edición concurrente. 
-
-Gráficos articles#create_random
-Gráficos articles#up_editor_grade
+#Gráficos articles#create_random
+#Gráficos articles#up_editor_grade
 
 Por otra prte también nos interesa saber si el consumidor de fuentes externas soporta un número determinado de fuentes, o si bien no tiene problemas para ejecutarse. 
 
