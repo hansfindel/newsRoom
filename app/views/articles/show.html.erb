@@ -1,61 +1,36 @@
 <p id="notice"><%= notice %></p>
+<div class="span12">
+<h1><%= @article.headline %></h1>
+ <%= @article.published_on %>
 
-<p>
-  <b>Headline:</b>
-  <%= @article.headline %>
-</p>
+<b><%= @article.user_name %></b>
+</div>
 
-<p>
-  <b>Deck:</b>
-  <%= simple_format @article.deck %>
-</p>
+<div class="span4">
+  <% if @article.picture_name!= "" %>
+    <%= image_tag(@article.picture_name) %>
+  <% else %>
+    <img src="http://placehold.it/350x250"></img>
+  <%end%>
+</div>
+<div class="span8">
+<p><%= simple_format @article.deck %></p>
+<p> <%= @article.story %> </p>
 
-<p>
-  <b>Story:</b>
-  <%= simple_format @article.story %>
-</p>
+  <p>
+    <b>Grade:</b>
+    <%= @article.grade %>
+  </p>
 
-<p>
-  <b>Published:</b>
-  <%= @article.published_on %>
-</p>
+  <p>
+   <%= @article.news_agency.name if @article.news_agency%>
+  </p>
 
-<p>
-  <b>Grade:</b>
-  <%= @article.grade %>
-</p>
+  <p><%= @article.get_category_names %></p>
 
-<p>
-  <b>Author:</b>
-  <%= @article.user_name %>
-</p>
-
-<p>
-  <b>News Agency:</b>
-  <%= @article.news_agency.name if @article.news_agency%>
-</p>
-
-<p>
-  <b>Country:</b>
-  <%= @article.country %>
-</p>
-
-<p>
-  <b>Area:</b>
-  <%= @article.area.name if @article.area%>
-</p>
-
-<p>
-  <b>Tags:</b>
-  <%= @article.get_category_names %>
-</p>
-
-<p>
-  <b>Picture name:</b>
-  <%= @article.picture_name %>
-</p>
 
 <% if can? :update, @article %>
 	<%= link_to 'Edit', edit_article_path(@article) %> |
 <% end %>
 <%= link_to 'Back', articles_path %>
+</div>
