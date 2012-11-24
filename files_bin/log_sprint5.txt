@@ -1,7 +1,10 @@
 Listado de tareas para el sprint 5. 
 
 Andrea: 
-
+- Instalanción de nginx + passenger en máquina del curso
+- Modificaciones a Glutton y FeedProcessor para procesar feeds y APIs externas (recopilación de feeds y APIs)
+- Cron para la actualización automática de Glutton
+- Arreglos de interfaz gráfica (bootstrap)
 
 
 Diego: 

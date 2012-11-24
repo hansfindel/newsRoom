@@ -1,7 +1,9 @@
 Listado de tareas para el sprint 4. 
 
 Andrea: 
-
+- Realización de testings funcionales y de controlador (artículos, usuarios)
+- Instalación de Jenkins en máquina del curso
+- Instalación y setup Bootstrap CDN
 
 
 Diego: 
