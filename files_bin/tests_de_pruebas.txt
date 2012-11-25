@@ -13,7 +13,7 @@ Otro de los posibles puntos de falla es la escritura de datos. Para ello probare
 Por otra prte también nos interesa saber si el consumidor de fuentes externas soporta un número determinado de fuentes, o si bien no tiene problemas para ejecutarse. 
 
 Pruebas con Glutton
-
+#success con más de 350 fuentes
 
 
 Con el fin de encontrar puntos de fallas, se realizarán las pruebas anteriores simultáneamente o con más carga de la especificada. 
