@@ -1,7 +1,9 @@
 Listado de tareas para el sprint 3. 
 
 Andrea: 
-
+- Modelo de clases (Pair Programming con Diego)
+- Manejo de permisos y roles de usuarios
+- Árbol de decisión
 
 
 Diego: 
