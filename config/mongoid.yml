@@ -1,5 +1,6 @@
 defaults: &defaults
-  host: localhost
+  host: arqui2.ing.puc.cl
+  port: 8080
   # slaves:
   #   - host: slave1.local
   #     port: 27018
@@ -8,11 +9,11 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  database: rails3_mongoid_devise_development
+  database: news_room_prod
 
 test:
   <<: *defaults
-  database: rails3_mongoid_devise_test
+  database: news_room_prod
 
 #just like the production site (before moving to u-servers)
 staging:
@@ -42,8 +43,17 @@ heroku_production:
 
 # set these environment variables on your prod server
 production:
-  <<: *defaults
-  database: rails3_mongoid_devise_production
+  sessions:
+    default:
+      hosts:
+        - arqui2.ing.puc.cl
+      port: 8080
+      database: news_room_prod
+    shard:
+      hosts:
+        - arqui2.ing.puc.cl
+      port: 8080
+      database: news_room_prod
   # slaves:
   #   - host: slave1.local
   #     port: 27018
