@@ -1,5 +1,5 @@
 defaults: &defaults
-  host: arqui2.ing.puc.cl
+  host: arqui17.ing.puc.cl
   port: 8080
   # slaves:
   #   - host: slave1.local
@@ -46,12 +46,12 @@ production:
   sessions:
     default:
       hosts:
-        - arqui2.ing.puc.cl
+        - arqui17.ing.puc.cl
       port: 8080
       database: news_room_prod
     shard:
       hosts:
-        - arqui2.ing.puc.cl
+        - arqui17.ing.puc.cl
       port: 8080
       database: news_room_prod
   # slaves:

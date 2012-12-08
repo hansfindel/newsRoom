@@ -1,0 +1,20 @@
+Santiago:
+
+    - Shading:
+        - Levantamiento de instancia mongos: la instancia de mongos esta corriendo en la maquina 17.
+        - Levantamiento de mongo config server: hay 3 instancias de mongo config server en las maquinas 17, 11, 7.
+        - Levantamiento de Shard: se dejarons instancias de mongod para usar como Shards en las maquinas 1 y 3.
+        - Sincronizacion de bases de datos.
+        - Aprendizaje e investigacion de sharding.
+
+
+Francisco:
+
+    - Shading:
+        - Levantamiento de instancia mongos: la instancia de mongos esta corriendo en la maquina 17.
+        - Levantamiento de mongo config server: hay 3 instancias de mongo config server en las maquinas 17, 11, 7.
+        - Levantamiento de Shard: se dejarons instancias de mongod para usar como Shards en las
+ maquinas 1 y 3.
+        - Sincronizacion de bases de datos.
+        - Aprendizaje e investigacion de sharding.
+
