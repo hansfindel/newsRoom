@@ -54,8 +54,8 @@ def degrade
 end
 
 def redirect_if_degraded
-  remove_cache
-  render "errors/overload" if rollout?(action_id) and production?
+  remove_cache if production? 
+  render "errors/overload" if production? and rollout?(action_id) 
 end
 
 def rollout?(name)
@@ -85,7 +85,7 @@ def current_controller_name
 end
 
 def production?
-  Rails.env == "production" || Rails.env == "staging" || heroku_prod? #|| Rails.env == "development"
+  @prod ||= (Rails.env == "staging" || heroku_prod?) #|| Rails.env == "production" || Rails.env == "development" 
 end
 def heroku_prod?
   Rails.env == "heroku_production"

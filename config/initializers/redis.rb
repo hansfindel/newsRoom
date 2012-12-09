@@ -3,7 +3,7 @@ uri = URI.parse(ENV["REDISTOGO_URL"])
 
 
 env = Rails.env 
-env_eq = (env == "production" || env == "staging" || env == "heroku_production" ) #|| env == "development"
+env_eq = (env == "staging" || env == "heroku_production" ) #|| env == "production" ||  env == "development"
 if env_eq 
 	if uri
 		REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
