@@ -18,3 +18,12 @@ Francisco:
         - Sincronizacion de bases de datos.
         - Aprendizaje e investigacion de sharding.
 
+Pablo:
+    - PPT
+
+Hans:
+    - PPT 
+    - Prueba de pasar los escenarios válidos 
+    - Prueba de límite
+    - Ayuda con configuración de la aplicación 
+    - Aprendizaje e investigacion de sharding.
