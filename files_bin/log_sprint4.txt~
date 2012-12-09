@@ -1,9 +1,7 @@
 Listado de tareas para el sprint 4. 
 
 Andrea: 
-- Realización de testings funcionales y de controlador (artículos, usuarios)
-- Instalación de Jenkins en máquina del curso
-- Instalación y setup Bootstrap CDN
+
 
 
 Diego: 
@@ -29,10 +27,8 @@ Pablo:
 
 
 Santiago:
-- Continuación de aprendizaje en Ruby.
 - Pair programing con José: Implementación flujo general del programa y de las noticias particularmente.
-- Setear environment en Ubuntu: Tuve que desinstalar Ubuntu sobre Windows y particionar el disco duro para poder instalar Ubuntu el él. Tuve que reinstalar Ruby.
-
+- Setear environment en Ubuntu: Al probar la aplicación en Windows, no fue posible instalar todas las gemas y paquetes necesarios, se perdió mucho tiempo intentando arreglar el problema en Windows y no fue posible, por lo que se decidió cambiar todo a Ubuntu, lo que también resultó muy difícil y demoroso. (desde cero)
 
 
 

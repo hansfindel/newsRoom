@@ -10,37 +10,51 @@
 </head>
 <body>
 
-<div id="user_nav">
-  <%= link_to "Home", articles_path %>
+<div id="user-nav">
+
   <% if current_user %>
+
+    <i class="icon-user"></i> <%= current_user.email %> |
+    <%= link_to articles_path do%> <i class="icon-home"></i> <% end%>  |
+    <%= link_to log_out_path do%>  <i class="icon-off"></i> <%end%>
+
     <% roles = Ability.get_permissions(current_user.role) %>
-    <% if roles.include?"admin" %>
-      <%= link_to "News Agencies", news_agencies_path %>
-      <%= link_to "User Manager", users_path %>
-    <% end %>
-    <% if roles.include?"admin" or roles.include?"editor" %>
-    	<%= link_to "Editor Evaluation", non_published_path %>
-    <% end %>
-    <% if roles.include?"admin" or roles.include?"chief_editor" %>
-      <%= link_to "Chief Editor Evaluation", chief_editors_path %>
-    <% end %>
-    <% if roles.include?"admin" %>
-      <%= link_to "Areas", areas_path %>
-    <% end %>
-    <% if roles.include?"admin" or roles.include?"chief_editor_country" %>
-      <%= link_to "Chief Country Editor Evaluation", chief_editors_country_path %>
-    <% end %>
-    Logged in as <%= current_user.email %>
-    <%= link_to "Log out", log_out_path %>
+
+    <ul class="nav nav-pills pull-right">
+      <% if roles.include?"admin" %>
+        <li><%= link_to "News Agencies", news_agencies_path %></li>
+        <li><%= link_to "User Manager", users_path %></li>
+      <% end %>
+        <% if roles.include?"admin" or roles.include?"editor" %>
+      	<li><%= link_to "Editor Evaluation", non_published_path %></li>
+      <% end %>
+      <% if roles.include?"admin" or roles.include?"chief_editor" %>
+        <li><%= link_to "Chief Editor Evaluation", chief_editors_path %></li>
+      <% end %>
+      <% if roles.include?"admin" %>
+        <li><%= link_to "Areas", areas_path %>
+      <% end %>
+      <% if roles.include?"admin" or roles.include?"chief_editor_country" %>
+        <li><%= link_to "Chief Country Editor Evaluation", chief_editors_country_path %></li>
+      <% end %>
+      
+    </ul>
+  </div>
+
   <% else %>
-    <%= link_to "Sign up", sign_up_path %> or 
+    <%= link_to "Sign up", sign_up_path %> | 
     <%= link_to "Log in", log_in_path %>
+  
   <% end %>
 </div>
 
-<% flash.each do |name, msg| %>
+<div class="span12">
+  <% flash.each do |name, msg| %>
+    <div class="alert <%= bootstrap_class_for(name) %> fade in">
     <%= content_tag :div, msg, :id => "flash#{name}" %>
-  <% end %>
+    <% end %>
+  </div>
+</div>
 
 <div class="container">
   <%= yield %>

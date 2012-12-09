@@ -1,10 +1,7 @@
 Listado de tareas para el sprint 5. 
 
 Andrea: 
-- Instalanción de nginx + passenger en máquina del curso
-- Modificaciones a Glutton y FeedProcessor para procesar feeds y APIs externas (recopilación de feeds y APIs)
-- Cron para la actualización automática de Glutton
-- Arreglos de interfaz gráfica (bootstrap)
+
 
 
 Diego: 
@@ -34,11 +31,5 @@ Pablo:
 
 
 Santiago:
-- Pair programing con Diego y José: Se arreglaron más cosas de los permisos, se implementaron nuevas clases para manejar el tema de las categorías (areas), se imlpementó jerarquía de editores (chief_efitor y chief_editor_country), se arreglaron muchos bugs. Finalizados los todos los casos de uso.
-- Aprendizaje sobre testing.
-- Se realizaron algunos tests.
-- Intento de hacer sharding con 3 servidores.
-- Instalación de la aplicación en 3 servidores.
-- Aprendizaje de Testing y verificación de algunos test.
 
 
