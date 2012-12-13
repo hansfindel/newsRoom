@@ -13,6 +13,7 @@ class FeedProcessor
   private
   
   def self.add_entries(entries)
+    random = false
     entries.each do |entry|
       unless Article.where(:guid => entry.id).count > 0
           Article.create(
@@ -23,12 +24,12 @@ class FeedProcessor
             :published_on                 => entry.published,
             :guid                         => entry.id,
             :category_names               => entry.categories,
-            :is_published                 => false,
+            :is_published                 => random,
             :editors_grade                => 0,
             :chief_editor_grade           => 0, 
-            :chief_editor_country_grade   => 0
-          )
+            :chief_editor_country_grade   => 0          )
       end
+      random = !random 
     end
   end
 
