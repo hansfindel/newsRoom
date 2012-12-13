@@ -17,7 +17,8 @@ class Glutton
       end
   		true
   	end
-  	@value	
+  	#@value	
+    true
   end
   def self.fetch_and_store
     NewsAgency.all.each do |agency|

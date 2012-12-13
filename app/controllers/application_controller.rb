@@ -50,9 +50,19 @@ class ApplicationController < ActionController::Base
   end
 
 def degrade 
-  degrade_feature(action_id) { yield } 
+  if degradable?
+    degrade_feature(action_id) { yield } 
+  else
+    yield
+  end
 end
-
+def degradable?
+  if production?
+    action_id != "fetch_and_store"
+  else
+    false
+  end
+end
 def redirect_if_degraded
   remove_cache if production? 
   render "errors/overload" if production? and rollout?(action_id) 
