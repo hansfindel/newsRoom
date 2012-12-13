@@ -118,6 +118,11 @@ class Article
     return true
   end
 
+  def add_country
+    if self.country.blank?
+      self.country = "Chile"
+    end
+  end
   def create_guid
     if self.guid.blank?
       self.guid = self._id.to_s
