@@ -29,7 +29,7 @@ class Article
 
   before_save :categorize
   before_save :not_published
-
+  before_save :add_country
   after_create :create_guid
 
   scope :published, -> { where(is_published: true) }
